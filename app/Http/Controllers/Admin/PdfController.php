@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Main;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ContactController extends Controller
+class PdfController extends Controller
 {
     public function index()
     {
-        return view('pages.contact');
+
     }
 }

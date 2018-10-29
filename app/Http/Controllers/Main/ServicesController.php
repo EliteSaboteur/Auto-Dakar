@@ -9,6 +9,6 @@ class ServicesController extends Controller
 {
     public function index()
     {
-        return view('main.services');
+        return view('pages.services');
     }
 }
