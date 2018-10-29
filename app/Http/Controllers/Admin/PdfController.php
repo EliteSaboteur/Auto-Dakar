@@ -20,6 +20,6 @@ class PdfController extends Controller
         $asd->loadHtml($convertedHtmlCss);
         $asd->setPaper('A4');
         $asd->render();
-        $asd->stream('asd');//file name
+        $asd->stream('asd',array("Attachment" => false));//file name
     }
 }
