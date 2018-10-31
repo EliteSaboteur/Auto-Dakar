@@ -5,8 +5,8 @@
  * Date: 10/29/2018
  * Time: 1:22 PM
  */ ?>
-<!doctype html>
-<html>
+        <!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     @include('includes._head')
 </head>
