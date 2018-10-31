@@ -16,3 +16,7 @@ Route::get('/about', 'Main\AboutController@index');
 Route::get('/services', 'Main\ServicesController@index');
 Route::get('/contact', 'Main\ContactController@index');
 Route::get('/pdf', 'Admin\PdfController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
