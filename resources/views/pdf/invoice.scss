@@ -1,5 +1,4 @@
 // invoice variables
-
 $page-width: 21cm;
 $page-height: 29.7cm;
 $page-bg: #ffffff;
@@ -7,11 +6,9 @@ $page-color: #000000;
 $page-margin: 1cm;
 $invoice-font-size: 12px;
 $font-family: sans-serif;
-
 @mixin no-page-break {
     page-break-inside: avoid;
 }
-
 
 // reset page
 * {
@@ -23,131 +20,285 @@ $font-family: sans-serif;
     font-weight: inherit;
 }
 
-
-// set page
-@page{
-    margin: $page-margin $page-margin 0 $page-margin;
-    width: $page-width;
-    height: $page-height;
-}
-
-body {
-    @include no-page-break();
-}
-
-#document {
+// set typography
+table {
     width: 100%;
-    background: #fff;
-    color: #000;
-    page-break-inside: avoid;
-    margin: 0;
+    table-layout: fixed;
 }
 
-.invoice {
-    width: 100%;
-    height: 20cm;
-    border: 2px solid #000;
-    page-break-inside: avoid;
-}
-
-.bill {
-    width: 100%;
-    padding: 2mm;
-    border: 2px solid #000;
-    margin-top: 1cm;
-    page-break-inside: avoid;
-}
-
-.invoice-content {
-    width: 100%;
-    border-top: 1px solid #000;
-}
-.invoice-content td, .invoice-content th {
-    border-bottom: 1px solid #000;
-    padding: 2mm;
-    vertical-align: top;
-}
-.invoice-content td, .invoice-content th {
-    border-right: 1px solid #000;
-}
-.invoice-content td:last-child, .invoice-content th:last-child {
-  border-right: 1px solid #000;
-}
-
-.logo {
-    height: 1.5cm;
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
-ul li span {
-    display: inline-block;
-    vertical-align: bottom;
-}
-ul li span:first-child {
-    margin-right: 3px;
+small {
+    font-size: 80%;
 }
 
 strong {
     font-weight: bold;
 }
 
-.invoice-header th {
-    vertical-align: top;
-}
-.invoice-header .company-info, .invoice-header .client-info {
-    text-align: left;
-    padding: 3mm;
-}
-.invoice-header .company-info li, .invoice-header .client-info li {
-    margin-bottom: 1mm;
-}
-.invoice-header .invoice-info {
-    padding: 3mm;
-}
-
-.box {
-    padding: 2mm;
-    border: 1px solid #000;
-    text-align: left;
-    margin-top: 5mm;
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    li {
+        span,
+        strong,
+        small {
+            display: inline-block;
+            vertical-align: bottom;
+            &:first-child {
+                margin-right: 3px;
+            }
+        }
+    }
 }
 
-.invoice-id {
-    margin-bottom: 3mm;
+// set page
+@page {
+    margin: $page-margin;
+    width: $page-width;
+    height: $page-height;
+}
+
+body,
+#document,
+.invoice,
+.bill {
+    @include no-page-break();
+    width: 100%;
+}
+
+#document {
+    width: 100%;
+    background: $page-bg;
+    color: $page-color;
+    margin: 0;
+}
+
+.invoice,
+.bill {
+    border: 1px solid $page-color;
+}
+
+.invoice-header {
+    width: 100%;
+    .company-info,
+    .client-info {
+        width: 30%;
+        text-align: left;
+        padding: 3mm;
+        vertical-align: top; 
+    }
+    th {
+        vertical-align: top;
+    }
+    .invoice-info {
+        width: 40%;
+        text-align: center;
+        padding: 3mm;
+        h2 {
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 1mm;
+            letter-spacing: -1px;
+        }
+        img {
+            display: block;
+            position: relative;
+            margin-bottom: 3mm;
+        }
+        .box {
+            padding: 2mm;
+            border: 1px solid $page-color;
+            text-align: left;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
 }
 
 .invoice-content {
-    vertical-align: top;
-    height: 10cm;
-}
-.invoice-content tbody {
-    height: 10cm;
-    border-bottom: 1px solid #000;
-}
-.invoice-content tbody td {
-    border-bottom: none;
-}
-.invoice-content tbody tr {
-    height: 1cm;
-}
-.invoice-content tbody tr:last-child {
-    height: auto;
-}
-.invoice-content tbody tr:last-child td {
     border-top: 1px solid #000;
+    height: 10cm;
+    overflow: hidden;
+    tbody {
+        height: 100%;
+        td {
+            border-bottom: none;
+        }
+        tr {
+            height: 1cm;
+            &:last-child {
+                height: auto;
+                td {
+                    border-top: 1px solid $page-color;
+                }
+            }
+        }
+    }
+    td,
+    th {
+        border-bottom: 1px 1px solid $page-color;
+        padding: 2mm;
+        vertical-align: top;
+        border-right: 1px 1px solid $page-color;
+        &:last-child {
+            border-right: 1px 1px solid $page-color;
+        }
+    }
+    .last-row {
+        td {
+            height: 10cm;
+        }
+    }
 }
 
-tfoot th { 
-    border-top: 1px solid #000;
+.invoice-content {
+    .nr {
+        width: 5%;
+    }
+    .item {
+        width: 35%;
+    }
+    .unit {
+        width: 5%;
+        font-size: 10px;
+    }
+    .qty {
+        width: 10%;
+    }
+    .unit-price {
+        width: 15%;
+    }
+    .value {
+        width: 15%;
+    }
+    .vat-value {
+        width: 15%;
+    }
+    thead {
+        th {
+            font-weight: bold;
+        }
+    }
+    .numbers th {
+        padding: 2px 0 !important;
+        font-weight: normal;
+    }
 }
 
-@media screen {
-    #invoice {
-        box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.14);
-        margin: 50px auto;
+.invoice-footer {
+    height: 5cm;
+    
+    td {
+        border-right: 1px solid $page-color;
+        border-bottom: 1px solid $page-color;
+        padding: 2mm;
+    }
+    .signature {
+        width: 15%;
+        vertical-align: top;
+    }
+    .expedition {
+        width: 40%;
+        vertical-align: top;
+        ul {
+            li {
+                margin-bottom: 4px;
+            }
+        }
+    }
+    .total {
+        width: 45%;
+        table-layout: fixed;
+        padding: 0;
+
+        > table {
+            height: 5cm;
+            .first-row,
+            .last-row {
+                td {
+                    vertical-align: top;
+                    text-align: left;
+                    height: 1.33cm;
+                }
+            }
+            .middle-row {
+                td {
+                    vertical-align: middle;
+                    height: 1.34cm;
+                    border-bottom: 1px solid $page-color; 
+                }
+            }
+            .last-row {
+                td {
+                    border-bottom: 0px !important;
+                }
+            }
+            td:last-child {
+                border-right: 0px !important;
+            }
+        }
+    }
+}
+
+tfoot th {
+    border-top: 1px 1px solid $page-color;
+}
+
+.bill {
+    margin-top: 5mm;
+    td {
+        padding: 3mm;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    .bill-company {
+        width: 35%;
+    }
+
+    .bill-info {
+        width: 65%;
+
+        .bill-series {
+            width: 100%;
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .bill-top {
+            width: 100%;
+            text-align: left;
+            margin: 4mm 0;
+
+            h1 {
+                font-size: 20px;
+                text-transform: uppercase;
+                font-weight: 700;
+                vertical-align: bottom;
+
+                span {
+                    font-size: 12px;
+                    text-transform: initial;
+                    font-weight: normal;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .bill-content {
+            margin-bottom: 3mm;
+        }
+
+        .casier {
+            text-align: right;
+
+            span {
+                display: inline-block;
+                width: 30%;
+                text-align: center;
+                margin-left: auto;
+            }
+        }
     }
 }
