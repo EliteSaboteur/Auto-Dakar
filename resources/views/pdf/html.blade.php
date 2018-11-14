@@ -9,13 +9,13 @@
                             <tr>
                                 <th>
                                     <!-- Invoice header -->
-                                    <table class="invoice-header" border-collapse="collapse" cellspacing="0" >
+                                    <table class="invoice-header" width="100%" border-collapse="collapse" cellspacing="0" >
                                         <tr>
                                             <th class="company-info">
                                                 <ul>
                                                     <li>
                                                         <span>Furnizor:</span>
-                                                        <span><small>S.C.</small> <strong>AUTO DAKAR</strong><small>S.R.L.</small></span>
+                                                        <span><small>S.C.</small> <strong>AUTO DAKAR</strong> <small>S.R.L.</small></span>
                                                     </li>
                                                     <li>
                                                         <span>Nr. ord.reg.com/an.:</span>
@@ -54,7 +54,7 @@
                                             </th>
                                             <th class="invoice-info">
                                                 <h2>FACTURA</h2>
-                                                <img class="logo" src="logo.jpg" alt="Auto Dakar">
+                                                <img class="logo" src="logo.png" width="3cm" alt="Auto Dakar">
                                                 <div class="box">
                                                     <p>
                                                         <span>Nr. facturii:</span>
