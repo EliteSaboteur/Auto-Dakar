@@ -1,56 +1,72 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-size: 12px; font-family: sans-serif; font-weight: inherit; }
 
-@page { margin: 1cm 1cm 0 1cm; width: 21cm; height: 29.7cm; }
-body { page-break-inside: avoid; }
+table { width: 100%; table-layout: fixed; }
 
-#document { width: 100%; background: #fff; color: #000; page-break-inside: avoid; margin: 0; }
-
-.invoice { width: 100%; height: 20cm; border: 2px solid #000; page-break-inside: avoid; }
-
-.bill { width: 100%; padding: 2mm; border: 2px solid #000; margin-top: 1cm; page-break-inside: avoid; }
-
-.invoice-content { width: 100%; border-top: 1px solid #000; }
-
-.invoice-content td, .invoice-content th { border-bottom: 1px solid #000; padding: 2mm; vertical-align: top; }
-
-.invoice-content td, .invoice-content th { border-right: 1px solid #000; }
-
-.invoice-content td:last-child, .invoice-content th:last-child { border-right: 1px solid #000; }
-
-.logo { height: 1.5cm; }
-
-ul { padding: 0; margin: 0; list-style-type: none; }
-
-ul li span { display: inline-block; vertical-align: bottom; }
-
-ul li span:first-child { margin-right: 3px; }
+small { font-size: 80%; }
 
 strong { font-weight: bold; }
 
+ul { padding: 0; margin: 0; list-style-type: none; }
+ul li span, ul li strong, ul li small { display: inline-block; vertical-align: bottom; }
+ul li span:first-child, ul li strong:first-child, ul li small:first-child { margin-right: 3px; }
+
+@page { margin: 1cm; width: 21cm; height: 29.7cm; }
+body, #document, .invoice, .bill { page-break-inside: avoid; width: 100%; }
+
+#document { width: 100%; background: #ffffff; color: #000000; margin: 0; }
+
+.invoice, .bill { border: 1px solid #000000; }
+
+.invoice-header { width: 100%; }
+.invoice-header .company-info, .invoice-header .client-info { width: 30%; text-align: left; padding: 3mm; vertical-align: top; }
 .invoice-header th { vertical-align: top; }
+.invoice-header .invoice-info { width: 40%; text-align: center; padding: 3mm; }
+.invoice-header .invoice-info h2 { text-transform: uppercase; font-size: 25px; font-weight: 700; margin-bottom: 1mm; letter-spacing: -1px; }
+.invoice-header .invoice-info img { display: block; position: relative; margin-bottom: 3mm; }
+.invoice-header .invoice-info .box { padding: 2mm; border: 1px solid #000000; text-align: left; width: 80%; margin: 0 auto; }
 
-.invoice-header .company-info, .invoice-header .client-info { text-align: left; padding: 3mm; }
-
-.invoice-header .company-info li, .invoice-header .client-info li { margin-bottom: 1mm; }
-
-.invoice-header .invoice-info { padding: 3mm; }
-
-.box { padding: 2mm; border: 1px solid #000; text-align: left; margin-top: 5mm; }
-
-.invoice-id { margin-bottom: 3mm; }
-
-.invoice-content { vertical-align: top; height: 10cm; }
-
-.invoice-content tbody { height: 10cm; border-bottom: 1px solid #000; }
-
+.invoice-content { border-top: 1px solid #000; height: 10cm; overflow: hidden; }
+.invoice-content tbody { height: 100%; }
 .invoice-content tbody td { border-bottom: none; }
-
 .invoice-content tbody tr { height: 1cm; }
-
 .invoice-content tbody tr:last-child { height: auto; }
+.invoice-content tbody tr:last-child td { border-top: 1px solid #000000; }
+.invoice-content td, .invoice-content th { border-bottom: 1px 1px solid #000000; padding: 2mm; vertical-align: top; border-right: 1px 1px solid #000000; }
+.invoice-content td:last-child, .invoice-content th:last-child { border-right: 1px 1px solid #000000; }
+.invoice-content .last-row td { height: 10cm; }
 
-.invoice-content tbody tr:last-child td { border-top: 1px solid #000; }
+.invoice-content .nr { width: 5%; }
+.invoice-content .item { width: 35%; }
+.invoice-content .unit { width: 5%; font-size: 10px; }
+.invoice-content .qty { width: 10%; }
+.invoice-content .unit-price { width: 15%; }
+.invoice-content .value { width: 15%; }
+.invoice-content .vat-value { width: 15%; }
+.invoice-content thead th { font-weight: bold; }
+.invoice-content .numbers th { padding: 2px 0 !important; font-weight: normal; }
 
-tfoot th { border-top: 1px solid #000; }
+.invoice-footer { height: 5cm; }
+.invoice-footer td { border-right: 1px solid #000000; border-bottom: 1px solid #000000; padding: 2mm; }
+.invoice-footer .signature { width: 15%; vertical-align: top; }
+.invoice-footer .expedition { width: 40%; vertical-align: top; }
+.invoice-footer .expedition ul li { margin-bottom: 4px; }
+.invoice-footer .total { width: 45%; table-layout: fixed; padding: 0; }
+.invoice-footer .total > table { height: 5cm; }
+.invoice-footer .total > table .first-row td, .invoice-footer .total > table .last-row td { vertical-align: top; text-align: left; height: 1.33cm; }
+.invoice-footer .total > table .middle-row td { vertical-align: middle; height: 1.34cm; border-bottom: 1px solid #000000; }
+.invoice-footer .total > table .last-row td { border-bottom: 0px !important; }
+.invoice-footer .total > table td:last-child { border-right: 0px !important; }
 
-@media screen { #invoice { box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.14); margin: 50px auto; } }
+tfoot th { border-top: 1px 1px solid #000000; }
+
+.bill { margin-top: 5mm; }
+.bill td { padding: 3mm; vertical-align: top; text-align: left; }
+.bill .bill-company { width: 35%; }
+.bill .bill-info { width: 65%; }
+.bill .bill-info .bill-series { width: 100%; text-align: right; font-size: 14px; }
+.bill .bill-info .bill-top { width: 100%; text-align: left; margin: 4mm 0; }
+.bill .bill-info .bill-top h1 { font-size: 20px; text-transform: uppercase; font-weight: 700; vertical-align: bottom; }
+.bill .bill-info .bill-top h1 span { font-size: 12px; text-transform: initial; font-weight: normal; display: inline-block; }
+.bill .bill-info .bill-content { margin-bottom: 3mm; }
+.bill .bill-info .casier { text-align: right; }
+.bill .bill-info .casier span { display: inline-block; width: 30%; text-align: center; margin-left: auto; }
