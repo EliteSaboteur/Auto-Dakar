@@ -8,6 +8,10 @@ $page-margin: 1cm;
 $invoice-font-size: 12px;
 $font-family: sans-serif;
 
+@mixin no-page-break {
+    page-break-inside: avoid;
+}
+
 
 // reset page
 * {
@@ -22,16 +26,16 @@ $font-family: sans-serif;
 
 // set page
 @page{
-    margin: 1cm 1cm 0 1cm;
-    width: 21cm;
-    height:28.7cm
+    margin: $page-margin $page-margin 0 $page-margin;
+    width: $page-width;
+    height: $page-height;
 }
 
 body {
-    page-break-inside: avoid;
+    @include no-page-break();
 }
 
-#invoice {
+#document {
     width: 100%;
     background: #fff;
     color: #000;
