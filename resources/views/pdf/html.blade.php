@@ -1,4 +1,5 @@
 <!-- Invoice document -->
+<div id="watermark"></div>
 <table id="document" width="100%" border-collapse="collapse" cellspacing="0" border="0">
     <tbody>
         <tr>
@@ -233,7 +234,7 @@
                                             </td>
                                             <td class="expedition">
                                                 <p><strong>Date privind expeditia</strong></p>
-                                                <ul style="margin-top: 3px;">
+                                                <ul style="margin-top: 2mm;">
                                                     <li>
                                                         <strong>Numele delegatului</strong>
                                                         <span>xxxxxxxxxxxxxxxxxxxx</span>
@@ -254,7 +255,7 @@
                                                     </li>
                                                     <li>
                                                         <p><strong>Expedierea s-a efectuat in prezenta noastra la</strong></p>
-                                                        <strong>data de</strong><span>xx.xx.xxxx</span>
+                                                        <strong>data de</strong> <span>xx.xx.xxxx</span>
                                                         <strong>ora</strong> <span>xx:xx</span> 
                                                     </li>
                                                     <li style="margin-top: 3px;">
