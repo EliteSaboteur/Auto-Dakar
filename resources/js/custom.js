@@ -9,13 +9,24 @@ var zeci = ['una ', 'două ', 'trei ', 'patru ', 'cinci ', 'șase ', 'șapte ', 
     'optsprezece ', 'nouăsprezce '];
 var sute = ['una', 'două', 'trei', 'patru', 'cinci', 'șase', 'șapte', 'opt', 'nouă'];
 $("button").click(function () {
-    var value = $("#valoare").val().split('.');
-    var lei = value[0];
-    var bani = value[1];
-
+    var input = $("#valoare").val();
+    var value = '';
+    var lei;
+    var bani;
+    if (input.indexOf('.') != -1) {
+        value = input.split('.');
+        lei = value[0];
+        bani = value[1];
+    } else if (input.indexOf(',') != -1) {
+        value = input.split(',');
+        lei = value[0];
+        bani = value[1];
+    }else{
+         lei = input;
+         bani = '00';
+    }
     var strValue = translate(lei.length, lei);
-
-    $(".val").html(strValue+' LEI și '+translate(bani.length, bani)+' BANI');
+    $(".val").html(strValue + ' LEI și ' + translate(bani.length, bani) + ' BANI');
 //            alert(strValue)
 });
 
@@ -27,12 +38,26 @@ function translate(length, value) {
             case 1 :
                 if (currentVal != '0') {
                     nextVal = value.charAt(value.length - 2);
-                    if (nextVal == '0' || nextVal == '1') {
+                    if (nextVal == '0' || nextVal == '1'|| nextVal == '') {
                         strValue = zeci[parseInt(nextVal + currentVal) - 1];
                         i++;
                         value = value.slice(0, -1);
                     } else {
                         strValue = ' și ' + unitati[parseInt(currentVal) - 1];
+                    }
+                } else {
+
+                    nextVal = value.charAt(value.length - 2);
+                    if (nextVal == '0' || nextVal == '1' || nextVal == '') {
+                        strValue = zeci[parseInt(nextVal + currentVal) - 1];
+                        i++;
+                        value = value.slice(0, -1);
+                    } else {
+                        strValue = ' și ' + unitati[parseInt(currentVal) - 1];
+                    }
+
+                    if (value == '00' || value == '0') {
+                        strValue = 'zero'
                     }
                 }
                 break;//unitati
@@ -60,12 +85,17 @@ function translate(length, value) {
                     strValue = ' mii ' + strValue;
                 }
                 nextVal = value.charAt(value.length - 2);
-                if (nextVal == '0' || nextVal == '1') {
+                if (nextVal == '0' || nextVal == '1' || nextVal == '') {
                     strValue = zeci[parseInt(nextVal + currentVal) - 1] + strValue;
                     i++;
                     value = value.slice(0, -1);
                 } else {
-                    strValue = ' și ' + unitati[parseInt(currentVal) - 1] + strValue;
+                    if(unitati[parseInt(currentVal) - 1] == 'doi')
+                    {
+                        strValue = ' și două' + strValue;
+                    }else{
+                        strValue = ' și ' + unitati[parseInt(currentVal) - 1] + strValue;
+                    }
                 }
                 break;//mii
             case 5 :
@@ -75,9 +105,11 @@ function translate(length, value) {
                 break;//zeci de mii
             case 6 :
                 if (sute[parseInt(currentVal) - 1] !== 'undefined') {
-
-                    strValue = sute[parseInt(currentVal) - 1] + " sută " + strValue;
-
+                    if(parseInt(currentVal) - 1 == 0){
+                        strValue = sute[parseInt(currentVal) - 1] + " sută " + strValue;
+                    }else{
+                        strValue = sute[parseInt(currentVal) - 1] + " sute " + strValue;
+                    }
                 }
                 break;//sute de mii
         }
