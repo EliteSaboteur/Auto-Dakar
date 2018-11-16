@@ -7,7 +7,7 @@
  */?>
 <!-- Scripts -->
 <p>Name: <input type="text" id="valoare" name="user" value="123.36"></p>
-
+<p class="val"></p>
 <button>Set the value of the input field</button>
 
 <script src="{{ asset('js/app.js') }}" defer></script>

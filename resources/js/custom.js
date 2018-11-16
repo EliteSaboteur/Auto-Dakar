@@ -2,7 +2,6 @@
  * Created by Intern on 11/12/2018.
  */
 
-var sizeMap = ['unități', 'zeci', 'sute', 'mii', 'zeciDeMii', 'suteDeMii'];
 var unitati = ['unu', 'doi', 'trei', 'patru', 'cinci', 'șase', 'șapte', 'opt', 'nouă'];
 var zecimale = ['', 'două', 'trei', 'patru', 'cinci', 'șai', 'șapte', 'opt', 'nouă'];
 var zeci = ['una ', 'două ', 'trei ', 'patru ', 'cinci ', 'șase ', 'șapte ', 'opt ', 'nouă ', 'zece ',
@@ -14,8 +13,9 @@ $("button").click(function () {
     var lei = value[0];
     var bani = value[1];
 
-    alert(bani + '|' + lei.length);
     var strValue = translate(lei.length, lei);
+
+    $(".val").html(strValue+' LEI și '+translate(bani.length, bani)+' BANI');
 //            alert(strValue)
 });
 
@@ -30,6 +30,7 @@ function translate(length, value) {
                     if (nextVal == '0' || nextVal == '1') {
                         strValue = zeci[parseInt(nextVal + currentVal) - 1];
                         i++;
+                        value = value.slice(0, -1);
                     } else {
                         strValue = ' și ' + unitati[parseInt(currentVal) - 1];
                     }
@@ -45,27 +46,26 @@ function translate(length, value) {
                     if (currentVal == '1') {
                         strValue = 'una sută ' + strValue;
                     } else {
-                        strValue = sute[parseInt(currentVal)-1] + ' sute ' + strValue;
+                        strValue = sute[parseInt(currentVal) - 1] + ' sute ' + strValue;
                     }
                 }
                 break;//sute
             case 4 :
-                if (currentVal != '0') {
-                    nextVal = value.charAt(value.length - 2);
-                    if (currentVal == '1' && nextVal == '') {
+                if (i == length) {
+                    if (currentVal == '1') {
                         strValue = 'una mie ' + strValue;
                         break;
-                    } else {
-                        strValue = ' mii ' + strValue;
                     }
-                    if (nextVal == '0' || nextVal == '1') {
-                        strValue = zeci[parseInt(nextVal + currentVal) - 1] + '' + strValue;
-                        i++;
-                    } else if (nextVal == '') {
-                        strValue = zeci[parseInt(currentVal) - 1] + '' + strValue;
-                    } else {
-                        strValue = ' și ' + unitati[parseInt(currentVal) - 1] + '' + strValue;
-                    }
+                } else {
+                    strValue = ' mii ' + strValue;
+                }
+                nextVal = value.charAt(value.length - 2);
+                if (nextVal == '0' || nextVal == '1') {
+                    strValue = zeci[parseInt(nextVal + currentVal) - 1] + strValue;
+                    i++;
+                    value = value.slice(0, -1);
+                } else {
+                    strValue = ' și ' + unitati[parseInt(currentVal) - 1] + strValue;
                 }
                 break;//mii
             case 5 :
@@ -74,20 +74,14 @@ function translate(length, value) {
                 }
                 break;//zeci de mii
             case 6 :
-                if (sute[currentVal - 1] !== 'undefined') {
+                if (sute[parseInt(currentVal) - 1] !== 'undefined') {
 
-                    strValue = sute[currentVal - 1] + " sută " + strValue;
+                    strValue = sute[parseInt(currentVal) - 1] + " sută " + strValue;
+
                 }
                 break;//sute de mii
         }
-        //currentVal = value %10
-
-        //if (currentVal != 0){
-        //    if(i+1!=length){strValue = ' și '+unitati[currentVal-1] + strValue }else{strValue = unitati[currentVal-1]+strValue}
-        //}
-        //value = Math.floor(value / 10);
         value = value.slice(0, -1);
-//sdf
     }
     return strValue;
 }
