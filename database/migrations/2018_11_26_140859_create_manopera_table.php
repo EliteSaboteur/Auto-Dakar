@@ -22,6 +22,9 @@ class CreateManoperaTable extends Migration
             $table->integer('tarif');
             $table->integer('ore');
             $table->timestamps();
+            //belongs to
+            $table->foreign('interventie_id')->references('id')->on('interventie');
+
         });
     }
 

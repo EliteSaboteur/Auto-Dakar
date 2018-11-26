@@ -27,7 +27,15 @@ class CreateInterventieTable extends Migration
             $table->string('email',50);
             $table->string('observatii',255)->nullable();
 
+            $table->integer('factura_id');
+            $table->integer('client_id');
             $table->timestamps();
+            //belongs to
+            $table->foreign('automobil_id')->references('id')->on('automobil');
+            //has one
+            $table->foreign('factura_id')->references('id')->on('factura');
+            $table->foreign('client_id')->references('id')->on('client');
+
         });
     }
 

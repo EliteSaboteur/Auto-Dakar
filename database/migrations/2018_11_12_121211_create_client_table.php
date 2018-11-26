@@ -14,7 +14,6 @@ class CreateClientTable extends Migration
     public function up()
     {
         Schema::create('client', function (Blueprint $table) {
-            $table->integer('interventie_id');
             $table->increments('id');
 
             $table->string('denumire');

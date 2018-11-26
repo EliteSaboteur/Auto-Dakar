@@ -16,11 +16,12 @@ class CreatePieseTable extends Migration
         Schema::create('piese', function (Blueprint $table) {
             $table->integer('interventie_id');
             $table->increments('id');
-
             $table->string('piesa');
             $table->integer('cantitate');
             $table->double('pret');
             $table->timestamps();
+            //belongs to
+            $table->foreign('interventie_id')->references('id')->on('interventie');
         });
     }
 
