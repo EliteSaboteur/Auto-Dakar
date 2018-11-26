@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAutomobilTable extends Migration
+class CreateChitantaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateAutomobilTable extends Migration
      */
     public function up()
     {
-        Schema::create('automobil', function (Blueprint $table) {
+        Schema::create('chitanta', function (Blueprint $table) {
+            $table->integer('factura_id');
             $table->increments('id');
-            $table->string('numar', 20);
-            $table->string('marca', 30);
-            $table->string('model', 30);
-            $table->unsignedSmallInteger('an');
-            $table->string('telefon', 20);
+
+            $table->increments('counter_chitanta');
+            $table->integer('nr_chitanta');
+            $table->timestamp('data_eliberare');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateAutomobilTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('automobil');
+        Schema::dropIfExists('chitanta');
     }
 }

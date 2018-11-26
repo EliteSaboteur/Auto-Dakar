@@ -14,11 +14,19 @@ class CreateInterventieTable extends Migration
     public function up()
     {
         Schema::create('interventie', function (Blueprint $table) {
-            $table->increments('id');
-            $table->date('data_intrare');
-            $table->double('suma')->nullable();
-            $table->string('observatii',255)->nullable();
             $table->integer('automobil_id');
+
+            $table->increments('id');
+            $table->date('data_estimativa');
+            $table->double('cost_estimativ');
+
+            $table->date('data_reparatie');
+            $table->integer('numar_reparatie');
+            $table->longText('lucrari_estimative');
+
+            $table->string('email',50);
+            $table->string('observatii',255)->nullable();
+
             $table->timestamps();
         });
     }

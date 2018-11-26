@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProdusTable extends Migration
+class CreateManoperaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateProdusTable extends Migration
      */
     public function up()
     {
-        Schema::create('produs', function (Blueprint $table) {
+        Schema::create('manopera', function (Blueprint $table) {
+            $table->integer('interventie_id');
             $table->increments('id');
-            $table->string('denumire');
-            $table->tinyInteger('um')->nullable();
-            $table->tinyInteger('cantitate');
-            $table->double('valoare');
-            $table->integer('factura_id');
+
+            $table->string('piesa');
+            $table->string('actiune');
+            $table->integer('tarif');
+            $table->integer('ore');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateProdusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produs');
+        Schema::dropIfExists('manopera');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEstimativTable extends Migration
+class CreatePieseTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateEstimativTable extends Migration
      */
     public function up()
     {
-        Schema::create('estimativ', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('piesa');
-            $table->string('actiune');
+        Schema::create('piese', function (Blueprint $table) {
             $table->integer('interventie_id');
+            $table->increments('id');
+
+            $table->string('piesa');
+            $table->integer('cantitate');
+            $table->double('pret');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateEstimativTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('estimativ');
+        Schema::dropIfExists('piese');
     }
 }

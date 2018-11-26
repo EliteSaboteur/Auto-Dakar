@@ -14,19 +14,19 @@ class CreateClientTable extends Migration
     public function up()
     {
         Schema::create('client', function (Blueprint $table) {
+            $table->integer('interventie_id');
             $table->increments('id');
-            $table->string('client');
 
+            $table->string('denumire');
             $table->string('cnp/cui');
             $table->string('seria')->nullable();
             $table->string('nr/regcom');
-            $table->string('eliberat')->nullable();
+            $table->string('eliberat_de')->nullable();
 
             $table->string('adresa')->nullable();
             $table->string('cont')->nullable();
             $table->string('banca')->nullable();
 
-            $table->integer('factura_id');
             $table->timestamps();
         });
     }
