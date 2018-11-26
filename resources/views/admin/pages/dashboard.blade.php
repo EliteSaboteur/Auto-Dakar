@@ -5,7 +5,7 @@
  * Date: 11/26/2018
  * Time: 5:15 PM
  */?>
-@extends('layouts.default')
+@extends('layouts.admin')
 @section('title')
     Dashboard
 @stop
