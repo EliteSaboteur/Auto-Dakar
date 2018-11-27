@@ -24,7 +24,6 @@ class CreateInterventieTable extends Migration
             $table->integer('numar_reparatie');
             $table->longText('lucrari_estimative');
 
-            $table->string('email',50);
             $table->string('observatii',255)->nullable();
 
             $table->integer('factura_id');
