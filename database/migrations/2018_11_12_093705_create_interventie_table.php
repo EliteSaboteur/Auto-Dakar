@@ -25,6 +25,7 @@ class CreateInterventieTable extends Migration
             $table->longText('lucrari_estimative');
 
             $table->string('observatii',255)->nullable();
+            $table->integer('status')->nullable();
 
             $table->unsignedInteger('factura_id');
             $table->unsignedInteger('client_id');
