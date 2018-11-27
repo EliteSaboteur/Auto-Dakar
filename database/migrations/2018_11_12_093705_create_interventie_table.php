@@ -14,20 +14,20 @@ class CreateInterventieTable extends Migration
     public function up()
     {
         Schema::create('interventie', function (Blueprint $table) {
-            $table->integer('automobil_id');
+            $table->unsignedInteger('automobil_id');
 
             $table->increments('id');
             $table->date('data_estimativa');
             $table->double('cost_estimativ');
 
-            $table->date('data_reparatie');
-            $table->integer('numar_reparatie');
+            $table->date('data_receptie');
+            $table->integer('numar_receptie');
             $table->longText('lucrari_estimative');
 
             $table->string('observatii',255)->nullable();
 
-            $table->integer('factura_id');
-            $table->integer('client_id');
+            $table->unsignedInteger('factura_id');
+            $table->unsignedInteger('client_id');
             $table->timestamps();
             //belongs to
             $table->foreign('automobil_id')->references('id')->on('automobil');
