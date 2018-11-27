@@ -1,0 +1,102 @@
+// ===============================================
+// Typography
+// ===============================================
+$sans-font:                         'Hurme Geometric Sans 1', sans-serif;
+$base-font:                         $sans-font; 
+
+
+$base-font-size:                    16px;                   
+
+$paragraph:                         $base-font-size;
+$heading1:                          40px;
+$heading2:                          32px;
+$heading3:                          28px;
+$heading4:                          24px;
+$heading5:                          18px;
+$heading6:                          16px; 
+
+//headings in rem
+
+$rem-paragraph:                     ($paragraph / $base-font-size) * 1rem;
+$rem-heading1:                      ($heading1 / $base-font-size) * 1rem;
+$rem-heading2:                      ($heading2 / $base-font-size) * 1rem;
+$rem-heading3:                      ($heading3 / $base-font-size) * 1rem;
+$rem-heading4:                      ($heading4 / $base-font-size) * 1rem;
+$rem-heading5:                      ($heading5 / $base-font-size) * 1rem;
+$rem-heading6:                      ($heading6 / $base-font-size) * 1rem;
+
+
+
+// ===============================================
+// Colors
+// ===============================================
+
+$primary:                           #87C232;
+$primary-dark:                      darken($primary, 10%);
+$primary-light:                     lighten($primary,10%);
+
+
+$accent:                            #FF5722;
+$accent-dark:                       darken($accent, 10%);
+$accent-light:                      lighten($accent,10%);
+
+$light-background:                  #f8f8f8;
+
+
+$white:                             #ffffff;
+$black:                             #212121;
+$type:                              #6a6a6a;
+
+$float-btn-color:                   #607D8B;
+
+
+$input-color:                       #cccccc;
+
+
+// ===============================================
+// Sizes   |   Spacings
+// ===============================================
+
+$gutter:                            40px;
+$half-gutter:                       $gutter / 2;
+$container:                         1200px;
+
+$hero-full:                         100vh;                      
+$hero-tall:                         600px;                      
+$hero-medium:                       400px;                      
+$hero-small:                        250px;                      
+$hero-extra-small:                  150px;                      
+
+$card-tall:                         400px;
+$card-medium:                       300px;
+$card-small:                        200px;
+
+$float-btn-size:                    34px;
+
+$btn-padding:                       10px 20px;
+$btn-small-padding:                 05px 10px;
+$btn-large-padding:                 15px 30px;
+
+
+
+// ===============================================
+// Media Queries
+// ===============================================
+
+$mobile-low:                        320px;
+$mobile-mid:                        480px;
+$mobile-large:                      600px;
+$tablet:                            768px;
+$desktop:                           992px;
+$large-desktop:                     1200px;
+
+$xs:                                "(max-width: 767px)";
+$xss:                               "(min-width: 320px) and (max-width: 479px)";
+$xsm:                               "(min-width: 480px) and (max-width: 599px)";
+$xsl:                               "(min-width: 600px) and (max-width: 767px)";
+$sm:                                "(min-width: 768px) and (max-width: 991px)";
+$md:                                "(min-width: 991px) and (max-width: 1199px)";
+$lg:                                "(min-width: 1200px)";
+
+$xssm:                              "(max-width: 991px)";
+$xssm:                              "(min-width: 768px) and (max-width: 1199px)";
