@@ -17,7 +17,7 @@ Route::get('/services', 'Main\ServicesController@index');
 Route::get('/contact', 'Main\ContactController@index');
 Route::get('/pdf', 'Admin\PdfController@index');
 
-Route::get('/dashboard', 'Admin\DashboardController@index');
+Route::view('/dashboard', 'admin.pages.dashboard');
 
 Auth::routes();
 
