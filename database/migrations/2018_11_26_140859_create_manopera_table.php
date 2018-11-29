@@ -14,7 +14,7 @@ class CreateManoperaTable extends Migration
     public function up()
     {
         Schema::create('manopera', function (Blueprint $table) {
-            $table->unsignedInteger('interventie_id');
+            $table->unsignedInteger('interventie_id')->nullable();
             $table->increments('id');
 
             $table->string('piesa');

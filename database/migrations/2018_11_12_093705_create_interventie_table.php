@@ -14,7 +14,7 @@ class CreateInterventieTable extends Migration
     public function up()
     {
         Schema::create('interventie', function (Blueprint $table) {
-            $table->unsignedInteger('automobil_id');
+            $table->unsignedInteger('automobil_id')->nullable();
 
             $table->increments('id');
             $table->date('data_estimativa');
@@ -27,8 +27,8 @@ class CreateInterventieTable extends Migration
             $table->string('observatii',255)->nullable();
             $table->integer('status')->nullable();
 
-            $table->unsignedInteger('factura_id');
-            $table->unsignedInteger('client_id');
+            $table->unsignedInteger('factura_id')->nullable();
+            $table->unsignedInteger('client_id')->nullable();
             $table->timestamps();
             //belongs to
             $table->foreign('automobil_id')->references('id')->on('automobil');

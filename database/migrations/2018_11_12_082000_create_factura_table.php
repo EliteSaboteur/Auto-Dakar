@@ -19,7 +19,7 @@ class CreateFacturaTable extends Migration
             $table->string('serie_factura');
             $table->integer('nr_factura');
             $table->date('data_eliberare');
-            $table->unsignedInteger('chitanta_id');
+            $table->unsignedInteger('chitanta_id')->nullable();
             $table->timestamps();
             //has one
             $table->foreign('chitanta_id')->references('id')->on('chitanta');
