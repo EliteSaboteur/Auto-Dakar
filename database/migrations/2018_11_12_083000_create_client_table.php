@@ -17,6 +17,7 @@ class CreateClientTable extends Migration
             $table->increments('id');
 
             $table->string('denumire');
+            $table->string('telefon', 20)->nullable();
             $table->string('cnp/cui');
             $table->string('seria')->nullable();
             $table->string('nr/regcom');

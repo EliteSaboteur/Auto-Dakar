@@ -14,10 +14,10 @@ class CreateChitantaTable extends Migration
     public function up()
     {
         Schema::create('chitanta', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('counter_chitanta');
-            $table->integer('nr_chitanta');
-            $table->timestamp('data_eliberare');
+            $table->increments('id')->nullable();
+            $table->integer('counter_chitanta')->nullable();
+            $table->integer('nr_chitanta')->nullable();
+            $table->timestamp('data_eliberare')->nullable();
             $table->timestamps();
         });
     }
