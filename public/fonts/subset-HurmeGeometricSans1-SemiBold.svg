@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20170731 at Wed Nov 28 00:04:44 2018
+ By Aleksey,,,
+Copyright (c) 2012 by Toni Hurme. All rights reserved.
+</metadata>
+<defs>
+<font id="HurmeGeometricSans1-SemiBold" horiz-adv-x="0" >
+  <font-face 
+    font-family="Hurme Geometric Sans 1"
+    font-weight="600"
+    font-stretch="normal"
+    units-per-em="1000"
+    panose-1="2 11 7 0 2 0 0 0 0 0"
+    ascent="800"
+    descent="-200"
+    bbox="-32 -193 712 718"
+    underline-thickness="50"
+    underline-position="-290"
+    unicode-range="U+0020-0219"
+  />
+<missing-glyph horiz-adv-x="712" 
+d="M712 0h-712v697h712v-697zM84 616v-535h544v535h-544zM199 133l-58 58l157 157l-157 157l58 58l157 -157l157 157l58 -58l-157 -157l157 -157l-58 -58l-157 157z" />
+    <glyph glyph-name=".notdef" horiz-adv-x="712" 
+d="M712 0h-712v697h712v-697zM84 616v-535h544v535h-544zM199 133l-58 58l157 157l-157 157l58 58l157 -157l157 157l58 -58l-157 -157l157 -157l-58 -58l-157 157z" />
+    <glyph glyph-name=".null" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="333" 
+ />
+    <glyph glyph-name="NULL" 
+ />
+    <glyph glyph-name="space" unicode=" " horiz-adv-x="407" 
+ />
+    <glyph glyph-name="acircumflex" unicode="&#xe2;" horiz-adv-x="615" 
+d="M259 566h-117l180 152l181 -152h-117l-64 63zM283 515q61 0 104.5 -23.5t56.5 -60.5v73h120v-504h-120v73q-13 -37 -56.5 -60.5t-104.5 -23.5q-107 0 -180 75q-72 77 -72 188q0 112 72 187q73 76 180 76zM299 98q65 0 109 44q45 43 45 110t-45 110q-44 44 -109 44
+q-63 0 -107 -44q-42 -44 -42 -110t42 -110q44 -44 107 -44z" />
+    <glyph glyph-name="icircumflex" unicode="&#xee;" horiz-adv-x="253" 
+d="M187 0h-121v504h121v-504zM83 552h-115l158 152l158 -152h-113l-45 63z" />
+    <glyph glyph-name="abreve" unicode="&#x103;" horiz-adv-x="615" 
+d="M313 556q-67 0 -113 40t-55 102h92q19 -58 76 -58q58 0 77 58h92q-9 -62 -55 -102t-114 -40zM283 515q61 0 104.5 -23.5t56.5 -60.5v73h120v-504h-120v73q-13 -37 -56.5 -60.5t-104.5 -23.5q-107 0 -180 75q-72 77 -72 188q0 112 72 187q73 76 180 76zM299 98
+q65 0 109 44q45 43 45 110t-45 110q-44 44 -109 44q-63 0 -107 -44q-42 -44 -42 -110t42 -110q44 -44 107 -44z" />
+    <glyph glyph-name="scommaaccent" unicode="&#x219;" horiz-adv-x="441" 
+d="M99 -193l51 145h137l-97 -145h-91zM33 41v118q73 -67 187 -67q85 0 85 48q0 24 -32 41q-19 10 -32 15q-30 13 -85 35q-107 47 -107 142q0 68 51 107q52 39 130 39q83 0 136 -34v-109q-61 38 -131 38q-73 0 -73 -43q0 -20 20 -32q3 -1 9 -4.5t12 -6.5q24 -8 44 -16
+q32 -12 66 -28q21 -10 52 -31q56 -38 56 -111q0 -63 -50 -110q-49 -45 -153 -45q-106 0 -185 54z" />
+    <hkern u1="&#x20;" u2="&#x103;" k="10" />
+    <hkern u1="&#x20;" u2="&#xe2;" k="10" />
+    <hkern u1="&#xee;" u2="&#xee;" k="-65" />
+  </font>
+</defs></svg>

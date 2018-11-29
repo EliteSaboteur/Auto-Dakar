@@ -1,14 +1,29 @@
-
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
+
+// ========= IMPORT CUSTOM BRAND STYLES =========
+
+// MIXINS
+@import 'mixins/widths',
+        'mixins/spacing',
+        'mixins/shadow';
+
+// BASE 
+@import 'base/variables',
+        'base/fonts',
+        'base/reset',
+        'base/typography',
+        'base/colors',
+        'base/buttons',
+        'base/forms',
+        'base/grid',
+        'base/position',
+        'base/elements',
+        'base/cards',
+        'base/colors';
+
+// COMPONENTS
+@import 'components/floating-buttons',
+        'components/hero',
+        'components/menu';

@@ -11,7 +11,11 @@ const mix = require('laravel-mix');
  |
  */
 
+ // copy fonts to public
+mix.copyDirectory('resources/fonts', 'public/fonts');
+
 mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/custom.js', 'public/js');
+    .js('resources/js/custom.js', 'public/js')
+    .js('resources/js/scss.js', 'public/js');
 mix.sass('resources/sass/app.scss', 'public/css')
     .sass('resources/views/pdf/invoice.scss', '../resources/views/pdf/style.css');

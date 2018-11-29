@@ -1,0 +1,39 @@
+.da-card {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    height: auto;
+    margin-bottom: $gutter;
+    position: relative;
+    background: $white;
+    border: 1px solid #ccc;
+    .da-card-header,
+    .da-card-body,
+    .da-card-footer {
+        padding: $half-gutter;
+    }
+    .da-card-header {
+        * {
+            padding: 0;  
+        }
+    }
+    .da-card-body {
+        flex-grow: 1;
+    }
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+$card-heights: ( tall: $card-tall,
+medium: $card-medium,
+small: $card-small);
+
+@each $key,
+$height in $card-heights {
+    .da-card-#{$key} {
+        height: $height;
+    }
+}
+
