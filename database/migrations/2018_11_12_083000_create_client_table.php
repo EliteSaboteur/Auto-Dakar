@@ -26,6 +26,7 @@ class CreateClientTable extends Migration
             $table->string('cont')->nullable();
             $table->string('banca')->nullable();
 
+            $table->string('email',50)->nullable();
             $table->timestamps();
         });
     }
