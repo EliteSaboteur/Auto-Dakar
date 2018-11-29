@@ -4,10 +4,12 @@
 .cta {
     position: relative;
     display: inline-block; 
-    padding: $btn-padding;
+    padding: $cta-padding-normal;
     margin-bottom: 0;
-    font-size: $base-font-size;
-    line-height: 20px;
+    font-size: $cta-font-size;
+    font-weight: $cta-font-weight;
+    line-height: $cta-line-heihgt;
+    min-width: $cta-min-width;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -31,16 +33,21 @@
     text-decoration: none;
 
     &.cta-small {
-        padding: $btn-small-padding;
+        padding: $cta-padding-small;
         font-size: $base-font-size - 4;
+        min-width: $cta-min-width - 30;
     }
     &.cta-large {
-        padding: $btn-large-padding;
+        padding: $cta-padding-large;
         font-size: $base-font-size + 2;
+        min-width: $cta-min-width + 30;
     }
-    &:hover, &:focus {
+    &:hover {
         @include box-shadow(3);
-        transform: translateY(-2px);
+    }
+
+    &:focus {
+        @include box-shadow(2);
     }
 
     &:hover,
@@ -59,7 +66,7 @@ $buttons: ( default: $white,
 @each $key,
 $color in $buttons {
     .cta-#{$key} {
-        background: #{$color};
+        background: #{$color}; 
         color:inherit;
 
         &:hover:active {
@@ -106,7 +113,7 @@ $color in $buttons {
     border-radius: 50%;
     transform: scale(0.7);
     -webkit-transform: scale(0.7);
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(200, 200, 200, 0.5);
     opacity: 0.45;
     animation: ripple 2s forwards;
     -webkit-animation: ripple 2s forwards;
