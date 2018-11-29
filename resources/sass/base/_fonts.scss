@@ -4,7 +4,7 @@ $font-family: 'Hurme Geometric Sans 1'; // HGS=HurmeGeometricSans1
 $font-path: '../fonts/HurmeGeometricSans1-';
 
 @font-face {
-    font-family: #{$font-family};
+    font-family: '#{$font-family}';
     src: url('#{$font-path}Black.eot');
     src: url('#{$font-path}Black.eot?#iefix') format('embedded-opentype'),
         url('#{$font-path}Black.woff2') format('woff2'),
@@ -16,7 +16,7 @@ $font-path: '../fonts/HurmeGeometricSans1-';
 }
 
 @font-face {
-    font-family: #{$font-family};
+    font-family: '#{$font-family}';
     src: url('#{$font-path}LightObl.eot');
     src: url('#{$font-path}LightObl.eot?#iefix') format('embedded-opentype'),
         url('#{$font-path}LightObl.woff2') format('woff2'),
@@ -28,7 +28,7 @@ $font-path: '../fonts/HurmeGeometricSans1-';
 }
 
 @font-face {
-    font-family: #{$font-family};
+    font-family: '#{$font-family}';
     src: url('#{$font-path}SemiBoldObl.eot');
     src: url('#{$font-path}SemiBoldObl.eot?#iefix') format('embedded-opentype'),
         url('#{$font-path}SemiBoldObl.woff2') format('woff2'),
@@ -40,7 +40,7 @@ $font-path: '../fonts/HurmeGeometricSans1-';
 }
 
 @font-face {
-    font-family: #{$font-family};
+    font-family: '#{$font-family}';
     src: url('#{$font-path}SemiBold.eot');
     src: url('#{$font-path}SemiBold.eot?#iefix') format('embedded-opentype'),
         url('#{$font-path}SemiBold.woff2') format('woff2'),
@@ -52,7 +52,7 @@ $font-path: '../fonts/HurmeGeometricSans1-';
 }
 
 @font-face {
-    font-family: #{$font-family};
+    font-family: '#{$font-family}';
     src: url('#{$font-path}BoldObl.eot');
     src: url('#{$font-path}BoldObl.eot?#iefix') format('embedded-opentype'),
         url('#{$font-path}BoldObl.woff2') format('woff2'),
@@ -64,7 +64,7 @@ $font-path: '../fonts/HurmeGeometricSans1-';
 }
 
 @font-face {
-    font-family: #{$font-family};
+    font-family: '#{$font-family}';
     src: url('#{$font-path}Bold.eot');
     src: url('#{$font-path}Bold.eot?#iefix') format('embedded-opentype'),
         url('#{$font-path}Bold.woff2') format('woff2'),
@@ -76,7 +76,7 @@ $font-path: '../fonts/HurmeGeometricSans1-';
 }
 
 @font-face {
-    font-family: #{$font-family};
+    font-family: '#{$font-family}';
     src: url('#{$font-path}Light.eot');
     src: url('#{$font-path}Light.eot?#iefix') format('embedded-opentype'),
         url('#{$font-path}Light.woff2') format('woff2'),
@@ -88,7 +88,7 @@ $font-path: '../fonts/HurmeGeometricSans1-';
 }
 
 @font-face {
-    font-family: #{$font-family};
+    font-family: '#{$font-family}';
     src: url('#{$font-path}BlackObl.eot');
     src: url('#{$font-path}BlackObl.eot?#iefix') format('embedded-opentype'),
         url('#{$font-path}BlackObl.woff2') format('woff2'),
@@ -100,7 +100,7 @@ $font-path: '../fonts/HurmeGeometricSans1-';
 }
 
 @font-face {
-    font-family: #{$font-family};
+    font-family: '#{$font-family}';
     src: url('#{$font-path}RegularObl.eot');
     src: url('#{$font-path}RegularObl.eot?#iefix') format('embedded-opentype'),
         url('#{$font-path}RegularObl.woff2') format('woff2'),
@@ -112,7 +112,7 @@ $font-path: '../fonts/HurmeGeometricSans1-';
 }
 
 @font-face {
-    font-family: #{$font-family};
+    font-family: '#{$font-family}';
     src: url('#{$font-path}Regular.eot');
     src: url('#{$font-path}Regular.eot?#iefix') format('embedded-opentype'),
         url('#{$font-path}Regular.woff2') format('woff2'),
