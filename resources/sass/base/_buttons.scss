@@ -20,17 +20,13 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
     text-decoration: none;
-    transition: all 0.25s ease;
     background: $white;
     color: $type;
     @include box-shadow(1);
-    font-weight: 600;
     transition: all 0.25s ease-out;
-    text-decoration: none;
     text-transform: uppercase;
 
     &.cta-small {
@@ -43,12 +39,23 @@
         font-size: $base-font-size + 2;
         min-width: $cta-min-width + 30;
     }
+
     &:hover {
         @include box-shadow(3);
+        -webkit-transform: translateY(-2px);
+        -moz-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+        -o-transform: translateY(-2px);
+        transform: translateY(-2px);
     }
 
     &:focus {
-        @include box-shadow(2);
+        @include box-shadow(1);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        transform: translateY(0px);
     }
 
     &:hover,
@@ -71,15 +78,15 @@ $color in $buttons {
         color:inherit;
 
         &:hover:active {
-            box-shadow: 0px 0px 0px 4px rgba( $color, 0.4);
+            box-shadow: 0px 0px 0px 4px rgba( $color, 0.6);
         }
         &:focus {
-            background: darken($color, 5%);
+            background: darken($color, 10%);
         }
     }
 }
 
-.cta-accent {
+.cta-accent, .cta-primary {
     color: $white;
     &:hover,
     &:focus,
@@ -90,7 +97,7 @@ $color in $buttons {
 
 .cta-default {
     &:hover:active {
-        box-shadow: 0px 0px 0px 4px rgba( $black, 0.2);
+        box-shadow: 0px 0px 0px 4px rgba( $black, 0.4);
     }
 }
 
