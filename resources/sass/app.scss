@@ -5,7 +5,8 @@
 // ========= IMPORT CUSTOM BRAND STYLES =========
 
 // MIXINS
-@import 'mixins/widths',
+@import 'mixins/foundationMQ',
+        'mixins/widths',
         'mixins/spacing',
         'mixins/shadow';
 
@@ -26,4 +27,5 @@
 // COMPONENTS
 @import 'components/floating-buttons',
         'components/hero',
-        'components/menu';
+        'components/menu',
+        'components/dashboard';

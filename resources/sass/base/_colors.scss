@@ -5,9 +5,10 @@ $colors: (
     primary: $primary,
     accent: $accent,
     light: $white,
-    dark: $black,
+    dark: $dark,
+    black: $black,
     type: $type,
-    light-grey: $light-background
+    light-grey: $light-grey
     );
 
 @each $key,

@@ -7,7 +7,10 @@
     margin-bottom: $gutter;
     position: relative;
     background: $white;
-    border: 1px solid #ccc;
+    border-radius: 4px;
+    @include box-shadow(1);
+    overflow: hidden;
+
     .da-card-header,
     .da-card-body,
     .da-card-footer {
