@@ -10,9 +10,9 @@ $cta-font-size:                     14px;
 $cta-font-weight:                   600;                   
 $cta-line-heihgt:                   20px;                   
 $cta-min-width:                     120px;    
-$cta-padding-small:                 7px 15px;               
-$cta-padding-normal:                10px 20px;               
-$cta-padding-large:                 15px 30px;               
+$cta-padding-small:                 6px 15px;               
+$cta-padding-normal:                9px 20px;               
+$cta-padding-large:                 14px 30px;               
 
 $paragraph:                         $base-font-size;
 $heading1:                          40px;
@@ -52,7 +52,7 @@ $type:                              #6a6a6a;
 $float-btn-color:                   $type;
 
 
-$input-border-color:                lighten($dark, 30%);
+$input-border-color:                lighten($dark, 40%);
 
 
 $error:                             #B81616; 

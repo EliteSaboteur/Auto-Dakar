@@ -83,6 +83,7 @@ $color in $buttons {
         }
         &:focus {
             background: darken($color, 10%);
+            box-shadow: 0px 0px 0px 4px rgba( $color, 0.6);
         }
     }
 }
@@ -97,7 +98,7 @@ $color in $buttons {
 }
 
 .cta-default {
-    &:hover:active {
+    &:hover:active, &:focus {
         box-shadow: 0px 0px 0px 4px rgba( $black, 0.4);
     }
 }

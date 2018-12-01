@@ -1,7 +1,5 @@
 $check-size: 28px;
 
-
-
 .form-check {
     position: relative;
     padding: 0;
@@ -156,15 +154,153 @@ $check-size: 28px;
     }
 }
 
-.form-control:focus {
+.form-control {
     color: $dark;
     background-color: #fff;
-    border-color: $dark;
+    border-color: $input-border-color;
     outline: 0;
-    -webkit-box-shadow: 0 0 0 0.2rem rgba($dark, 0.15);
-    box-shadow: 0 0 0 0.2rem rgba($dark, 0.15);
+    padding: $cta-padding-normal;
+    border-radius: 4px;
+    color: $dark;
+    height: 40px;
+
+    &:focus {
+        -webkit-box-shadow: 0 0 0 0.2rem rgba($dark, 0.15);
+        box-shadow: 0 0 0 0.2rem rgba($dark, 0.15);
+    }
+
+    &:focus:invalid {
+        -webkit-box-shadow: 0 0 0 0.2rem rgba($error, 0.15);
+        box-shadow: 0 0 0 0.2rem rgba($error, 0.15);
+    }
+
+    &:focus:valid {
+        -webkit-box-shadow: 0 0 0 0.2rem rgba($primary, 0.15);
+        box-shadow: 0 0 0 0.2rem rgba($primary, 0.15);
+    }
 }
 
+.has-float-label {
+    position: relative;
+
+    label {
+        position: absolute;
+        cursor: text;
+        font-size: rem-calc(13);
+        opacity: 1;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        top: 0px;
+        left: rem-calc(20px);
+        z-index: 3;
+        padding: 0 3px;
+        font-weight: 400;
+        transform: translateY(-50%);
+        line-height: rem-calc(20px);
+        margin-bottom: 0;
+        pointer-events: none;
+        
+        &:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            background: #fff;
+            height: 100%;
+            top: 0%;
+            left: -3px;
+            right: -3px;
+            z-index: -1
+        }
+        .error {
+            font-size: 0;
+            color: $error;
+            font-weight: 400;
+        }
+        .placeholder {
+            font-size: inherit;
+        }
+    }
+
+    .form-control::-webkit-input-placeholder {
+        opacity: 0;
+        -webkit-transition: all .2s;
+        transition: all .2s
+    }
+
+    .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+        opacity: 0;
+    }
+
+    .form-control:placeholder-shown:not(:focus)+label {
+        opacity: 1;
+        top: 1px;
+        transform: translateY(0%);
+        font-weight: 400;
+        font-size: rem-calc(16);
+        left: rem-calc(20px);
+        line-height: rem-calc(38px);
+        color: $dark;
+        .placeholder {
+            color: $dark;
+        }
+    } 
+    .form-control:invalid {
+        border-color: $error;
+    }
+
+    .form-control::placeholder-shown:valid {
+        border-color: $primary;
+    }
+
+    .form-control:invalid+label {
+        .placeholder {
+            font-size: 0;
+        }
+        .error {
+            font-size: inherit;
+        }
+    } 
+
+    .form-control:valid+label {
+        .placeholder {
+            color: $primary;
+        }
+    } 
+
+    .form-control::-moz-placeholder,
+    .form-control:-ms-input-placeholder,
+    .form-control:-moz-placeholder,
+    .form-control::-webkit-input-placeholder {
+        color: transparent!important;
+    }
+}
+
+
+.input-group {
+
+    .has-float-label {
+        display: table-cell;
+
+        &:not(:last-child) .form-control {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        &:not(:first-child) .form-control {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            margin-left: -1px;
+        }
+        .form-control {
+            border-radius: 4px;
+        }
+    }
+}
+
+textarea.form-control {
+    min-width: 100%;
+    max-width: 100%;
+}
 
 
 

@@ -68,5 +68,49 @@
     </div>
 
     <div class="divider margin-bottom-30"></div>
+    
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="da-card">
+                <div class="da-card-header">
+                    <h4 class="da-card-title">Inputs & selects</h4>
+                </div>
+                <div class="da-card-body">
+                    <form action="">
+                        <div class="form-group has-float-label">
+                            <input type="email" class="form-control" id="inputTypeText" aria-describedby="emailHelp" placeholder="&nbsp;">
+                            <label for="inputTypeText">
+                                <span class="placeholder">I'm an input type text</span>
+                                <span class="error">Acest camp nu este completat corect</span>
+                            </label>
+                            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                    </form>
+                </div>
+                <div class="da-card-footer">
+                    <div class="text-right">
+                        <a href="#!" data-ripple class="cta cta-accent">Submit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+        <div class="da-card">
+                <div class="da-card-header">
+                    <h4 class="da-card-title">Checkboxes and other form fields</h4>
+                </div>
+                <div class="da-card-body">
+                    <form action="">
+                        
+                    </form>
+                </div>
+                <div class="da-card-footer">
+                    <div class="text-right">
+                        <a href="#!" data-ripple class="cta cta-accent">Submit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection
