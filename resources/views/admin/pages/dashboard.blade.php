@@ -80,9 +80,10 @@
                         <div class="form-group has-float-label">
                             <input type="email" class="form-control" id="inputTypeText" aria-describedby="emailHelp" placeholder="&nbsp;">
                             <label for="inputTypeText">
-                                <span class="placeholder">I'm an input type text</span>
-                                <span class="error">Acest camp nu este completat corect</span>
+                                <span class="placeholder">Adresa de email</span>
+                                <span class="error">Adresa introdusa nu este valida</span>
                             </label>
+                            <span class="material-icons icon">person</span>
                             <small class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                     </form>

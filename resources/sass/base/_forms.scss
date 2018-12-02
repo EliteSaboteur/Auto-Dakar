@@ -163,20 +163,22 @@ $check-size: 28px;
     border-radius: 4px;
     color: $dark;
     height: 40px;
+    box-shadow: inset 0px 0px 0px 100px $white;
 
     &:focus {
-        -webkit-box-shadow: 0 0 0 0.2rem rgba($dark, 0.15);
-        box-shadow: 0 0 0 0.2rem rgba($dark, 0.15);
+        -webkit-box-shadow: 0 0 0 4px rgba($dark, 0.15), inset 0px 0px 0px 100px $white;
+        box-shadow: 0 0 0 4px rgba($dark, 0.15), inset 0px 0px 0px 100px $white;
+        border-color: $dark;
     }
 
     &:focus:invalid {
-        -webkit-box-shadow: 0 0 0 0.2rem rgba($error, 0.15);
-        box-shadow: 0 0 0 0.2rem rgba($error, 0.15);
+        -webkit-box-shadow: 0 0 0 4px rgba($error, 0.15), inset 0px 0px 0px 100px $white;
+        box-shadow: 0 0 0 4px rgba($error, 0.15), inset 0px 0px 0px 100px $white;
     }
 
     &:focus:valid {
-        -webkit-box-shadow: 0 0 0 0.2rem rgba($primary, 0.15);
-        box-shadow: 0 0 0 0.2rem rgba($primary, 0.15);
+        -webkit-box-shadow: 0 0 0 4px rgba($primary, 0.15), inset 0px 0px 0px 100px $white;
+        box-shadow: 0 0 0 4px rgba($primary, 0.15), inset 0px 0px 0px 100px $white;
     }
 }
 
@@ -186,7 +188,7 @@ $check-size: 28px;
     label {
         position: absolute;
         cursor: text;
-        font-size: rem-calc(13);
+        font-size: rem-calc(14);
         opacity: 1;
         -webkit-transition: all .2s;
         transition: all .2s;
@@ -194,11 +196,12 @@ $check-size: 28px;
         left: rem-calc(20px);
         z-index: 3;
         padding: 0 3px;
-        font-weight: 400;
+        font-weight: 600;
         transform: translateY(-50%);
         line-height: rem-calc(20px);
         margin-bottom: 0;
         pointer-events: none;
+
         
         &:after {
             content: " ";
@@ -206,15 +209,13 @@ $check-size: 28px;
             position: absolute;
             background: #fff;
             height: 100%;
-            top: 0%;
-            left: -3px;
+            top: 0px;
+            left: -3px; 
             right: -3px;
-            z-index: -1
+            z-index: -1;
         }
         .error {
             font-size: 0;
-            color: $error;
-            font-weight: 400;
         }
         .placeholder {
             font-size: inherit;
@@ -231,7 +232,7 @@ $check-size: 28px;
         opacity: 0;
     }
 
-    .form-control:placeholder-shown:not(:focus)+label {
+    .form-control:placeholder-shown:not(:focus) + label {
         opacity: 1;
         top: 1px;
         transform: translateY(0%);
@@ -239,39 +240,123 @@ $check-size: 28px;
         font-size: rem-calc(16);
         left: rem-calc(20px);
         line-height: rem-calc(38px);
+        height: rem-calc(38px);
         color: $dark;
-        .placeholder {
-            color: $dark;
-        }
     } 
-    .form-control:invalid {
-        border-color: $error;
+
+// STATES AND COLORS
+    .form-control {
+
+        // input is not focused, not valid nor invalid
+        //
+
+        // input is focused, valid or invalid
+        &:focus {
+            &:not(:placeholder-shown) {
+                color: $dark!important;
+                border-color: $dark!important;
+
+                + label {
+
+                    color: $dark;
+
+                    .placeholder {
+                        font-size: inherit;
+                    }
+
+                    .error {
+                        font-size: 0;
+                    }
+                }
+
+                ~ .icon {
+                    @include material-icon(edit);
+                    opacity: 0.3;
+                }
+            }
+        }
+
+        // input is not focused and invalid
+
+        &:not(:focus) {
+            &:invalid {
+                color: $error;
+                border-color: $error;
+
+                + label {
+                    color: $error;
+
+                    .error {
+                        font-size: inherit;
+                        margin-left: 5px;
+                    }
+                }
+
+                ~ .icon {
+                    color: $error;
+                    @include material-icon(error_outline);
+                }
+            }
+        }
+
+        // input is not focused and valid
+
+        &:not(:focus) {
+
+            &:placeholder-shown:valid {
+                border-color: $input-border-color;
+
+                + label {
+                    color: $dark;
+                }
+
+                ~ .icon {
+                    color: $dark;
+                    @include material-icon(person);
+                }
+            }
+
+            &:valid {
+                border-color: $input-border-color;
+
+                + label {
+                    color: $primary;
+                }
+
+                ~ .icon {
+                    color: $primary;
+                    @include material-icon(done);
+                }
+            }
+        }
     }
-
-    .form-control::placeholder-shown:valid {
-        border-color: $primary;
-    }
-
-    .form-control:invalid+label {
-        .placeholder {
-            font-size: 0;
-        }
-        .error {
-            font-size: inherit;
-        }
-    } 
-
-    .form-control:valid+label {
-        .placeholder {
-            color: $primary;
-        }
-    } 
 
     .form-control::-moz-placeholder,
     .form-control:-ms-input-placeholder,
     .form-control:-moz-placeholder,
     .form-control::-webkit-input-placeholder {
         color: transparent!important;
+    }
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: rem-calc($gutter / 2);
+
+    .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        line-height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0;
+
+        &:before {
+            font-size: $base-font-size * 1.5;
+        }
     }
 }
 
