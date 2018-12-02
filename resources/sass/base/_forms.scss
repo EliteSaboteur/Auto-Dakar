@@ -6,7 +6,7 @@ $check-size: 28px;
     margin-bottom: 15px;
 
     input {
-        position: absolute;
+        position: absolute!important;
         opacity: 0;
         top: 0;
         left: 0;
@@ -39,7 +39,7 @@ $check-size: 28px;
             top: -1px;
             background: $primary;
             box-shadow: inset 0px 0px 0px $check-size #fff;
-            transition: all 0.3s ease;
+            transition: all 0.2s linear;
             color: #fff;
             font-size: 24px;
         }
@@ -57,6 +57,7 @@ $check-size: 28px;
             top: -1px;
             background: $primary;
             opacity: 0;
+            transition: all 0.2s linear;
         }
 
         &:before,
@@ -68,6 +69,7 @@ $check-size: 28px;
             text-decoration: none;
             font-weight: bold;
             color: inherit;
+            
             &:hover {
                 text-decoration: underline;
             }
@@ -90,7 +92,7 @@ $check-size: 28px;
         border-color: $primary;
     }
     input:checked+label:after, label.checked:after {
-        animation: check-pulse 0.4s linear;
+        animation: check-pulse 0.2s linear;
     }
 }
 
@@ -109,7 +111,7 @@ $check-size: 28px;
     }
 
     input:checked+label:after, label.checked:after {
-        animation: check-pulse 0.4s linear forwards;
+        animation: check-pulse 0.2s linear;
     }
 }
 
@@ -426,7 +428,7 @@ textarea.form-control {
         opacity: 0.7;
     }
     100% {
-        transform: scale(1.8);
+        transform: scale(2.2);
         opacity: 0;
     }
 }

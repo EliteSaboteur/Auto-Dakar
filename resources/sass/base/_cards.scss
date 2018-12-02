@@ -49,3 +49,14 @@ $height in $card-heights {
     }
 }
 
+[class*='col'] {
+
+    .da-card {
+        height: 100%;
+
+        .da-card-body {
+            flex-grow: 1;
+        }
+    }
+}
+

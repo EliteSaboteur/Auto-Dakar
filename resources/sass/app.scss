@@ -2,7 +2,6 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~material-icons/iconfont/material-icons.scss';
 
-$material-icons-font-path: '~material-icons/iconfont/';
 
 // ========= IMPORT CUSTOM BRAND STYLES =========
 
@@ -35,4 +34,5 @@ $material-icons-font-path: '~material-icons/iconfont/';
         'components/dashboard';
 
 // VENDOR
-@import 'vendor/bootstrap-select';
+@import 'vendor/bootstrap-select',
+        'vendor/date-time';

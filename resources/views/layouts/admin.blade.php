@@ -36,6 +36,7 @@
     </div>
 
 @include('includes._scripts')
+@yield ('scripts')
 </body>
 </html>
 

@@ -103,19 +103,38 @@
                             </label>
                             <span class="material-icons icon lock_outline"></span>
                         </div>
-
-                         <div class="form-group has-float-label">
-                            <select class="selectpicker form-control" id="select" title="Anul fabricarii">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                            <label for="select">
-                                <span class="placeholder">Alege o optiune</span>
-                                <span class="error">Acest camp este obligatoriu</span>
-                            </label>
-                            <span class="material-icons icon car"></span>
+                        
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group has-float-label">
+                                    <select class="selectpicker" id="select" title="Selecteaza">
+                                        <option value="audi">Audi</option>
+                                        <option value="bmw">BMW</option>
+                                        <option value="dacia">Dacia</option>
+                                        <option value="volvo">Volvo</option>
+                                    </select>
+                                    <label for="select">
+                                        <span class="placeholder">Marca</span>
+                                        <span class="error">Acest camp este obligatoriu</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group has-float-label">
+                                    <select class="selectpicker" id="select2" title="Selecteaza">
+                                        <option value="model1">Model </option>
+                                        <option value="model2">Model </option>
+                                        <option value="model3">Model </option>
+                                        <option value="model3">Model </option>
+                                    </select>
+                                    <label for="select2">
+                                        <span class="placeholder">Model</span>
+                                        <span class="error">Acest camp este obligatoriu</span>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
+
 
                         <div class="form-group has-float-label">
                             <textarea name="textarea" id="textarea" rows="3" class="form-control" placeholder="&nbsp;"></textarea>
@@ -142,26 +161,68 @@
                 </div>
                 <div class="da-card-body">
                     <form action="">
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="check1">
-                            <label class="form-check-label" for="check1">Check me out</label>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h5>Checkboxes</h5>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check1">
+                                        <label class="form-check-label" for="check1">Check me out</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group form-check">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check2">
+                                        <label class="form-check-label" for="check2">Check me out</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="check2">
-                            <label class="form-check-label" for="check2">Check me out</label>
+                        <div class="divider margin-bottom-30"></div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                            <h5>Radio buttons</h5>
+                                <div class="row">
+                                    <div class="form-group col">
+                                        <div class="form-radio">
+                                            <input type="radio" name="radio" class="form-check-input" id="radio1">
+                                            <label class="form-check-label" for="radio1">Pick me</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col">
+                                        <div class="form-radio">
+                                            <input type="radio" name="radio" class="form-check-input" id="radio2">
+                                            <label class="form-check-label" for="radio2">Or me</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col">
+                                        <div class="form-radio">
+                                            <input type="radio" name="radio" class="form-check-input" id="radio3">
+                                            <label class="form-check-label" for="radio3">Never both</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="form-group form-radio">
-                            <input type="radio" name="radio" class="form-check-input" id="radio1">
-                            <label class="form-check-label" for="radio1">Check me out</label>
-                        </div>
-                        <div class="form-group form-radio">
-                            <input type="radio" name="radio" class="form-check-input" id="radio2">
-                            <label class="form-check-label" for="radio2">Check me out</label>
+                        <div class="divider margin-bottom-30"></div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h5>Date picker</h5>
+                                <div class="form-group has-float-label">
+                                    <input type="text" id="deliveryDate" name="deliveryDate" class="form-control">
+                                    <label for="deliveryDate">
+                                        <span class="placeholder">Data estimativa a finalizarii executiei:</span>
+                                    </label>
+                                    <div id="deliveryDatePicker"></div>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
-                <div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div>
                 <div class="da-card-footer">
                     <div class="text-right">
                         <a href="#!" data-ripple class="cta cta-accent">Submit</a>
@@ -170,5 +231,37 @@
             </div>
         </div>
     </div>
-
+    @section('scripts')
+    <script src="{{ asset('js/moment.js') }}" defer></script>
+    <script src="{{ asset('js/datetimepicker.min.js') }}" defer></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#deliveryDatePicker').datetimepicker({
+                inline: true,
+                sideBySide: true,
+                stepping: 15,
+                locale: 'ro',
+                enabledHours: [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+                format: "DD MMMM YYYY HH:mm",
+                minDate: moment().add('h', 2).toDate(),
+                icons: {
+                    time: 'material-icons access_time',
+                    date: 'material-icons calendar_today',
+                    up: 'material-icons expand_less',
+                    down: 'material-icons expand_more',
+                    previous: 'material-icons chevron_left',
+                    next: 'material-icons chevron_right',
+                    today: 'material-icons refresh',
+                    clear: 'material-icons clear',
+                    close: 'material-icons clear'
+                },
+            });
+            $('#deliveryDatePicker').on('dp.change', function(event) {
+                var formatted_date = event.date.format('DD MMMM YYYY HH:mm');
+                $('#deliveryDate').val(formatted_date);
+            });
+        });
+    </script>
+    @stop
+    
 @endsection

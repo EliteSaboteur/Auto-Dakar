@@ -1,20 +1,20 @@
 $color-red-error: $error !default;
 $color-green-success: $primary;
-$color-grey-arrow: rgba(204, 204, 204, 0.2) !default;
+$color-grey-arrow: $input-border-color !default;
 
 $width-default: 100% !default; // 3 960px-grid columns
 
 $zindex-select-dropdown: 1060 !default; // must be higher than a modal background (1050)
 
 //** Placeholder text color
-$input-color-placeholder: #999 !default;
-$input-alt-color-placeholder: rgba(255, 255, 255, 0.5) !default;
+$input-color-placeholder: $dark !default;
+$input-alt-color-placeholder: $dark !default;
 
-$input-padding-y-sm: .25rem !default;
-$input-padding-x-sm: .5rem !default;
+$input-padding-y-sm: 6px !default;
+$input-padding-x-sm: 15px !default;
 
-$input-padding-y-lg: 0.5rem !default;
-$input-padding-x-lg: 1rem !default;
+$input-padding-y-lg: 14px !default;
+$input-padding-x-lg: 30px !default;
 
 // Mixins
 @mixin cursor-disabled() {
@@ -51,6 +51,7 @@ select.selectpicker {
 
   // The selectpicker button
   > .dropdown-toggle {
+    @extend .form-control;
     position: relative;
     width: 100%;
     z-index: 1;
@@ -279,9 +280,9 @@ select.selectpicker {
   }
 
   > .dropdown-menu.show {
-    width: calc(100% - 80px);
+    width: calc(100% - 40px);
+    margin-top: 20px;
     left: 50%!important;
-    @include box-shadow(2);
     transform:translateX(-50%)!important;
   }
   // The selectpicker dropdown

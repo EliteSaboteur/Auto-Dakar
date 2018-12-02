@@ -1,81 +1,3 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 47);
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ 47:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(48);
-
-
-/***/ }),
-
-/***/ 48:
-/***/ (function(module, exports) {
-
 // floating buttons
 jQuery.fn.semiCircle = function (cx, cy, radius, radiusY, startDegrees, endDegrees, length) {
     if (radiusY === undefined) radiusY = radius;
@@ -95,6 +17,7 @@ jQuery.fn.semiCircle = function (cx, cy, radius, radiusY, startDegrees, endDegre
     });
 };
 
+
 jQuery.fn.float = function (cx, cy, radius, radiusY, startDegrees, endDegrees, length, iconOff, iconOn) {
 
     $(this).on('click', function () {
@@ -112,22 +35,27 @@ jQuery.fn.float = function (cx, cy, radius, radiusY, startDegrees, endDegrees, l
             floatParent.addClass("opened").removeClass("closing");
         }
     });
-};
+}
 
 // toggle text function
 jQuery.fn.extend({
-    toggleText: function toggleText(a, b) {
+    toggleText: function (a, b) {
         var that = this;
         if (that.text() != a && that.text() != b) {
             that.text(a);
-        } else if (that.text() == a) {
+        } else
+        if (that.text() == a) {
             that.text(b);
-        } else if (that.text() == b) {
+        } else
+        if (that.text() == b) {
             that.text(a);
         }
         return this;
     }
 });
+
+
+
 
 jQuery(document).ready(function ($) {
 
@@ -153,9 +81,11 @@ jQuery(document).ready(function ($) {
         }
     });
 
+
+
     // toggle menu function
     function togglemenu(toggleBtn) {
-        $('.menu-toggle').toggleText('⋮', '⨯');
+        $('.menu-toggle').toggleText('⋮', '⨯')
         var menu = toggleBtn.parents('.menu');
         menu.toggleClass('open');
         $('body').toggleClass('locked');
@@ -163,7 +93,8 @@ jQuery(document).ready(function ($) {
 
     //menu smooth scroll function
     $('.anchor').on('click', function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') ||
+            location.hostname == this.hostname) {
 
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -194,6 +125,7 @@ jQuery(document).ready(function ($) {
     // init floating buttons
     $('.floating-share .floating-item').semiCircle(0, 0, 0, 0, 0, 0, 0);
 
+
     //ripple effect on buttons
     $(document).on("mousedown", "[data-ripple]", function (e) {
 
@@ -210,12 +142,11 @@ jQuery(document).ready(function ($) {
             offs = $self.offset(),
             x = e.pageX - offs.left,
             y = e.pageY - offs.top,
-            dia = Math.min(this.offsetHeight, this.offsetWidth, 100),
-            // start diameter
-        $ripple = $('<div/>', {
-            class: "ripple",
-            appendTo: $self
-        });
+            dia = Math.min(this.offsetHeight, this.offsetWidth, 100), // start diameter
+            $ripple = $('<div/>', {
+                class: "ripple",
+                appendTo: $self
+            });
 
         if (!initPos || initPos === "static") {
             $self.css({
@@ -229,19 +160,16 @@ jQuery(document).ready(function ($) {
                 background: $self.data("ripple"),
                 width: dia,
                 height: dia,
-                left: x - dia / 2,
-                top: y - dia / 2
+                left: x - (dia / 2),
+                top: y - (dia / 2),
             },
             appendTo: $ripple,
             one: {
-                animationend: function animationend() {
+                animationend: function () {
                     $ripple.remove();
                 }
             }
         });
     });
+
 });
-
-/***/ })
-
-/******/ });

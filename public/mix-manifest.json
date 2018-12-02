@@ -2,6 +2,9 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/../resources/views/pdf/style.css": "/../resources/views/pdf/style.css",
-    "/js/scss.js": "/js/scss.js",
-    "/js/custom.js": "/js/custom.js"
+    "/js/custom.js": "/js/custom.js",
+    "/js/datetimepicker.min.js": "/js/datetimepicker.min.js",
+    "/js/moment.js": "/js/moment.js",
+    "/js/bootstrap-select.js": "/js/bootstrap-select.js",
+    "/js/scss.js": "/js/scss.js"
 }
