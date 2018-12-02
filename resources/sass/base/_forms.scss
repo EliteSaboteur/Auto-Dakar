@@ -1,9 +1,10 @@
 $check-size: 28px;
 
-.form-check {
+.form-check, .form-radio {
     position: relative;
     padding: 0;
     margin-bottom: 15px;
+
     input {
         position: absolute;
         opacity: 0;
@@ -16,18 +17,20 @@ $check-size: 28px;
         z-index: 10;
         pointer-events: none;
     }
+
     label {
         display: block;
         padding-left: 40px;
         line-height: $check-size;
         user-select: none;
         cursor: pointer;
+
         &:before {
-            content: "√";
+            content: '';
             display: flex;
             width: $check-size;
             height: $check-size;
-            border: 1px solid $dark;
+            border: 1px solid $input-border-color;
             justify-content: center;
             align-items: center;
             border-radius: 4px;
@@ -38,27 +41,29 @@ $check-size: 28px;
             box-shadow: inset 0px 0px 0px $check-size #fff;
             transition: all 0.3s ease;
             color: #fff;
-            font-size: 12px;
+            font-size: 24px;
         }
+
         &:after {
             content: "";
             display: flex;
             width: $check-size;
             height: $check-size;
-            border: 1px solid $dark;
             justify-content: center;
             align-items: center;
-            border-radius: 50%;
+            border-radius: 4px;
             position: absolute;
             left: -1px;
             top: -1px;
             background: $primary;
             opacity: 0;
         }
+
         &:before,
         &:after {
             cursor: pointer;
         }
+
         a {
             text-decoration: none;
             font-weight: bold;
@@ -68,91 +73,46 @@ $check-size: 28px;
             }
         }
     }
+}
+
+.form-check {
+    
+    label {
+
+        &:before {
+            @extend .material-icons;
+            content: "done";
+        }
+    }
+
     input:checked+label:before, label.checked:before {
         box-shadow: inset 0px 0px 0px 0px #fff;
         border-color: $primary;
     }
     input:checked+label:after, label.checked:after {
-        animation: pulse 0.4s linear;
+        animation: check-pulse 0.4s linear;
     }
 }
 
 .form-radio {
-    position: relative;
-    padding: 0;
-    margin-bottom: 15px;
-    input {
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        width: $check-size;
-        height: $check-size;
-        display: block;
-        padding: 0;
-        z-index: 10;
-        pointer-events: none;
-    }
+
     label {
-        display: block;
-        padding-left: 40px;
-        line-height: $check-size;
-        user-select: none;
-        cursor: pointer;
-        &:before {
-            content: "";
-            display: flex;
-            width: $check-size;
-            height: $check-size;
-            border: 1px solid $dark;
-            justify-content: center;
-            align-items: center;
+
+        &:before, &:after {
             border-radius: 50%;
-            position: absolute;
-            left: -1px;
-            top: -1px;
-            background: $primary;
-            box-shadow: inset 0px 0px 0px $check-size #fff;
-            transition: all 0.3s ease;
-            color: #fff;
-            font-size: 12px;
-        }
-        &:after {
-            content: "";
-            display: flex;
-            width: $check-size;
-            height: $check-size;
-            border: 1px solid $dark;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            position: absolute;
-            left: -1px;
-            top: -1px;
-            background: $primary;
-            opacity: 0;
-        }
-        &:before,
-        &:after {
-            cursor: pointer;
-        }
-        a {
-            text-decoration: none;
-            font-weight: bold;
-            color: inherit;
-            &:hover {
-                text-decoration: underline;
-            }
         }
     }
+
     input:checked+label:before, label.checked:before {
         box-shadow: inset 0px 0px 0px 6px #fff;
         border-color: $primary;
     }
+
     input:checked+label:after, label.checked:after {
-        animation: pulse 0.4s linear;
+        animation: check-pulse 0.4s linear forwards;
     }
 }
+
 
 .form-control {
     color: $dark;
@@ -185,7 +145,7 @@ $check-size: 28px;
 .has-float-label {
     position: relative;
 
-    label {
+    .form-control.valid + label, .form-control.invalid + label, label {
         position: absolute;
         cursor: text;
         font-size: rem-calc(14);
@@ -202,7 +162,6 @@ $check-size: 28px;
         margin-bottom: 0;
         pointer-events: none;
 
-        
         &:after {
             content: " ";
             display: block;
@@ -214,9 +173,11 @@ $check-size: 28px;
             right: -3px;
             z-index: -1;
         }
+
         .error {
             font-size: 0;
         }
+
         .placeholder {
             font-size: inherit;
         }
@@ -232,7 +193,7 @@ $check-size: 28px;
         opacity: 0;
     }
 
-    .form-control:placeholder-shown:not(:focus) + label {
+    .form-control:placeholder-shown:not(:focus):not(.invalid):not(.valid) + label {
         opacity: 1;
         top: 1px;
         transform: translateY(0%);
@@ -252,6 +213,16 @@ $check-size: 28px;
 
         // input is focused, valid or invalid
         &:focus {
+
+            ~ .icon {
+
+                &:before {
+                    content: "edit";
+                }
+
+                opacity: 0.3;
+            }
+
             &:not(:placeholder-shown) {
                 color: $dark!important;
                 border-color: $dark!important;
@@ -268,18 +239,32 @@ $check-size: 28px;
                         font-size: 0;
                     }
                 }
-
-                ~ .icon {
-                    @include material-icon(edit);
-                    opacity: 0.3;
-                }
             }
         }
 
         // input is not focused and invalid
 
         &:not(:focus) {
-            &:invalid {
+
+            &:invalid:placeholder-shown, &:placeholder-shown {
+                color: $dark;
+                border-color: $input-border-color;
+
+                + label {
+                    color: $dark;
+
+                    .error {
+                        font-size: 0;
+                        margin-left: 0px;
+                    }
+
+                    .placeholder {
+                        font-size: inherit;
+                    }
+                }
+            }
+
+            &:invalid:not(:placeholder-shown) {
                 color: $error;
                 border-color: $error;
 
@@ -290,11 +275,45 @@ $check-size: 28px;
                         font-size: inherit;
                         margin-left: 5px;
                     }
+
+                    .placeholder {
+                        font-size: 0;
+                    }
                 }
 
                 ~ .icon {
                     color: $error;
-                    @include material-icon(error_outline);
+
+                    &:before {
+                        content: 'error_outline'
+                    }
+                }
+            }
+
+        }
+
+        &.invalid, &.invalid:placeholder-shown:not(:focus) {
+            color: $error!important;
+            border-color: $error!important;
+
+            + label {
+                color: $error;
+
+                .error {
+                    font-size: inherit;
+                    margin-left: 5px;
+                }
+
+                .placeholder {
+                    font-size: 0;
+                }
+            }
+
+            ~ .icon {
+                color: $error;
+
+                &:before {
+                    content: 'error_outline'
                 }
             }
         }
@@ -309,14 +328,9 @@ $check-size: 28px;
                 + label {
                     color: $dark;
                 }
-
-                ~ .icon {
-                    color: $dark;
-                    @include material-icon(person);
-                }
             }
 
-            &:valid {
+            &:not(:placeholder-shown):valid {
                 border-color: $input-border-color;
 
                 + label {
@@ -325,7 +339,26 @@ $check-size: 28px;
 
                 ~ .icon {
                     color: $primary;
-                    @include material-icon(done);
+
+                    &:before {
+                        content: 'done';
+                    }
+                }
+            }
+        }
+
+        &.valid {
+            border-color: $input-border-color!important;
+
+            + label {
+                color: $primary!important;
+            }
+
+            ~ .icon {
+                color: $primary;
+
+                &:before {
+                    content: 'done';
                 }
             }
         }
@@ -352,14 +385,9 @@ $check-size: 28px;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 0;
-
-        &:before {
-            font-size: $base-font-size * 1.5;
-        }
+        color: $input-border-color;
     }
 }
-
 
 .input-group {
 
@@ -385,18 +413,17 @@ $check-size: 28px;
 textarea.form-control {
     min-width: 100%;
     max-width: 100%;
+    min-height: rem-calc(80px);
 }
 
-
-
-@keyframes pulse {
+@keyframes check-pulse {
     0% {
         transform: scale(1);
         opacity: 0;
     }
     40% {
         transform: scale(1.4);
-        opacity: 0.4;
+        opacity: 0.7;
     }
     100% {
         transform: scale(1.8);

@@ -78,20 +78,60 @@
                 <div class="da-card-body">
                     <form action="">
                         <div class="form-group has-float-label">
-                            <input type="email" class="form-control" id="inputTypeText" aria-describedby="emailHelp" placeholder="&nbsp;">
+                            <input type="text" class="form-control" id="inputTypeText" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
                             <label for="inputTypeText">
+                                <span class="placeholder">Utilizator</span>
+                                <span class="error">Numele trebuie sa aiba minim 10 caractere</span>
+                            </label>
+                            <span class="material-icons icon perm_identity"></span>
+                        </div>
+
+                        <div class="form-group has-float-label">
+                            <input type="email" class="form-control" id="inputTypeEmail" aria-describedby="emailHelp" required="required" placeholder="&nbsp;">
+                            <label for="inputTypeEmail">
                                 <span class="placeholder">Adresa de email</span>
                                 <span class="error">Adresa introdusa nu este valida</span>
                             </label>
-                            <span class="material-icons icon">person</span>
-                            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <span class="material-icons icon mail_outline"></span>
+                        </div>
+
+                        <div class="form-group has-float-label">
+                            <input type="password" class="form-control" id="inputTypePassword" aria-describedby="emailHelp" pattern=".{10,}" required="required" placeholder="&nbsp;">
+                            <label for="inputTypePassword">
+                                <span class="placeholder">Parola</span>
+                                <span class="error">Parola nu este suficient de puternica</span>
+                            </label>
+                            <span class="material-icons icon lock_outline"></span>
+                        </div>
+
+                         <div class="form-group has-float-label">
+                            <select class="selectpicker form-control" id="select" title="Anul fabricarii">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            <label for="select">
+                                <span class="placeholder">Alege o optiune</span>
+                                <span class="error">Acest camp este obligatoriu</span>
+                            </label>
+                            <span class="material-icons icon car"></span>
+                        </div>
+
+                        <div class="form-group has-float-label">
+                            <textarea name="textarea" id="textarea" rows="3" class="form-control" placeholder="&nbsp;"></textarea>
+                            <label for="textarea">
+                                <span class="placeholder">Detaliile comenzii</span>
+                                <span class="error">Mesajul nu poate fi gol</span>
+                            </label>
+                            <span class="material-icons icon message"></span>
+                        </div>
+
+                        <div class="form-group margin-all-0">
+                            <div class="text-right">
+                                <button type="submit" class="cta cta-accent" data-ripple>Trimite</button>    
+                            </div>
                         </div>
                     </form>
-                </div>
-                <div class="da-card-footer">
-                    <div class="text-right">
-                        <a href="#!" data-ripple class="cta cta-accent">Submit</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -102,9 +142,26 @@
                 </div>
                 <div class="da-card-body">
                     <form action="">
-                        
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="check1">
+                            <label class="form-check-label" for="check1">Check me out</label>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="check2">
+                            <label class="form-check-label" for="check2">Check me out</label>
+                        </div>
+
+                        <div class="form-group form-radio">
+                            <input type="radio" name="radio" class="form-check-input" id="radio1">
+                            <label class="form-check-label" for="radio1">Check me out</label>
+                        </div>
+                        <div class="form-group form-radio">
+                            <input type="radio" name="radio" class="form-check-input" id="radio2">
+                            <label class="form-check-label" for="radio2">Check me out</label>
+                        </div>
                     </form>
                 </div>
+                <div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div><div class="divider margin-bottom-30"></div>
                 <div class="da-card-footer">
                     <div class="text-right">
                         <a href="#!" data-ripple class="cta cta-accent">Submit</a>

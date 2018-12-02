@@ -8,12 +8,14 @@ $material-icons-font-path: '~material-icons/iconfont/';
 
 // MIXINS
 @import 'mixins/foundationMQ',
+        'mixins/animate',
         'mixins/widths',
         'mixins/spacing',
         'mixins/shadow';
 
 // BASE 
 @import 'base/variables',
+        'base/material-icons',
         'base/fonts',
         'base/reset',
         'base/typography',
@@ -31,3 +33,6 @@ $material-icons-font-path: '~material-icons/iconfont/';
         'components/hero',
         'components/menu',
         'components/dashboard';
+
+// VENDOR
+@import 'vendor/bootstrap-select';
