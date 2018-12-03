@@ -18,6 +18,7 @@ class CreateAutomobilTable extends Migration
             $table->string('numar', 20);
             $table->string('marca', 30);
             $table->string('model', 30);
+            $table->string('sasiu', 50);
             $table->unsignedSmallInteger('an');
             $table->timestamps();
         });

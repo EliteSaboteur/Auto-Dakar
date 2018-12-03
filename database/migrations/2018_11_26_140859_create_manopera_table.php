@@ -16,15 +16,12 @@ class CreateManoperaTable extends Migration
         Schema::create('manopera', function (Blueprint $table) {
             $table->unsignedInteger('interventie_id')->nullable();
             $table->increments('id');
-
-            $table->string('piesa');
             $table->string('actiune');
             $table->integer('tarif');
             $table->integer('ore');
             $table->timestamps();
             //belongs to
             $table->foreign('interventie_id')->references('id')->on('interventie');
-
         });
     }
 
