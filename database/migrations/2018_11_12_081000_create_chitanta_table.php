@@ -15,7 +15,6 @@ class CreateChitantaTable extends Migration
     {
         Schema::create('chitanta', function (Blueprint $table) {
             $table->increments('id')->nullable();
-            $table->integer('counter_chitanta')->nullable();
             $table->integer('nr_chitanta')->nullable();
             $table->timestamp('data_eliberare')->nullable();
             $table->timestamps();

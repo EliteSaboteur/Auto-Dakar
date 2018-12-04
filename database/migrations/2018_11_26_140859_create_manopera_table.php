@@ -18,7 +18,7 @@ class CreateManoperaTable extends Migration
             $table->increments('id');
             $table->string('actiune');
             $table->integer('tarif');
-            $table->integer('ore');
+            $table->double('ore');
             $table->timestamps();
             //belongs to
             $table->foreign('interventie_id')->references('id')->on('interventie');

@@ -15,7 +15,6 @@ class CreateFacturaTable extends Migration
     {
         Schema::create('factura', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('counter_factura');
             $table->string('serie_factura');
             $table->integer('nr_factura');
             $table->date('data_eliberare');
