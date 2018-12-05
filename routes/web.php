@@ -18,7 +18,21 @@ Route::get('/contact', 'Main\ContactController@index');
 Route::get('/pdf', 'Admin\PdfController@index');
 
 Route::view('/dashboard', 'admin.pages.dashboard');
+Route::get('/admin', 'Admin\AdminController@index')->name('admin');
 
 Auth::routes();
+//
+//Route::get('/dashboard', '')->name('dashboard');
+//Route::get('/add', '')->name('add');
+//Route::get('/interventions', '')->name('interventions');
+//Route::get('/statistics', '')->name('statistics');
+//
+//Route::get('/intervention', '')->name('intervention');
+//Route::get('/estimativ', '')->name('estimativ');
+//Route::get('/estimativ-view', '')->name('estimativ-view');
+//Route::get('/deviz', '')->name('deviz');
+//Route::get('/factura', '')->name('factura');
+//Route::get('/chitanta', '')->name('chitanta');
 
-Route::get('/admin', 'Admin\AdminController@index')->name('admin');
+
+
