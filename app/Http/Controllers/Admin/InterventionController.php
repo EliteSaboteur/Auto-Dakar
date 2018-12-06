@@ -8,6 +8,15 @@ use App\Http\Controllers\Controller;
 class InterventionController extends Controller
 {
     /**
+     * Display a listing of the resource to user.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showToUser()
+    {
+        //
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
