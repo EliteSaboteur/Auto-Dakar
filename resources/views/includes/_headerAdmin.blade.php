@@ -5,21 +5,33 @@
  * Date: 10/29/2018
  * Time: 1:21 PM
  */?>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Admin</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="/">Site <span class="sr-only">(current)</span></a>
-            {{--<a class="nav-item nav-link" href="/dashboard">Dashboard</a>--}}
-            <a class="nav-item nav-link" href="/intervention/create">Adauga Interventie</a>
-            <a class="nav-item nav-link" href="/intervention">Interventii</a>
-            <a class="nav-item nav-link" href="/statistics">Statistici</a>
-            <a class="nav-item nav-link" href="/components">Components</a>
 
-            <a class="nav-item nav-link" href="/pdf" target="_blank">PDF</a>
-        </div>
+        <!-- Admin navbar -->
+<div class="admin-nav">
+    <button class="navbar-toggler" type="button" data-toggle="collapse"><span class="navbar-toggler-icon">X</span></button>
+    <div class="admin-nav-header">
+        <span class="admin-user">Admin</span>
     </div>
-</nav>
+    <div class="admin-nav-body">
+        <ul class="nav-items">
+            <li class="nav-item">
+                <a class="nav-link active" href="/">Inapoi in Site <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/new-automobil">Adauga Automobil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/current-interventions">Interventii Curente</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/old-interventions">Istoric Interventii</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/pdf" target="_blank">PDF</a>
+            </li>
+        </ul>
+    </div>
+    <div class="admin-nav-footer">
+        <a class="nav-item nav-link" href="/">Logout</a>
+    </div>
+</div>

@@ -10,178 +10,258 @@
     Dashboard
 @stop
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <div class="da-card">
-                    <div class="da-card-header">
-                        <h2>Typography - explained</h2>
-                    </div>
-                    <div class="da-card-body">
-                        <p>Entire typography is fluid. This means that it automatically changes font-size basesd on device viewport width</p>
-                        <br>
-                        <br>
-                        <blockquote>
-                            The beauty of type lies in its utility; <em>Prettiness</em> without readability serves neither author <em>nor</em> reader.
-                            <span>James Felici</span>
-                        </blockquote>
 
-                        <small>Heading 1</small>
-                        <h1>The quick brown fox jumps over the lazy dog</h1>
-                        <hr>
-                        <small>Heading 2</small>
-                        <h2>The quick brown fox jumps over the lazy dog</h2>
-                        <hr>
-                        <small>Heading 3</small>
-                        <h3>The quick brown fox jumps over the lazy dog</h3>
-                        <hr>
-                        <small>Heading 4</small>
-                        <h4>The quick brown fox jumps over the lazy dog</h4>
-                        <hr>
-                        <small>Heading 5</small>
-                        <h5>The quick brown fox jumps over the lazy dog</h5>
-                        <hr>
-                        <small>Heading 6</small>
-                        <h6>The quick brown fox jumps over the lazy dog</h6>
-                        <hr>
-                        <small>Paragraph</small>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis risus tincidunt, iaculis risus ac, feugiat nulla. Nulla lobortis purus maximus turpis porta, et consequat erat aliquam. Vestibulum imperdiet, sapien at dictum cursus, elit mi volutpat arcu, non ornare orci turpis lobortis libero. In sollicitudin nisi sit amet iaculis egestas. In vehicula cursus mattis. Duis ullamcorper pulvinar urna vel egestas. Duis in dapibus lectus. Phasellus fringilla orci vitae risus lobortis, sed sodales dolor mollis. Donec auctor lobortis velit sed scelerisque. Sed et leo ut mauris imperdiet dignissim nec ac est. Etiam at nisi et eros malesuada mollis eget ut orci. Nunc in eleifend urna.
-                        </p>
-                        <p>
-                            Mauris eget dapibus sem, in aliquam lectus. Duis cursus, magna a lacinia auctor, mauris nibh efficitur sem, eget bibendum enim odio a sapien. Proin vehicula non felis ac ultricies. Donec consequat est ut magna aliquam convallis. Fusce elementum justo quis congue ullamcorper. Nunc sodales mi est, pharetra consequat nisl volutpat eu. Sed fringilla finibus orci quis tincidunt. Nullam ullamcorper congue velit vitae pellentesque. Donec odio diam, semper eget lectus in, vestibulum tincidunt arcu. Suspendisse ullamcorper lorem ut ipsum fermentum aliquam. Ut non dapibus metus, nec sollicitudin ipsum. Donec pharetra sem ligula, at suscipit orci facilisis a. Mauris tortor ligula, condimentum a sodales non, vestibulum a erat.
-                        </p>
-                        <hr>
-                        <blockquote>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis risus tincidunt, iaculis risus ac, feugiat nulla. Nulla lobortis purus maximus turpis porta, et consequat erat aliquam.
-                            <span>James Felici</span>
-                        </blockquote>
-                        <hr>
-                        <small>ems</small>
-                        <p>
-                            <em>This is italic font</em>
-                        </p>
-                        <hr>
-                        <small>Bold</small>
-                        <p>
-                            <strong>This is bold font</strong>
-                        </p>
-                        <hr>
-                        <small>Anchors</small>
-                        <p>
-                            <a href="#!">This is a link</a>
-                        </p>
-                    </div>
-                    <div class="da-card-footer">
-                        <a href="#!" data-ripple class="cta cta-primary">Button</a>
-                    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="da-card admin-hero da-background-dark padding-all-30">
+                <div class="da-card-header">
+                    <h1 class="da-text-light-grey text-center">AutoDakar - Dashboard</h1>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm">
-                <div class="da-card" id="buttons">
-                    <div class="da-card-header">
-                        <h2>Buttons & Links</h2>
-                    </div>
-                    <div class="da-card-body">
-                        <div class="flex-list fle-wrap flex-vertical-top">
-                            <div class="flex-item width-xs-100 width-sm-60">
-                                <ul class="flex-list flex-1 flex-wrap">
-                                    <li class="flex-item">
-                                        <p>Buttons</p>
-                                        <ul class="flex-list flex-wrap">
-                                            <li class="flex-item">
-                                                <a href="javascript:void(0)" data-ripple class="cta cta-default">Button</a>
-                                            </li>
-                                            <li class="flex-item">
-                                                <a href="javascript:void(0)" data-ripple class="cta cta-primary">Button</a>
-                                            </li>
-                                            <li class="flex-item">
-                                                <a href="javascript:void(0)" data-ripple class="cta cta-accent">Button</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="flex-item">
-                                        <p>Buttons small</p>
-                                        <ul class="flex-list flex-wrap">
-                                            <li class="flex-item">
-                                                <a href="javascript:void(0)" data-ripple class="cta cta-small cta-default">Button</a>
-                                            </li>
-                                            <li class="flex-item">
-                                                <a href="javascript:void(0)" data-ripple class="cta cta-small cta-primary">Button</a>
-                                            </li>
-                                            <li class="flex-item">
-                                                <a href="javascript:void(0)" data-ripple class="cta cta-small cta-accent">Button</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="flex-item">
-                                        <p>Buttons large</p>
-                                        <ul class="flex-list flex-wrap">
-                                            <li class="flex-item">
-                                                <a href="javascript:void(0)" data-ripple class="cta cta-large cta-default">Button</a>
-                                            </li>
-                                            <li class="flex-item">
-                                                <a href="javascript:void(0)" data-ripple class="cta cta-large cta-primary">Button</a>
-                                            </li>
-                                            <li class="flex-item">
-                                                <a href="javascript:void(0)" data-ripple class="cta cta-large cta-accent">Button</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+    </div>
+
+    <div class="divider margin-bottom-30"></div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <div class="da-card">
+                <div class="da-card-header da-background-accent">
+
+                </div>
+                <div class="da-card-body">
+                    <h3 class="text-center">Adauga automobil </h3>
+                </div>
+                <div class="da-card-footer text-center">
+                    <a href="#!" data-ripple class="cta cta-accent">Button</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+            <div class="da-card">
+                <div class="da-card-header da-background-primary">
+
+                </div>
+                <div class="da-card-body">
+                    <h3 class="text-center">Interventii curente</h3>
+                </div>
+                <div class="da-card-footer text-center">
+                    <a href="#!" data-ripple class="cta cta-primary">Button</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+            <div class="da-card">
+                <div class="da-card-header da-background-light-grey">
+
+                </div>
+                <div class="da-card-body">
+                    <h3 class="text-center">Istoric interventii</h3>
+                </div>
+                <div class="da-card-footer text-center">
+                    <a href="#!" data-ripple class="cta cta-default">Button</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider margin-bottom-30"></div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="da-card">
+                <div class="da-card-header">
+                    <h4 class="da-card-title">Inputs & selects</h4>
+                </div>
+                <div class="da-card-body">
+                    <form action="">
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="inputTypeText" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="inputTypeText">
+                                <span class="placeholder">Utilizator</span>
+                                <span class="error">Numele trebuie sa aiba minim 10 caractere</span>
+                            </label>
+                            <span class="material-icons icon perm_identity"></span>
+                        </div>
+
+                        <div class="form-group has-float-label">
+                            <input type="email" class="form-control" id="inputTypeEmail" aria-describedby="emailHelp" required="required" placeholder="&nbsp;">
+                            <label for="inputTypeEmail">
+                                <span class="placeholder">Adresa de email</span>
+                                <span class="error">Adresa introdusa nu este valida</span>
+                            </label>
+                            <span class="material-icons icon mail_outline"></span>
+                        </div>
+
+                        <div class="form-group has-float-label">
+                            <input type="password" class="form-control" id="inputTypePassword" aria-describedby="emailHelp" pattern=".{10,}" required="required" placeholder="&nbsp;">
+                            <label for="inputTypePassword">
+                                <span class="placeholder">Parola</span>
+                                <span class="error">Parola nu este suficient de puternica</span>
+                            </label>
+                            <span class="material-icons icon lock_outline"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group has-float-label">
+                                    <select class="selectpicker" id="select" title="Selecteaza">
+                                        <option value="audi">Audi</option>
+                                        <option value="bmw">BMW</option>
+                                        <option value="dacia">Dacia</option>
+                                        <option value="volvo">Volvo</option>
+                                    </select>
+                                    <label for="select">
+                                        <span class="placeholder">Marca</span>
+                                        <span class="error">Acest camp este obligatoriu</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group has-float-label">
+                                    <select class="selectpicker" id="select2" title="Selecteaza">
+                                        <option value="model1">Model </option>
+                                        <option value="model2">Model </option>
+                                        <option value="model3">Model </option>
+                                        <option value="model3">Model </option>
+                                    </select>
+                                    <label for="select2">
+                                        <span class="placeholder">Model</span>
+                                        <span class="error">Acest camp este obligatoriu</span>
+                                    </label>
+                                </div>
                             </div>
                         </div>
 
 
-                    </div>
+                        <div class="form-group has-float-label">
+                            <textarea name="textarea" id="textarea" rows="3" class="form-control" placeholder="&nbsp;"></textarea>
+                            <label for="textarea">
+                                <span class="placeholder">Detaliile comenzii</span>
+                                <span class="error">Mesajul nu poate fi gol</span>
+                            </label>
+                            <span class="material-icons icon message"></span>
+                        </div>
 
+                        <div class="form-group margin-all-0">
+                            <div class="text-right">
+                                <button type="submit" class="cta cta-accent" data-ripple>Trimite</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm">
-                <div class="da-card">
-                    <div class="da-card-header">
-                        <h1 class="da-text-primary">Forms</h1>
-                    </div>
-                    <div class="da-card-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <div class="col-sm-12 col-md-6">
+            <div class="da-card">
+                <div class="da-card-header">
+                    <h4 class="da-card-title">Checkboxes and other form fields</h4>
+                </div>
+                <div class="da-card-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h5>Checkboxes</h5>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            <div>
-                                <div class="form-radio">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
-                                        Default radio
-                                    </label>
-                                </div>
-                                <div class="form-radio">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                    <label class="form-check-label" for="exampleRadios2">
-                                        Second default radio
-                                    </label>
+                            <div class="col">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check1">
+                                        <label class="form-check-label" for="check1">Check me out</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="text-right">
-                                <button type="submit" class="cta cta-accent">Submit</button>
+                            <div class="col">
+                                <div class="form-group form-check">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check2">
+                                        <label class="form-check-label" for="check2">Check me out</label>
+                                    </div>
+                                </div>
                             </div>
-                        </form>
+                        </div>
+                        <div class="divider margin-bottom-30"></div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h5>Radio buttons</h5>
+                                <div class="row">
+                                    <div class="form-group col">
+                                        <div class="form-radio">
+                                            <input type="radio" name="radio" class="form-check-input" id="radio1">
+                                            <label class="form-check-label" for="radio1">Pick me</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col">
+                                        <div class="form-radio">
+                                            <input type="radio" name="radio" class="form-check-input" id="radio2">
+                                            <label class="form-check-label" for="radio2">Or me</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col">
+                                        <div class="form-radio">
+                                            <input type="radio" name="radio" class="form-check-input" id="radio3">
+                                            <label class="form-check-label" for="radio3">Never both</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider margin-bottom-30"></div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h5>Date picker</h5>
+                                <div class="form-group has-float-label">
+                                    <input type="text" id="deliveryDate" name="deliveryDate" class="form-control">
+                                    <label for="deliveryDate">
+                                        <span class="placeholder">Data estimativa a finalizarii executiei:</span>
+                                    </label>
+                                    <div id="deliveryDatePicker"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="da-card-footer">
+                    <div class="text-right">
+                        <a href="#!" data-ripple class="cta cta-accent">Submit</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+@section('scripts')
+    <script src="{{ asset('js/moment.js') }}" defer></script>
+    <script src="{{ asset('js/datetimepicker.min.js') }}" defer></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#deliveryDatePicker').datetimepicker({
+                inline: true,
+                sideBySide: true,
+                stepping: 15,
+                locale: 'ro',
+                enabledHours: [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+                format: "DD MMMM YYYY HH:mm",
+                minDate: moment().add('h', 2).toDate(),
+                icons: {
+                    time: 'material-icons access_time',
+                    date: 'material-icons calendar_today',
+                    up: 'material-icons expand_less',
+                    down: 'material-icons expand_more',
+                    previous: 'material-icons chevron_left',
+                    next: 'material-icons chevron_right',
+                    today: 'material-icons refresh',
+                    clear: 'material-icons clear',
+                    close: 'material-icons clear'
+                },
+            });
+            $('#deliveryDatePicker').on('dp.change', function(event) {
+                var formatted_date = event.date.format('DD MMMM YYYY HH:mm');
+                $('#deliveryDate').val(formatted_date);
+            });
+        });
+    </script>
+@stop
+
 @endsection
