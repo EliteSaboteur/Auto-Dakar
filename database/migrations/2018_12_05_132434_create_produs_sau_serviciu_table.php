@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateManoperaTable extends Migration
+class CreateProdusSauServiciuTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateManoperaTable extends Migration
      */
     public function up()
     {
-        Schema::create('manopera', function (Blueprint $table) {
+        Schema::create('produs_sau_serviciu', function (Blueprint $table) {
             $table->unsignedInteger('interventie_id')->nullable();
             $table->increments('id');
-
-            $table->string('piesa');
-            $table->string('actiune');
-            $table->integer('tarif');
-            $table->integer('ore');
+            $table->string('tip');
+            $table->string('denumire');
+            $table->integer('cantitate/tarif');
+            $table->double('pret/ore');
             $table->timestamps();
             //belongs to
             $table->foreign('interventie_id')->references('id')->on('interventie');
@@ -35,6 +34,6 @@ class CreateManoperaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('manopera');
+        Schema::dropIfExists('produs_sau_serviciu');
     }
 }

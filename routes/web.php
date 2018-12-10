@@ -10,15 +10,26 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', 'Main\HomeController@index');
 Route::get('/about', 'Main\AboutController@index');
 Route::get('/services', 'Main\ServicesController@index');
 Route::get('/contact', 'Main\ContactController@index');
-Route::get('/pdf', 'Admin\PdfController@index');
+Route::view('/components', 'admin.pages.components');
 
-Route::view('/dashboard', 'admin.pages.dashboard');
 
 Auth::routes();
+Route::middleware(['auth'])->group(function(){
+    Route::get('/pdf', 'Admin\PdfController@index');
+    Route::view('/dashboard', 'admin.pages.dashboard');
+    Route::get('/statistics', 'Admin\AdminController@statistics')->name('statistics');
+    Route::resources([
+        'estimativ' => 'Admin\EstimativController',
+        'deviz' => 'Admin\DevizController',
+        'factura' => 'Admin\FacturaController',
+        'chitanta' => 'Admin\ChitantaController',
+        'intervention' => 'Admin\InterventionController'
+    ]);
+});
 
-Route::get('/admin', 'Admin\AdminController@index')->name('admin');
+
+

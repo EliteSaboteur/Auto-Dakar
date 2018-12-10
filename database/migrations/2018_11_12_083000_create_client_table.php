@@ -17,17 +17,21 @@ class CreateClientTable extends Migration
             $table->increments('id');
 
             $table->string('denumire');
-            $table->string('telefon', 20)->nullable();
             $table->string('cnp/cui');
-            $table->string('seria')->nullable();
-            $table->string('nr/regcom');
-            $table->string('eliberat_de')->nullable();
-
-            $table->string('adresa')->nullable();
-            $table->string('cont')->nullable();
-            $table->string('banca')->nullable();
-
+            $table->longText('meta');
+            $table->string('telefon', 20)->nullable();
             $table->string('email',50)->nullable();
+
+//            $table->string('regcom')->nullable();
+//            $table->string('seria')->nullable();
+//            $table->string('numar')->nullable();
+//            $table->string('eliberat_de')->nullable();
+//            $table->string('reprezentant')->nullable();
+//
+//            $table->string('adresa')->nullable();
+//            $table->string('judet')->nullable();
+//            $table->string('cont')->nullable();
+//            $table->string('banca')->nullable();
             $table->timestamps();
         });
     }

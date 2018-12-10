@@ -14,7 +14,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+//        $this->middleware('auth');
     }
 
     /**
@@ -26,12 +26,9 @@ class AdminController extends Controller
     {
         return view('pages.home');
     }
-    public function newCar()
+
+    public function statistics()
     {
-        return view('admin.pages.newCar');
-    }
-    public function interventions()
-    {
-        return view('admin.pages.interventions');
+        return view('admin.pages.statistics');
     }
 }

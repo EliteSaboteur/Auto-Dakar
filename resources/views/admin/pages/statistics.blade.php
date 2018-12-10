@@ -1,15 +1,16 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: David
- * Date: 11/26/18
- * Time: 9:20 PM
+ * User: Intern
+ * Date: 12/10/2018
+ * Time: 9:26 AM
  */?>
 @extends('layouts.admin')
 @section('title')
-    Interventii
+    Statistici
 @stop
 @section('content')
 
 @endsection
+
 
