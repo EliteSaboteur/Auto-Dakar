@@ -55,7 +55,7 @@ class InterventionController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('admin.pages.singleIntervention',compact('id'));
     }
 
     /**
