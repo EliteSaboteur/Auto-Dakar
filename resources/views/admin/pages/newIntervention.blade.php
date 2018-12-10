@@ -28,9 +28,9 @@
                             <span class="material-icons icon directions_car"></span>
                         </div>
                         <div class="form-group has-float-label">
-                            <input type="text" class="form-control" id="serie" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
-                            <label for="serie">
-                                <span class="placeholder">Serie</span>
+                            <input type="text" class="form-control" id="serie-caroserie" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="serie-caroserie">
+                                <span class="placeholder">Serie Caroserie</span>
                                 <span class="error">Seria trebuie sa aiba minim 10 caractere!</span>
                             </label>
                             <span class="material-icons icon directions_car"></span>
@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                         </div>
-
+{{--pf--}}
                         <div class="divider margin-bottom-30"></div>
                         <div class="form-group margin-all-0">
                             <div class="text-left">
@@ -98,6 +98,46 @@
                             <span class="material-icons icon credit_card"></span>
                         </div>
                         <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="serie-ci" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="serie-ci">
+                                <span class="placeholder">Serie CI</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon credit_card"></span>
+                        </div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="numar-ci" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="numar-ci">
+                                <span class="placeholder">Numar CI</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon credit_card"></span>
+                        </div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="eliberat" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="eliberat">
+                                <span class="placeholder">Eliberat de</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon credit_card"></span>
+                        </div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="adresa" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="adresa">
+                                <span class="placeholder">Adresa</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon location_on"></span>
+                        </div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="judet" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="judet">
+                                <span class="placeholder">Judet</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon location_on"></span>
+                        </div>
+                        <div class="form-group has-float-label">
                             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
                             <label for="cnp/cui">
                                 <span class="placeholder">Email</span>
@@ -105,10 +145,101 @@
                             </label>
                             <span class="material-icons icon email"></span>
                         </div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="cont" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="cont">
+                                <span class="placeholder">Cont</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon account_balance_wallet"></span>
+                        </div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="banca" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="banca">
+                                <span class="placeholder">Banca</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon account_balance"></span>
+                        </div>
+{{--pj--}}
+                        <div class="divider margin-bottom-50"></div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="denumire" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="denumire">
+                                <span class="placeholder">Denumire Firma</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon perm_identity"></span>
+                        </div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="telefon" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="telefon">
+                                <span class="placeholder">Telefon</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon phone"></span>
+                        </div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="regcom" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="regcom">
+                                <span class="placeholder">Nr. Reg.com/an.</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon credit_card"></span>
+                        </div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="cnp/cui" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="cnp/cui">
+                                <span class="placeholder">CUI</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon credit_card"></span>
+                        </div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="adresa" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="adresa">
+                                <span class="placeholder">Sediul</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon location_on"></span>
+                        </div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="judet" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="judet">
+                                <span class="placeholder">Judet</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon location_on"></span>
+                        </div>
+                        <div class="form-group has-float-label">
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="cnp/cui">
+                                <span class="placeholder">Email</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon email"></span>
+                        </div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="cont" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="cont">
+                                <span class="placeholder">Cont</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon account_balance_wallet"></span>
+                        </div>
+                        <div class="form-group has-float-label">
+                            <input type="text" class="form-control" id="banca" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                            <label for="banca">
+                                <span class="placeholder">Banca</span>
+                                <span class="error">Acest camp e obligatoriu!</span>
+                            </label>
+                            <span class="material-icons icon account_balance"></span>
+                        </div>
+
 
                         <div class="form-group margin-all-0">
                             <div class="text-right">
-                                <button type="submit" class="cta cta-accent" data-ripple>Trimite</button>
+                                <button type="submit" class="cta cta-accent" data-ripple>Adauga</button>
                             </div>
                         </div>
                     </form>
