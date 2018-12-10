@@ -14,9 +14,10 @@
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="/">Site <span class="sr-only">(current)</span></a>
             {{--<a class="nav-item nav-link" href="/dashboard">Dashboard</a>--}}
-            <a class="nav-item nav-link" href="/new-automobil">Adauga Automobil</a>
-            <a class="nav-item nav-link" href="/current-interventions">Interventii Curente</a>
-            <a class="nav-item nav-link" href="/old-interventions">Istoric Interventii</a>
+            <a class="nav-item nav-link" href="/intervention/create">Adauga Interventie</a>
+            <a class="nav-item nav-link" href="/intervention">Interventii</a>
+            <a class="nav-item nav-link" href="/statistics">Statistici</a>
+            <a class="nav-item nav-link" href="/components">Components</a>
 
             <a class="nav-item nav-link" href="/pdf" target="_blank">PDF</a>
         </div>

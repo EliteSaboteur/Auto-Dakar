@@ -10,15 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//User Related
 Route::get('/', 'Main\HomeController@index');
 Route::get('/about', 'Main\AboutController@index');
 Route::get('/services', 'Main\ServicesController@index');
 Route::get('/contact', 'Main\ContactController@index');
-Route::get('/pdf', 'Admin\PdfController@index');
+Route::view('/components', 'admin.pages.components');
+
 
 Auth::routes();
 Route::middleware(['auth'])->group(function(){
+    Route::get('/pdf', 'Admin\PdfController@index');
     Route::view('/dashboard', 'admin.pages.dashboard');
     Route::get('/statistics', 'Admin\AdminController@statistics')->name('statistics');
     Route::resources([
@@ -29,7 +30,6 @@ Route::middleware(['auth'])->group(function(){
         'intervention' => 'Admin\InterventionController'
     ]);
 });
-//interventia la @show auth? how to fix?
 
 
 

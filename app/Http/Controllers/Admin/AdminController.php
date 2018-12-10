@@ -26,16 +26,9 @@ class AdminController extends Controller
     {
         return view('pages.home');
     }
-    public function newIntervention()
-    {
-        return view('pages.home');
-    }
-    public function allInterventions()
-    {
-        return view('pages.home');
-    }
+
     public function statistics()
     {
-        return view('pages.home');
+        return view('admin.pages.statistics');
     }
 }

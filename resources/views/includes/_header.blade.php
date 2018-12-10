@@ -16,8 +16,8 @@
             <a class="nav-item nav-link" href="/services">Services</a>
             <a class="nav-item nav-link" href="/about">About</a>
             <a class="nav-item nav-link" href="/contact">Contact</a>
-            <a class="nav-item nav-link" href="/dashboard">Dashboard</a>
-            <a class="nav-item nav-link" href="/pdf" target="_blank">PDF</a>
+            <a class="nav-item nav-link" href="/components">Components</a>
+            <a class="nav-item nav-link" href="/dashboard">Admin</a>
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->

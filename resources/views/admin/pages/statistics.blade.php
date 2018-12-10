@@ -2,13 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: Intern
- * Date: 11/26/2018
- * Time: 5:15 PM
- */ ?>
+ * Date: 12/10/2018
+ * Time: 9:26 AM
+ */?>
 @extends('layouts.admin')
 @section('title')
-    Dashboard
+    Statistici
 @stop
 @section('content')
 
 @endsection
+
+
