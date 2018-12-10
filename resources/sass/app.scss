@@ -1,16 +1,20 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import '~material-icons/iconfont/material-icons.scss';
 
 
 // ========= IMPORT CUSTOM BRAND STYLES =========
 
 // MIXINS
-@import 'mixins/widths',
+@import 'mixins/foundationMQ',
+        'mixins/animate',
+        'mixins/widths',
         'mixins/spacing',
         'mixins/shadow';
 
 // BASE 
 @import 'base/variables',
+        'base/material-icons',
         'base/fonts',
         'base/reset',
         'base/typography',
@@ -26,4 +30,9 @@
 // COMPONENTS
 @import 'components/floating-buttons',
         'components/hero',
-        'components/menu';
+        'components/menu',
+        'components/dashboard';
+
+// VENDOR
+@import 'vendor/bootstrap-select',
+        'vendor/date-time';

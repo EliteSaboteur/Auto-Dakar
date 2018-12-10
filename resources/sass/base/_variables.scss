@@ -1,18 +1,19 @@
 // ===============================================
 // Typography
 // ===============================================
+
+$material-icons-font-path:          '~material-icons/iconfont/';
 $sans-font:                         'Hurme Geometric Sans 1', sans-serif;
 $base-font:                         $sans-font; 
-
 
 $base-font-size:                    16px;                   
 $cta-font-size:                     14px;                   
 $cta-font-weight:                   600;                   
 $cta-line-heihgt:                   20px;                   
 $cta-min-width:                     120px;    
-$cta-padding-small:                 7px 15px;               
-$cta-padding-normal:                10px 20px;               
-$cta-padding-large:                 15px 30px;               
+$cta-padding-small:                 6px 15px;               
+$cta-padding-normal:                9px 20px;               
+$cta-padding-large:                 14px 30px;               
 
 $paragraph:                         $base-font-size;
 $heading1:                          40px;
@@ -39,28 +40,23 @@ $rem-heading6:                      ($heading6 / $base-font-size) * 1rem;
 // ===============================================
 
 $primary:                           #87C232;
-$primary-dark:                      darken($primary, 10%);
-$primary-light:                     lighten($primary,10%);
-
-
 $accent:                            #FF5722;
-$accent-dark:                       darken($accent, 10%);
-$accent-light:                      lighten($accent,10%);
 
-$light-background:                  #f8f8f8;
+$light-grey:                        #f6f6f6;
 
 
 $white:                             #ffffff;
-$black:                             #212121;
+$dark:                              #212121;
+$black:                             #000000;
 $type:                              #6a6a6a;
 
-$float-btn-color:                   #607D8B;
+$float-btn-color:                   $type;
 
 
-$input-color:                       #cccccc;
+$input-border-color:                lighten($dark, 50%);
 
 
-$error:                             #B81616;
+$error:                             #B81616; 
 $warning:                           #E2B41E;
 $success:                           #87C232;
 
@@ -68,9 +64,9 @@ $success:                           #87C232;
 // Sizes   |   Spacings
 // ===============================================
 
-$gutter:                            40px;
+$gutter:                            30px;
 $half-gutter:                       $gutter / 2;
-$container:                         1200px;
+$container:                         1440px;
 
 $hero-full:                         100vh;                      
 $hero-tall:                         600px;                      

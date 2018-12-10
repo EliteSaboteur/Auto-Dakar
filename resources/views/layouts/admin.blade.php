@@ -11,25 +11,32 @@
     @include('includes._head')
 </head>
 <body>
-<div class="container">
 
-    <header class="row">
-        @include('includes._headerAdmin')
-    </header>
+    <!-- ========= ADMIN DASHBOARD LAYOUT ==========  -->
+    <div class="admin-dashboard">
 
-    <div id="main" class="row">
+        <!-- admin side menu  -->
+        <aside class="admin-sidemenu">
+            @include('includes._headerAdmin')
+        </aside>
 
-        @yield('content')
+        <!-- admin content  -->
+        <div id="main" class="admin-content">
+
+            <div class="content">
+                @yield('content')
+            </div>
+
+            <footer >
+                @include('includes._footer')
+            </footer>
+
+        </div>
 
     </div>
 
-    <footer class="row">
-        @include('includes._footer')
-    </footer>
-
-</div>
-
 @include('includes._scripts')
+@yield ('scripts')
 </body>
 </html>
 
