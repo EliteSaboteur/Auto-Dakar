@@ -7,7 +7,7 @@
  */ ?>
 @extends('layouts.admin')
 @section('title')
-    Dashboard
+    Components
 @stop
 @section('content')
 
@@ -15,7 +15,7 @@
         <div class="col-sm-12">
             <div class="da-card admin-hero da-background-dark padding-all-30">
                 <div class="da-card-header">
-                    <h1 class="da-text-light-grey text-center">AutoDakar - Dashboard</h1>
+                    <h1 class="da-text-light-grey text-center">AutoDakar - @yield('title')</h1>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
 
                 </div>
                 <div class="da-card-body">
-                    <h3 class="text-center">Adauga automobil </h3>
+                    <h3 class="text-center">Adauga Interventie </h3>
                 </div>
                 <div class="da-card-footer text-center">
                     <a href="#!" data-ripple class="cta cta-accent">Button</a>
@@ -231,6 +231,7 @@
             </div>
         </div>
     </div>
+@endsection
 @section('scripts')
     <script src="{{ asset('js/moment.js') }}" defer></script>
     <script src="{{ asset('js/datetimepicker.min.js') }}" defer></script>
@@ -264,4 +265,4 @@
     </script>
 @stop
 
-@endsection
+

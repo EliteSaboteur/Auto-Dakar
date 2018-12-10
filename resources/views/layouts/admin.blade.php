@@ -11,6 +11,7 @@
     @include('includes._head')
 </head>
 <body>
+<div id='app'></div>
 
     <!-- ========= ADMIN DASHBOARD LAYOUT ==========  -->
     <div class="admin-dashboard">

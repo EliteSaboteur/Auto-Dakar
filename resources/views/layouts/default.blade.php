@@ -11,6 +11,7 @@
     @include('includes._head')
 </head>
 <body>
+<div id='app'></div>
 <div class="container">
 
     <header class="row">

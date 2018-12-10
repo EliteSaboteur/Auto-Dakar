@@ -15,23 +15,25 @@
     <div class="admin-nav-body">
         <ul class="nav-items">
             <li class="nav-item">
-                <a class="nav-link active" href="/">Inapoi in Site <span class="sr-only">(current)</span></a>
+                <a class="nav-link active" href="/components">Components <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/new-automobil">Adauga Automobil</a>
+                <a class="nav-link" href="/intervention/create">Adauga Interventie</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/current-interventions">Interventii Curente</a>
+                <a class="nav-link" href="/intervention">Interventii</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/old-interventions">Istoric Interventii</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/pdf" target="_blank">PDF</a>
+                <a class="nav-link" href="/statistics">Statistici</a>
             </li>
         </ul>
     </div>
     <div class="admin-nav-footer">
-        <a class="nav-item nav-link" href="/">Logout</a>
+        <a class="nav-item nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+            Logout
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
     </div>
 </div>
