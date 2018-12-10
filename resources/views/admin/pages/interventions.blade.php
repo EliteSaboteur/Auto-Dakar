@@ -20,7 +20,7 @@
                 <div class="da-card-body">
                     <h3 class="text-center">AB 15 FLN | VW Golf 4 | Data estimata: 22.10.2018</h3>
                 </div>
-                <a href="{{route('intervention.show',['numar'=>'AB 15 FLN'])}}" class="absolute absolute-full"></a>
+                <a href="{{route('intervention.show',['id'=>'AB 15 FLN'])}}" class="absolute absolute-full"></a>
             </div>
         </div>
     </div>
