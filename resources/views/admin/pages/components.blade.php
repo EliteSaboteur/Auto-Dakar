@@ -11,15 +11,7 @@
 @stop
 @section('content')
 
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="da-card admin-hero da-background-dark padding-all-30">
-                <div class="da-card-header">
-                    <h1 class="da-text-light-grey text-center">AutoDakar - @yield('title')</h1>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div class="divider margin-bottom-30"></div>
 
@@ -33,8 +25,9 @@
                     <h3 class="text-center">Adauga Interventie </h3>
                 </div>
                 <div class="da-card-footer text-center">
-                    <a href="#!" data-ripple class="cta cta-accent">Button</a>
+                    <a href="#!" data-ripple class="cta cta-accent">Deschide</a>
                 </div>
+                <a href="" class="absolute absolute-full"></a>
             </div>
         </div>
 

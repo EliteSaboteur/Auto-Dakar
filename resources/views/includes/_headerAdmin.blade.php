@@ -14,8 +14,9 @@
     </div>
     <div class="admin-nav-body">
         <ul class="nav-items">
+
             <li class="nav-item">
-                <a class="nav-link active" href="/components">Components <span class="sr-only">(current)</span></a>
+                <a class="nav-link active" href="/dashboard">Panou de administrare</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/intervention/create">Adauga Interventie</a>
@@ -29,6 +30,7 @@
         </ul>
     </div>
     <div class="admin-nav-footer">
+        <a class="nav-link " href="/components">Components</a>
         <a class="nav-item nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
             Logout
         </a>

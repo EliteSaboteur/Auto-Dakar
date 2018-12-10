@@ -25,6 +25,15 @@
         <div id="main" class="admin-content">
 
             <div class="content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="da-card admin-hero da-background-dark padding-all-30">
+                            <div class="da-card-header">
+                                <h1 class="da-text-light-grey text-center">AutoDakar - @yield('title')</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 @yield('content')
             </div>
 
