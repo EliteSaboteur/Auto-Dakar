@@ -11,7 +11,6 @@
 {{--<button>Set the value of the input field</button>--}}
 
 <script src="{{ asset('js/app.js') }}" defer></script>
-<script src="{{ asset('js/custom.js') }}" defer></script>
 <script src="{{ asset('js/bootstrap-select.js') }}" defer></script>
 <script src="{{ asset('js/scss.js') }}" defer></script>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>

@@ -16,7 +16,7 @@
         <ul class="nav-items">
 
             <li class="nav-item">
-                <a class="nav-link active" href="/dashboard">Panou de administrare</a>
+                <a class="nav-link" href="/dashboard">Panou de administrare</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/intervention/create">Adauga Interventie</a>
