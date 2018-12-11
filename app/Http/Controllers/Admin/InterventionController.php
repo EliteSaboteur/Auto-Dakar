@@ -23,7 +23,7 @@ class InterventionController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.interventions');
+        return view('admin.pages.intervention.interventions');
     }
 
     /**
@@ -33,7 +33,7 @@ class InterventionController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.newIntervention');
+        return view('admin.pages.intervention.newIntervention');
     }
 
     /**
@@ -55,7 +55,7 @@ class InterventionController extends Controller
      */
     public function show($id)
     {
-        return view('admin.pages.singleIntervention',compact('id'));
+        return view('admin.pages.intervention.singleIntervention',compact('id'));
     }
 
     /**
