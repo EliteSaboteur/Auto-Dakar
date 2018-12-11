@@ -23,7 +23,7 @@ class InterventionController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.intervention.interventions');
+        return view('admin.pages.intervention.allInterventions');
     }
 
     /**
