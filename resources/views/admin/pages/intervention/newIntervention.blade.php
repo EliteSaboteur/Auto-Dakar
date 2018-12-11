@@ -115,38 +115,6 @@
 
                         </div>
 
-                        <div class="row">
-                            <div class="col-xs-12 col-md-4">
-                                <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="serie-ci" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
-                                    <label for="serie-ci">
-                                        <span class="placeholder">Serie CI</span>
-                                        <span class="error">Acest camp e obligatoriu!</span>
-                                    </label>
-                                    <span class="material-icons icon credit_card"></span>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="numar-ci" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
-                                    <label for="numar-ci">
-                                        <span class="placeholder">Numar CI</span>
-                                        <span class="error">Acest camp e obligatoriu!</span>
-                                    </label>
-                                    <span class="material-icons icon credit_card"></span>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="eliberat" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
-                                    <label for="eliberat">
-                                        <span class="placeholder">Eliberat de</span>
-                                        <span class="error">Acest camp e obligatoriu!</span>
-                                    </label>
-                                    <span class="material-icons icon credit_card"></span>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="row">
                             <div class="col-xs-12 col-md-4">
@@ -213,10 +181,53 @@
                                 </div>
                             </div>
 
+
                         </div>
 
+                        <div class="row">
+                            <div class="col-xs-12 col-md-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" id="reprezentant" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                                    <label for="reprezentant">
+                                        <span class="placeholder">Reprezentant</span>
+                                        <span class="error">Acest camp e obligatoriu!</span>
+                                    </label>
+                                    <span class="material-icons icon perm_identity"></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" id="serie-ci" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                                    <label for="serie-ci">
+                                        <span class="placeholder">Serie CI</span>
+                                        <span class="error">Acest camp e obligatoriu!</span>
+                                    </label>
+                                    <span class="material-icons icon credit_card"></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" id="numar-ci" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                                    <label for="numar-ci">
+                                        <span class="placeholder">Numar CI</span>
+                                        <span class="error">Acest camp e obligatoriu!</span>
+                                    </label>
+                                    <span class="material-icons icon credit_card"></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-3">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" id="eliberat" aria-describedby="emailHelp" min="10" required="required" placeholder="&nbsp;">
+                                    <label for="eliberat">
+                                        <span class="placeholder">Eliberat de</span>
+                                        <span class="error">Acest camp e obligatoriu!</span>
+                                    </label>
+                                    <span class="material-icons icon credit_card"></span>
+                                </div>
+                            </div>
+                        </div>
 
-{{--pj--}}
+                        {{--pj--}}
                         <div class="divider margin-bottom-50"></div>
 
 
