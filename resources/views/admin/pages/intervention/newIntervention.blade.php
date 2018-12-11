@@ -13,12 +13,13 @@
     <div class="divider margin-bottom-30"></div>
     <div class="row">
         <div class="col-sm">
+            <form action="">
             <div class="da-card">
                 <div class="da-card-header">
-                    <h1 class="da-text-primary">Automobil</h1>
+                    <h3 class="da-text-primary">Automobil</h3>
                 </div>
                 <div class="da-card-body">
-                    <form action="">
+
                         <div class="row">
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group has-float-label">
@@ -72,8 +73,14 @@
                                 </div>
                             </div>
                         </div>
-{{--pf--}}
-                        <div class="divider margin-bottom-30"></div>
+{{--pf--}}      </div>
+            </div>
+            <div class="divider margin-bottom-30"></div>
+                <div class="da-card">
+                    <div class="da-card-header">
+                        <h3 class="da-text-primary">Client</h3>
+                    </div>
+                    <div class="da-card-body">
                         <div class="form-group margin-all-0">
                             <div class="text-left">
                                 <button type="button" class="cta cta-primary" data-ripple>Persoana Fizica</button>
@@ -226,6 +233,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
 
                         {{--pj--}}
                         <div class="divider margin-bottom-50"></div>
@@ -236,9 +246,10 @@
                                 <button type="submit" class="cta cta-accent" data-ripple>Adauga</button>
                             </div>
                         </div>
-                    </form>
+
                 </div>
             </div>
+            </form>
         </div>
     </div>
 @endsection

@@ -20,6 +20,7 @@ $admin-sidebar-background: $dark;
         position: sticky;
         top:0;
         height: 100vh;
+        flex-shrink: 0;
     }
 
     &-nav {

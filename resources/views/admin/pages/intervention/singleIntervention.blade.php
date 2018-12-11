@@ -51,38 +51,33 @@
                     <h5>Status</h5>
                 </div>
                 <div class="da-card-body">
-                    <div class="col">
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="check1">
-                                <label class="form-check-label" for="check1">Interventie inregistrata</label>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="check1">
+                                    <label class="form-check-label" for="check1">Interventie inregistrata</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group form-check">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="check2">
+                                    <label class="form-check-label" for="check2">Efectuarea lucrarilor</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group form-check">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="check4">
+                                    <label class="form-check-label" for="check4">Interventie finalizata</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="form-group form-check">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="check2">
-                                <label class="form-check-label" for="check2">Efectuarea lucrarilor</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="check3">
-                                <label class="form-check-label" for="check3">Finalizare</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group form-check">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="check4">
-                                <label class="form-check-label" for="check4">Interventie finalizata</label>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
