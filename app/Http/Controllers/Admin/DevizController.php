@@ -24,7 +24,7 @@ class DevizController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.deviz.newDeviz');
     }
 
     /**
@@ -46,7 +46,7 @@ class DevizController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('admin.pages.deviz.singleDeviz');
     }
 
     /**

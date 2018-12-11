@@ -24,7 +24,7 @@ class EstimativController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.estimativ.newEstimativ');
     }
 
     /**
@@ -46,7 +46,7 @@ class EstimativController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('admin.pages.estimativ.singleEstimativ');
     }
 
     /**

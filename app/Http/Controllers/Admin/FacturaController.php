@@ -24,7 +24,7 @@ class FacturaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.factura.newFactura');
     }
 
     /**
@@ -46,7 +46,7 @@ class FacturaController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('admin.pages.factura.singleFactura');
     }
 
     /**
