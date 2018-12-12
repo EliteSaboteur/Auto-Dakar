@@ -143,11 +143,23 @@ small {
     text-align: right;
 }
 
-.text-bold {
-    font-weight: bold;
+.text-boldest {
+    font-weight: 900;
 }
 
-.text-italic {
+.text-bold, strong {
+    font-weight: 700;
+}
+
+.text-semibold, b {
+    font-weight: 600;
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+.text-italic, i, em {
     font-style: italic;
 }
 

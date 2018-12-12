@@ -71,7 +71,7 @@ $font-path: '../fonts/HurmeGeometricSans1-';
         url('#{$font-path}Bold.woff') format('woff'),
         url('#{$font-path}Bold.ttf') format('truetype'),
         url('#{$font-path}Bold.svg#HurmeGeometricSans1-Bold') format('svg');
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
 

@@ -175,7 +175,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="divider margin-bottom-30"></div>
+                        <div class=" margin-bottom-30"></div>
                         <div class="row">
                             <div class="col-sm-12">
                                 <h5>Radio buttons</h5>
