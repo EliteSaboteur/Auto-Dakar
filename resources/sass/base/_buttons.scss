@@ -3,7 +3,9 @@
 // ===============================================
 .cta {
     position: relative;
-    display: inline-block; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: $cta-padding-normal;
     margin-bottom: 0;
     font-size: $cta-font-size;
@@ -64,6 +66,11 @@
     &:active {
         color: inherit;
         text-decoration: none;
+    }
+
+    .material-icons {
+        font-size: $cta-font-size + 4;
+        margin-left: 3px;
     }
 }
 
