@@ -15,7 +15,7 @@
         <div class="col-sm-6">
             <div class="da-card">
                 <div class="da-card-header">
-                    <h3>Estimativ</h3>
+                    <h3>Comandă</h3>
                 </div>
                 <div class="da-card-body">
                     <div class="row">
@@ -44,26 +44,57 @@
                     <hr>
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
-                            <div class="form-group has-float-label">
-                                <input type="text" class="form-control" id="numar-comanda" aria-describedby="emailHelp"
-                                       min="10"
-                                       required="required" placeholder="&nbsp;">
-                                <label for="numar-comanda">
-                                    <span class="placeholder">Lucrări</span>
-                                    <span class="error">Numele nu trebuie sa contina spatii albe!</span>
-                                </label>
-                                <span class="material-icons icon assignment"></span>
-                            </div>
+                            <h3>Adaugă lucrare</h3>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            {{--<div class="options-wrapper">--}}
+                                {{--<div class="options-list">--}}
+                                    {{--<div class="radio-wrapper radio-big">--}}
+                                        {{--<input type="radio" name="radio" id="radio1">--}}
+                                        {{--<label for="radio1">I choose this option</label>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="radio-wrapper radio-big">--}}
+                                        {{--<input type="radio" name="radio" id="radio2">--}}
+                                        {{--<label for="radio2">Or perhaps I'd like this one better</label>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="radio-wrapper radio-big">--}}
+                                        {{--<input type="radio" name="radio" id="radio3">--}}
+                                        {{--<label for="radio3">Or this one?</label>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="radio-wrapper radio-big">--}}
+                                        {{--<input type="radio" name="radio" id="radio4">--}}
+                                        {{--<label for="radio4">WTF, I can'd decide what to chooose. Why 8 options?</label>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="radio-wrapper radio-big">--}}
+                                        {{--<input type="radio" name="radio" id="radio5">--}}
+                                        {{--<label for="radio5">Here we start again</label>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="radio-wrapper radio-big">--}}
+                                        {{--<input type="radio" name="radio" id="radio6">--}}
+                                        {{--<label for="radio6">This one is the best. I choose this</label>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="radio-wrapper radio-big">--}}
+                                        {{--<input type="radio" name="radio" id="radio7">--}}
+                                        {{--<label for="radio7">Nope</label>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="radio-wrapper radio-big">--}}
+                                        {{--<input type="radio" name="radio" id="radio8">--}}
+                                        {{--<label for="radio8">Scss is fun</label>--}}
+                                    {{--</div>--}}
 
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="da-card">
                 <div class="da-card-header">
-                    <h3>Lucrări estimate</h3>
+                    <h3>Estimări</h3>
                 </div>
                 <div class="da-card-body">
                     <div class="row">
@@ -81,7 +112,6 @@
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group has-float-label">
-                                {{--<input type="text" id="data-comanda" name="deliveryDate" data-toggle="datetimepicker" class="form-control datetimepicker-input" data-target="#data-comanda">--}}
                                 <input type="text" id="data-estimata" name="data-estimata" data-toggle="datetimepicker" class="form-control datetimepicker-input" data-target="#data-estimata">
                                 <label for="data-estimata">
                                     <span class="placeholder">Dată estimată:</span>
@@ -89,14 +119,10 @@
                             </div>
                         </div>
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check1">
-                                    <label class="form-check-label" for="check1">Check me out</label>
-                                </div>
-                            </div>
+                            <h3>Lucrari soliciate</h3>
                         </div>
                     </div>
                 </div>
