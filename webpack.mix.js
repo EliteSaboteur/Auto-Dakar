@@ -14,7 +14,7 @@ const mix = require('laravel-mix');
  // copy fonts to public
 mix.copyDirectory('resources/fonts', 'public/fonts');
 
-mix.copyDirectory('resources/js/datetimepicker.min.js', 'public/js');
+mix.copyDirectory('resources/js/tempus-deus.js', 'public/js');
 mix.copyDirectory('resources/js/moment.js', 'public/js');
 mix.copyDirectory('resources/js/bootstrap-select.js', 'public/js');
 mix.copyDirectory('resources/js/scss.js', 'public/js');

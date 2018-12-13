@@ -18,31 +18,44 @@
                     <h3>Date Factură</h3>
                 </div>
                 <div class="da-card-body">
-                    <div class="form-group has-float-label">
-                        <input type="text" class="form-control" id="serie-factura" aria-describedby="emailHelp" min="10"
-                               required="required" placeholder="&nbsp;">
-                        <label for="serie-factura">
-                            <span class="placeholder">Serie factură</span>
-                            <span class="error">Numele nu trebuie sa contina spatii albe!</span>
-                        </label>
-                        <span class="material-icons icon assignment"></span>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <div class="form-group has-float-label">
+                                <input type="text" class="form-control" id="serie-factura" aria-describedby="emailHelp"
+                                       min="10"
+                                       required="required" placeholder="&nbsp;">
+                                <label for="serie-factura">
+                                    <span class="placeholder">Serie factură</span>
+                                    <span class="error">Numele nu trebuie sa contina spatii albe!</span>
+                                </label>
+                                <span class="material-icons icon assignment"></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <div class="form-group has-float-label">
+                                <input type="text" class="form-control" id="numar-factura" aria-describedby="emailHelp"
+                                       min="10"
+                                       required="required" placeholder="&nbsp;">
+                                <label for="numar-factura">
+                                    <span class="placeholder">Număr factură</span>
+                                    <span class="error">Numele nu trebuie sa contina spatii albe!</span>
+                                </label>
+                                <span class="material-icons icon assignment"></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group has-float-label">
-                        <input type="text" class="form-control" id="numar-factura" aria-describedby="emailHelp" min="10"
-                               required="required" placeholder="&nbsp;">
-                        <label for="numar-factura">
-                            <span class="placeholder">Număr factură</span>
-                            <span class="error">Numele nu trebuie sa contina spatii albe!</span>
-                        </label>
-                        <span class="material-icons icon assignment"></span>
-                    </div>
-                    <div class="form-group has-float-label">
-                        <input type="text" id="deliveryDate" name="deliveryDate" class="form-control">
-                        <label for="deliveryDate">
-                            <span class="placeholder">Data eliberării facturii:</span>
-                        </label>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <div class="form-group has-float-label">
+                                {{--<input type="text" class="form-control datetimepicker-input" id="datetimepicker5" data-toggle="datetimepicker" data-target="#datetimepicker5"/>--}}
 
-                        <div id="deliveryDatePicker"></div>
+                                <input type="text" id="data-factura" name="data-factura" class="form-control" val="">
+                                <label for="data-factura">
+                                    <span class="placeholder">Data eliberării facturii:</span>
+                                </label>
+                                <div id="deliveryDatePicker"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,9 +119,10 @@
                         <div class="col-xs-12 col-md-12">
                             <p>Reparație auto (conform deviz lucrare nr. <strong>01</strong> din
                                 <strong>22.12.2019</strong>)</p>
-
+                            <hr>
                             <div class="text-right">
-                                <a href="{{route('factura.show',['id'=>'id'])}}" class="cta cta-accent right">Emite Factura</a>
+                                <a href="{{route('factura.show',['id'=>'id'])}}" class="cta cta-accent right">Emite
+                                    Factura</a>
 
                                 <a href="{{route('deviz.show',['id'=>'id'])}}" class="cta cta-accent">Emite Deviz</a>
                             </div>
@@ -134,7 +148,7 @@
                 stepping: 15,
                 locale: 'ro',
                 enabledHours: [9, 10, 11, 12, 13, 14, 15, 16],
-                format: "DD MMMM YYYY HH:mm",
+                format: "DD MM YYYY HH:mm",
 //                minDate: moment().add('h', 2).toDate(),
                 icons: {
                     time: 'material-icons access_time',
@@ -148,9 +162,10 @@
                     close: 'material-icons clear'
                 },
             });
-            $('#deliveryDatePicker').on('dp.change', function (event) {
+            $('#data-factura').val($('#deliveryDatePicker').data("datetimepicker").date().format('DD MM YYYY HH:mm'));
+            $('#deliveryDatePicker').on('change.datetimepicker datetimepicker.change', function (event) {
                 var formatted_date = event.date.format('DD MM YYYY HH:mm');
-                $('#deliveryDate').val(formatted_date);
+                $('#data-factura').val(formatted_date);
             });
         });
     </script>
