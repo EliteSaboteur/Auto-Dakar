@@ -123,11 +123,11 @@ $check-size: 28px;
                 color: $white;
                 font-size: rem-calc(20px);
                 box-shadow: none;
-                animation: check-pulse-small 0.3s ease;
+                animation: check-pulse-small 0.5s ease;
             }
 
             &:after {
-                animation: check-pulse-small 0.3s ease;
+                animation: check-pulse-small 0.5s ease;
                 box-shadow: none;
                 background: $primary;
             }
@@ -511,12 +511,12 @@ textarea.form-control {
         transform: scale(1);
         opacity: 0;
     }
-    40% {
-        transform: scale(1.1);
+    20% {
+        transform: scale(1.05);
         opacity: 0.5;
     }
     100% {
-        transform: scale(1.2);
+        transform: scale(1.15);
         opacity: 0;
     }
 }
