@@ -75,6 +75,63 @@ $check-size: 28px;
             }
         }
     }
+
+    &.form-big {
+        margin: 0;
+
+        label {
+            padding: rem-calc(15px);
+            text-align: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            margin: 0;
+
+            &:before, &:after {
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+                top:0;
+                left:0;
+                color: transparent;
+                background: transparent;
+                align-items: flex-start;
+                font-size: 0;
+            }
+
+            .material-icons {
+                font-size: rem-calc(50px);
+                margin-bottom: rem-calc(10px);
+            }
+
+        }
+
+        input:checked + label {
+            font-weight: bold;
+            color: $white;
+            background: $primary;
+            box-shadow: none;
+
+            &:before {
+                border-color: $primary;
+                content: "";
+                align-items: flex-start;
+                padding: rem-calc(15px);
+                color: $white;
+                font-size: rem-calc(20px);
+                box-shadow: none;
+                animation: check-pulse-small 0.3s ease;
+            }
+
+            &:after {
+                animation: check-pulse-small 0.3s ease;
+                box-shadow: none;
+                background: $primary;
+            }
+        }
+    }
 }
 
 .form-check {
@@ -419,6 +476,20 @@ textarea.form-control {
     min-height: rem-calc(80px);
 }
 
+.form-options {
+
+    &-wrapper {
+        width: 100%;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+        grid-gap: 15px;
+        grid-auto-rows: 1fr;
+    }
+}
+
 @keyframes check-pulse {
     0% {
         transform: scale(1);
@@ -430,6 +501,21 @@ textarea.form-control {
     }
     100% {
         transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+@keyframes check-pulse-small {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    40% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.2);
         opacity: 0;
     }
 }

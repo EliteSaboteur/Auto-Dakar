@@ -49,43 +49,38 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
-                            {{--<div class="options-wrapper">--}}
-                                {{--<div class="options-list">--}}
-                                    {{--<div class="radio-wrapper radio-big">--}}
-                                        {{--<input type="radio" name="radio" id="radio1">--}}
-                                        {{--<label for="radio1">I choose this option</label>--}}
-                                    {{--</div>--}}
-                                    {{--<div class="radio-wrapper radio-big">--}}
-                                        {{--<input type="radio" name="radio" id="radio2">--}}
-                                        {{--<label for="radio2">Or perhaps I'd like this one better</label>--}}
-                                    {{--</div>--}}
-                                    {{--<div class="radio-wrapper radio-big">--}}
-                                        {{--<input type="radio" name="radio" id="radio3">--}}
-                                        {{--<label for="radio3">Or this one?</label>--}}
-                                    {{--</div>--}}
-                                    {{--<div class="radio-wrapper radio-big">--}}
-                                        {{--<input type="radio" name="radio" id="radio4">--}}
-                                        {{--<label for="radio4">WTF, I can'd decide what to chooose. Why 8 options?</label>--}}
-                                    {{--</div>--}}
-                                    {{--<div class="radio-wrapper radio-big">--}}
-                                        {{--<input type="radio" name="radio" id="radio5">--}}
-                                        {{--<label for="radio5">Here we start again</label>--}}
-                                    {{--</div>--}}
-                                    {{--<div class="radio-wrapper radio-big">--}}
-                                        {{--<input type="radio" name="radio" id="radio6">--}}
-                                        {{--<label for="radio6">This one is the best. I choose this</label>--}}
-                                    {{--</div>--}}
-                                    {{--<div class="radio-wrapper radio-big">--}}
-                                        {{--<input type="radio" name="radio" id="radio7">--}}
-                                        {{--<label for="radio7">Nope</label>--}}
-                                    {{--</div>--}}
-                                    {{--<div class="radio-wrapper radio-big">--}}
-                                        {{--<input type="radio" name="radio" id="radio8">--}}
-                                        {{--<label for="radio8">Scss is fun</label>--}}
-                                    {{--</div>--}}
-
-                                {{--</div>--}}
-                            {{--</div>--}}
+                            <div class="form-options-wrapper">
+                                <div class="form-options-list">
+                                    <div class="form-radio form-big">
+                                        <input type="radio" name="a" id="radio1">
+                                        <label for="radio1">
+                                            <span class="material-icons">directions_car</span>
+                                            <span>I choose this option</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-radio form-big">
+                                        <input type="radio" name="a" id="radio2">
+                                        <label for="radio2">
+                                            <span class="material-icons">local_car_wash</span>
+                                            <span>I choose this option</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-big">
+                                        <input type="checkbox" name="c" id="radio3">
+                                        <label for="radio3">
+                                            <span class="material-icons">local_taxi</span>
+                                            <span>I choose this option</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-big">
+                                        <input type="checkbox" name="d" id="radio4">
+                                        <label for="radio4">
+                                            <span class="material-icons">local_shipping</span>
+                                            <span>I choose this option because I am badass</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
