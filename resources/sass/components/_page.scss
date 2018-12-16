@@ -1,0 +1,35 @@
+header {
+    background: $accent;
+
+    .navbar {
+        background: transparent;
+        padding: 0;
+
+        .nav-link {
+            color: $white;
+            padding: rem-calc($gutter / 2  $gutter);
+
+            &:hover {
+                background: darken($accent, 5%);
+            }
+
+            &.active {
+                background: $dark;
+            }
+        }
+    }
+
+    #logo {
+        height: rem-calc(30px);
+    }
+}
+
+main {
+    padding: rem-calc($gutter 0);
+}
+
+footer {
+    background: $dark;
+    color: $white; 
+    padding: rem-calc(10px);
+}

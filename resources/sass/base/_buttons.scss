@@ -68,6 +68,10 @@
         text-decoration: none;
     }
 
+    &.cta-link {
+        box-shadow: none;
+    }
+
     .material-icons {
         font-size: $cta-font-size + 4;
         margin-left: 3px;
@@ -107,6 +111,14 @@ $color in $buttons {
 .cta-default {
     &:hover:active, &:focus {
         box-shadow: 0px 0px 0px 2px rgba( $black, 0.2);
+    }
+}
+
+.cta.cta-link {
+    box-shadow: none;
+
+    &:hover, &:active, &:focus {
+        box-shadow: none;
     }
 }
 

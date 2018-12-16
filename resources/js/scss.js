@@ -172,4 +172,14 @@ jQuery(document).ready(function ($) {
         });
     });
 
+    // admin nav toggle
+
+    var adminNav = $('.admin-sidemenu');
+    var navTog = $('.admin-sidemenu .navbar-toggler');
+
+    navTog.on('click', function(){
+        adminNav.toggleClass('open');
+    });
+
 });
+
