@@ -63,37 +63,44 @@
                                         </div>
                                     </div>
                                     <div class="col col-auto">
-                                        <button class="cta cta-primary" data-ripple>Adaugă</button>
+                                        <button class="cta cta-primary" id="adauga" data-ripple>Adaugă</button>
                                     </div>
                                 </div>
 
                                 <div class="form-options-list">
                                     <div class="form-radio form-big">
-                                        <input type="radio" name="option" id="vopsit">
-                                        <label for="vopsit">
+                                        <input type="radio" name="piesa" id="capota">
+                                        <label for="capota">
                                             <span class="material-icons directions_car"></span>
-                                            <span>Vopsit</span>
+                                            <span>Capotă</span>
                                         </label>
                                     </div>
                                     <div class="form-radio form-big">
-                                        <input type="radio" name="option" id="tinichigerie">
-                                        <label for="tinichigerie">
+                                        <input type="radio" name="piesa" id="aripa">
+                                        <label for="aripa">
                                             <span class="material-icons local_car_wash"></span>
-                                            <span>Tinichigerie</span>
+                                            <span>Aripă</span>
                                         </label>
                                     </div>
                                     <div class="form-check form-big">
-                                        <input type="radio" name="option" id="parbriz">
-                                        <label for="parbriz">
+                                        <input type="radio" name="piesa" id="portiera">
+                                        <label for="portiera">
                                             <span class="material-icons local_taxi"></span>
+                                            <span>Portieră</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-big">
+                                        <input type="radio" name="piesa" id="parbriz">
+                                        <label for="parbriz">
+                                            <span class="material-icons local_shipping"></span>
                                             <span>Parbriz</span>
                                         </label>
                                     </div>
                                     <div class="form-check form-big">
-                                        <input type="radio" name="option" id="polish">
-                                        <label for="polish">
+                                        <input type="radio" name="piesa" id="geam">
+                                        <label for="geam">
                                             <span class="material-icons local_shipping"></span>
-                                            <span>Polish</span>
+                                            <span>Geam</span>
                                         </label>
                                     </div>
                                 </div>
@@ -137,6 +144,9 @@
                         <div class="col-xs-12 col-md-12">
                             <h3>Lucrari soliciate</h3>
                         </div>
+                        <div class="col-xs-12 col-md-12" id="lucrari">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,6 +158,12 @@
     <script src="{{ asset('js/datetimepicker.min.js') }}" defer></script>
     <script type="text/javascript">
         $(function () {
+
+            clickCounter=0;
+            $( "#adauga" ).on( "click", function() {
+                clickCounter++;
+                $('#lucrari').append('<p>'+clickCounter+") "+$('#optiune-lucrare').val()+'</p>');
+            });
 
             $( ".type-of-service label" ).on( "click", function() {
                 $('#optiune-lucrare').val($.trim($( this ).text()));
