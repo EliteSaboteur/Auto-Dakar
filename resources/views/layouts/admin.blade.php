@@ -17,7 +17,7 @@
     <div class="admin-dashboard">
 
         <!-- admin side menu  -->
-        <aside class="admin-sidemenu">
+        <aside class="admin-sidemenu open">
             @include('includes._headerAdmin')
         </aside>
 

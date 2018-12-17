@@ -10,12 +10,12 @@
     border-radius: 4px;
     @include box-shadow(1);
 
-    .card-header {
+    .da-card-header {
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
     }
 
-    .card-footer {
+    .da-card-footer {
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
     }

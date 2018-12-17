@@ -12,25 +12,48 @@
 </head>
 <body>
 <div id='app'></div>
-<div class="container">
 
-    <header class="row">
+    <!-- Page Header -->
+    <header>
         @include('includes._header')
     </header>
 
-    <div id="main" class="row">
-
+    <!-- Page Body -->
+    <main id="main">
         @yield('content')
+    </main>
 
-    </div>
-
-    <footer class="row">
+    <!-- Page Footer -->
+    <footer>
         @include('includes._footer')
     </footer>
 
 </div>
 
     @include('includes._scripts')
+    <script>
+        jQuery(document).ready(function($){
+
+            // Auto adjust page components height so 
+            //the footer always stays at the bottom
+
+            // declare elements
+            var hH =    $('header').outerHeight(),
+                m =     $('main'),
+                fH =    $('footer').outerHeight(),
+                wH =    $(window).height(),
+                min =   wH - (hH + fH);
+
+            // declare function to calc main min height
+            function mainCalcHeight() {
+                m.css('min-height', min + 'px');
+            }
+
+            // init calc function
+            mainCalcHeight();
+
+        });
+    </script>
 </body>
 </html>
 

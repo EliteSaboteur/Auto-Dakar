@@ -1,69 +1,64 @@
 @extends('layouts.default')
 
 @section('content')
+<div class="hero">
+
+</div>  
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+        <div class="col-sm-8 col-md-6">
+            <div class="da-card">
+                <div class="da-card-header da-background-dark">
+                    <h4 class="da-text-light">{{ __('Login') }}</h4>
+                </div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                <form method="POST" action="{{ route('login') }}" class="padding-all-15">
+                    <div class="da-card-body">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
+                        <div class="form-group has-float-label">
+                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="&nbsp;" required autofocus>
+                            <label for="email" class=" col-form-label">
+                                <span class="placeholder">{{ __('E-Mail Address') }}</span>
                                 @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                                <span class="error" role="alert"> <strong>{{ $errors->first('email') }}</strong></span>
                                 @endif
-                            </div>
+                            </label>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
+                        <div class="form-group has-float-label">
+                            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="&nbsp;">
+                            <label for="password" class="col-form-label">
+                                <span class="place">{{ __('Password') }}</span>
                                 @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                                <span class="error" role="alert"><strong>{{ $errors->first('password') }}</strong></span>
                                 @endif
-                            </div>
+                            </label>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <div class="form-group ">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
+                                <label class="form-check-label" for="remember">
+                                    {{ __('Remember Me') }}
+                                </label>
                             </div>
                         </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                    </div>
+                    <div class="da-card-footer">
+                        <div class="form-group margin-bottom-0">
+                            <div class="text-right">
+                                <a class="cta cta-link" href="{{ route('password.request') }}" data-ripple>
                                     {{ __('Forgot Your Password?') }}
                                 </a>
+                                <button type="submit" class="cta cta-accent" data-ripple>
+                                    {{ __('Login') }}
+                                </button>
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
