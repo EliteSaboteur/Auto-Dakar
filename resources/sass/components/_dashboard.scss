@@ -53,7 +53,7 @@ $admin-sidebar-background: $dark;
     
             &-header {
                 height: rem-calc($admin-sidebar-width / 2);
-                background: $accent;
+                background: $primary;
                 color: $white; 
                 padding: rem-calc($gutter / 2);
                 display: flex;

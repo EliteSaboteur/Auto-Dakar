@@ -184,7 +184,7 @@ $check-size: 28px;
     color: $dark;
     height: 40px;
     box-shadow: inset 0px 0px 0px 100px $white;
-    text-transform: uppercase;
+    //text-transform: uppercase;
 
     &:focus {
         -webkit-box-shadow: 0 0 0 4px rgba($dark, 0.15), inset 0px 0px 0px 100px $white;
