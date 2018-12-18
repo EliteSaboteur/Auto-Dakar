@@ -3,8 +3,8 @@
 
     .estimated-option {
         counter-increment: estimated-value-index;
-        padding: rem-calc(10px 0);
-        border-bottom: 1px solid rgba($dark, 0.5);
+        padding: rem-calc(10px);
+        border-bottom: 1px solid rgba($dark, 0.2);
         display: flex;
         align-items: center;
         font-weight: 600;
