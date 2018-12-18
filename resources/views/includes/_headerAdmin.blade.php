@@ -33,8 +33,7 @@
     <div class="admin-nav-footer">
         <a class="nav-link " href="/components">Components</a>
         <a class="nav-item nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-            <i class="meterial-icons">dashboard</i>Logout
-        </a>
+            <i class="material-icons">power_settings_new</i>Logout</a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
         </form>
