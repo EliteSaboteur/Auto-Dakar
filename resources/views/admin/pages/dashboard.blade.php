@@ -9,6 +9,9 @@
 @section('title')
     Panou de administrare
 @stop
+@section('toggle_navbar')
+    open
+@endsection
 @section('content')
     <div class="divider margin-bottom-30"></div>
 

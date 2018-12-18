@@ -9,6 +9,9 @@
 @section('title')
     Adauga Interventie
 @stop
+@section('toggle_navbar')
+    open
+@endsection
 @section('content')
     <div class="divider margin-bottom-30"></div>
     <div class="row">

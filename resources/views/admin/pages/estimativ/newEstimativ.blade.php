@@ -82,21 +82,21 @@
                                             <span>Aripă</span>
                                         </label>
                                     </div>
-                                    <div class="form-check form-big">
+                                    <div class="form-radio form-big">
                                         <input type="radio" name="piesa" id="portiera">
                                         <label for="portiera">
                                             <span class="material-icons local_taxi"></span>
                                             <span>Portieră</span>
                                         </label>
                                     </div>
-                                    <div class="form-check form-big">
+                                    <div class="form-radio form-big">
                                         <input type="radio" name="piesa" id="parbriz">
                                         <label for="parbriz">
                                             <span class="material-icons local_shipping"></span>
                                             <span>Parbriz</span>
                                         </label>
                                     </div>
-                                    <div class="form-check form-big">
+                                    <div class="form-radio form-big">
                                         <input type="radio" name="piesa" id="geam">
                                         <label for="geam">
                                             <span class="material-icons local_shipping"></span>
@@ -163,6 +163,8 @@
             $( "#adauga" ).on( "click", function() {
                 clickCounter++;
                 $('#lucrari').append('<p>'+clickCounter+") "+$('#optiune-lucrare').val()+'</p>');
+                $('#optiune-lucrare').val("");
+                $('.form-radio input').prop('checked', false); ;
             });
 
             $( ".type-of-service label" ).on( "click", function() {

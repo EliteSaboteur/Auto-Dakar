@@ -9,6 +9,9 @@
 @section('title')
     Interventii
 @stop
+@section('toggle_navbar')
+    open
+@endsection
 @section('content')
     <div class="divider margin-bottom-30"></div>
 

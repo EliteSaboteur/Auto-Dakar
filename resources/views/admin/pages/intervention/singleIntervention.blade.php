@@ -23,22 +23,22 @@
                 <div class="da-card-body">
                     <div class="form-group margin-all-0">
                         <div class="text-left">
-                            <a href="{{route('estimativ.create')}}"  class="cta cta-primary" data-ripple>Emite Estimativ</a>
+                            <a href="{{route('estimativ.create')}}"  class="cta cta-primary btn-block" data-ripple>Emite Estimativ</a>
                         </div>
                     </div>
                     <div class="form-group margin-all-0">
                         <div class="text-left">
-                            <a href="{{route('factura.create')}}"  class="cta cta-primary" data-ripple>Emite Factura</a>
+                            <a href="{{route('factura.create')}}"  class="cta cta-primary btn-block" data-ripple>Emite Factura</a>
                         </div>
                     </div>
                     <div class="form-group margin-all-0">
                         <div class="text-left">
-                            <a href="{{route('deviz.create')}}" class="cta cta-primary" data-ripple>Emite Deviz</a>
+                            <a href="{{route('deviz.create')}}" class="cta cta-primary btn-block" data-ripple>Emite Deviz</a>
                         </div>
                     </div>
                     <div class="form-group margin-all-0">
                         <div class="text-left">
-                            <a href="{{route('chitanta.create')}}"  class="cta cta-primary" data-ripple>Emite Chitanta</a>
+                            <a href="{{route('chitanta.create')}}"  class="cta cta-primary btn-block" data-ripple>Emite Chitanta</a>
                         </div>
                     </div>
                 </div>

@@ -9,6 +9,9 @@
 @section('title')
     Statistici
 @stop
+@section('toggle_navbar')
+    open
+@endsection
 @section('content')
 
 @endsection

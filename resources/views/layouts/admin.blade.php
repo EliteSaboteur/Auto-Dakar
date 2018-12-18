@@ -17,7 +17,7 @@
     <div class="admin-dashboard">
 
         <!-- admin side menu  -->
-        <aside class="admin-sidemenu open">
+        <aside class="admin-sidemenu @yield('toggle_navbar')">
             @include('includes._headerAdmin')
         </aside>
 
