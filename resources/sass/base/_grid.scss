@@ -43,6 +43,10 @@
     }
     &.flex-column {
         flex-direction: column;
+        margin-bottom: 0;
+        .flex-item {
+            margin-bottom: 0;
+        }
     }
     &.flex-column-reverse {
         flex-direction: column-reverse;
