@@ -4,9 +4,9 @@
     width: auto;
     flex-wrap: nowrap;
     list-style-type: none;
-    margin-left: -($half-gutter / 2);
-    margin-right: -($half-gutter / 2);
-    margin-bottom: -$half-gutter;
+    margin-left: -($half-gutter);
+    margin-right: -($half-gutter);
+    margin-bottom: -$gutter;
     list-style-type: none;
     &.flex-center {
         justify-content: center;
@@ -51,9 +51,9 @@
         height: 100%; 
     }
     .flex-item {
-        padding-left: $half-gutter / 2;
-        padding-right: $half-gutter / 2; 
-        margin-bottom: $half-gutter;
+        padding-left: $half-gutter;
+        padding-right: $half-gutter;
+        margin-bottom: $gutter;
     }
     
 }
