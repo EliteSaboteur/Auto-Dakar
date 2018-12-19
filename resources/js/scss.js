@@ -23,7 +23,7 @@ jQuery.fn.float = function (cx, cy, radius, radiusY, startDegrees, endDegrees, l
     $(this).on('click', function () {
         var floatingEl = $(this).parents('.floating-share').find('.floating-item');
         var floatParent = $(this).parents('.floating-share');
-        $(this).find('.fa').toggleClass(iconOff + " " + iconOn);
+        $(this).find('.main-button').toggleClass(iconOff + " " + iconOn);
         if (floatParent.hasClass("opened")) {
             floatingEl.semiCircle(0, 0, 0, 0, 0, 0, 0);
             floatParent.removeClass("opened").addClass("closing");
@@ -35,7 +35,7 @@ jQuery.fn.float = function (cx, cy, radius, radiusY, startDegrees, endDegrees, l
             floatParent.addClass("opened").removeClass("closing");
         }
     });
-}
+};
 
 // toggle text function
 jQuery.fn.extend({

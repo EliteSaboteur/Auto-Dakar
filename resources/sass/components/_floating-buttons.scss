@@ -87,10 +87,10 @@
     .float-trigger {
         transform: scale(1.5);
         box-shadow: 0px 0px 0px 5px rgba($float-btn-color, 0.3);
-        z-index: 3001;
+        z-index: 3000;
     }
     .share-items {
-        z-index: 3000;
+        z-index: 3001;
     }
 }
 

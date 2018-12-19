@@ -134,37 +134,33 @@
                         </div>
                         <div class="flex-item">
                             <h5>Piese de schimb / Materiale:</h5>
+                        </div>
+
+                        <div class="flex-item">
+                            <div id="piese" class="has-numbered-items"></div>
+                        </div>
+
+                        <div class="flex-item">
+                            <h1>First try</h1>
                             <div class="floating-share floating-full-circle">
-                                <button class="float-trigger float-btn"><i class="fa fa-bars"></i></button>
+                                <button class="float-trigger float-btn"><i class="main-button material-icons build"></i></button>
                                 <ul class="share-items">
-                                    <li class="floating-item item-heart">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple ><i class="fa fa-heart"></i></a>
-                                    </li>
-                                    <li class="floating-item item-star">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple ><i class="fa fa-star"></i></a>
-                                    </li>
-                                    <li class="floating-item item-wifi">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple ><i class="fa fa-wifi"></i></a>
-                                    </li>
-                                    <li class="floating-item item-bell">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple ><i class="fa fa-bell"></i></a>
-                                    </li>
                                     <li class="floating-item item-cloud">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple ><i class="fa fa-cloud"></i></a>
+                                        <a href="javascript:void(0)" class="float-btn" data-ripple >dreapta față<i class="material-icons alarm"></i></a>
                                     </li>
                                     <li class="floating-item item-cog">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple ><i class="fa fa-cog"></i></a></li>
+                                        <a href="javascript:void(0)" class="float-btn" data-ripple >stânga față<i class="material-icons alarm_add"></i></a>
+                                    </li>
                                     <li class="floating-item item-folder">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple ><i class="fa fa-folder"></i></a>
+                                        <a href="javascript:void(0)" class="float-btn" data-ripple >dreapta spate<i class="material-icons alarm_off"></i></a>
                                     </li>
                                     <li class="floating-item item-paper-plane">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple ><i class="fa fa-paper-plane"></i></a>
+                                        <a href="javascript:void(0)" class="float-btn" data-ripple >stânga spate<i class="material-icons alarm_on"></i></a>
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="flex-item">
-                            <div id="piese" class="has-numbered-items"></div>
+
+
                         </div>
                     </div>
                 </div>
@@ -175,7 +171,11 @@
 @section('scripts')
     <script type="text/javascript">
         $(function () {
-            $('.floating-full-circle button').float(0, 0, 80, 80, 0, 360, 0, 'fa-bars', 'fa-times');
+            $('.floating-full-circle button').float(0, 0, 75, 75, -45, 225, 1, 'build', 'bug_report');
+            $('.share-items .floating-item').on('click',function(){
+                $('.floating-full-circle button').trigger('click');
+            });
+
 
             $("#adauga").on("click", function () {
                 if ($('#optiune-lucrare').val() != "") {
