@@ -163,7 +163,7 @@
 
             $( "#adauga" ).on( "click", function() {
                 if($('#optiune-lucrare').val()!=""){
-                    $('#lucrari').append('<div class="estimated-option">'+$('#optiune-lucrare').val()+'<span class="rem">Sterge <span class="material-icons close"></span></span></div>');
+                    $('#lucrari').append('<div class="estimated-option">'+$('#optiune-lucrare').val()+'<span class="rem">Șterge <span class="material-icons close"></span></span></div>');
                     $('#optiune-lucrare').val("");
                     $('.form-radio input').prop('checked', false);
                 }

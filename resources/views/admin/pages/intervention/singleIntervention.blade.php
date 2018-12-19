@@ -11,7 +11,7 @@
 @stop
 @section('content')
 
-    <div class="divider margin-bottom-30"></div>
+    <div class="margin-bottom-30"></div>
 
     <div class="row">
 
@@ -87,14 +87,14 @@
                     <h5>Client</h5>
                 </div>
                 <div class="da-card-body">
-                    <p>Nume: Gruian David</p>
-                    <p>Telefon: 0786941314</p>
-                    <p>CNP: 1980107222566</p>
-                    <p>CI: AX 263548</p>
-                    <p>Adresa: Str. Bucuresti, Nr.91</p>
-                    <p>Judet: Alba</p>
-                    <p>Cont: -</p>
-                    <p>Banca: -</p>
+                    <p>Nume: <strong>Gruian David</strong></p>
+                    <p>Telefon: <strong>0786941314</strong></p>
+                    <p>CNP: <strong>1980107222566</strong></p>
+                    <p>CI: <strong>AX 263548</strong></p>
+                    <p>Adresa: <strong>Str. Bucuresti, Nr.91</strong></p>
+                    <p>Judet: <strong>Alba</strong></p>
+                    <p>Cont: <strong>-</strong></p>
+                    <p>Banca: <strong>-</strong></p>
                 </div>
             </div>
         </div>
