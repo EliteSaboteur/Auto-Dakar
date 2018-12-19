@@ -13,48 +13,138 @@
     open
 @endsection
 @section('content')
+
+
     <div class="divider margin-bottom-30"></div>
 
-    <div class="row">
-        <div class="col-sm-12 col-md-12">
-            <div class="da-card">
-                <div class="da-card-header da-background-accent">
-                </div>
-                <div class="da-card-body">
-                    <h3 class="text-center">AB 15 FLN | VW Golf 4 | Data estimata: 22.10.2018</h3>
-                </div>
-                <a href="{{route('intervention.show',['id'=>'AB 15 FLN'])}}" class="absolute absolute-full"></a>
+    <div id="interventionsGrid">
+        <div class="grid-view-mode">
+            <div class="filter-title">
+                <p>Mod de vizualizare </p>
             </div>
+            <ul class="grid-view-mode-list">
+                <li class="grid-view-mode-list-item active grid-mode-switcher">
+                    <i class="material-icons">view_module</i>
+                </li>
+                <li class="grid-view-mode-list-item grid-mode-switcher">
+                    <i class="material-icons">view_list</i>
+                </li>
+            </ul>
+        </div>
+        <div class="grid-content" id="interventionsGridContent" data-view="grid">
+        
+        <!-- This PHP is used just to create multiple cards with same content -->
+        <!-- For the purpose of showing the animation -->
+        <?php
+
+        $card = "<div class='intervention-card da-card'>
+                    <div class='da-card-body'>
+                        <ul class='flex-list info-properties'>
+                            <li class='flex-item' data-title='Nr Auto'>AB 15 FLN</li>
+                            <li class='flex-item' data-title='Marca & Model'>VW Golf 4</li>
+                            <li class='flex-item' data-title='Data estimata'>22.10.2018</li>
+                        </ul>
+                        <div class='cta-button-group text-left'>
+                            <button class='cta cta-link cta-small btn-block'>Vezi detalii</button>
+                        </div>
+                    </div>
+                    <a href='intervention/AB%2015%20FLN' class='absolute absolute-full overlay-link' data-ripple></a>
+                </div>";
+                
+            echo str_repeat($card,50);   
+        
+        ?>
+
+        <!-- I commented out the real card-markup -->
+        <!-- The above one is just for presnetation  -->
+        <!-- But they are the same    -->
+
+            <!-- <div class="intervention-card da-card">
+                <div class="da-card-body">
+                    <ul class="flex-list info-properties">
+                        <li class="flex-item" data-title="Nr Auto">AB 15 FLN</li>
+                        <li class="flex-item" data-title="Marca & Model">VW Golf 4</li>
+                        <li class="flex-item" data-title="Data estimata">22.10.2018</li>
+                    </ul>
+                    <div class='cta-button-group text-left'>
+                            <button class='cta cta-link cta-small btn-block'>Vezi detalii</button>
+                    </div>
+                </div>
+                <a href="{{route('intervention.show',['id'=>'AB 15 FLN'])}}" class="absolute absolute-full overlay-link" data-ripple></a>
+            </div> -->
         </div>
     </div>
-    <div class="divider margin-bottom-30"></div>
 
-    <div class="row">
-        <div class="col-sm-12 col-md-12">
-            <div class="da-card">
-                <div class="da-card-header da-background-accent"></div>
-                <div class="da-card-body">
-                    <h3 class="text-center">AB 12 NHN | Dacia Logan | Data estimata: 25.10.2018</h3>
-                </div>
-                <a href="" class="absolute absolute-full"></a>
-            </div>
-        </div>
-    </div>
-    <div class="divider margin-bottom-30"></div>
 
-    <div class="row">
-        <div class="col-sm-12 col-md-12">
-            <div class="da-card">
-                <div class="da-card-header da-background-primary">
-
-                </div>
-                <div class="da-card-body">
-                    <h3 class="text-center">B 52 FSD | Hyundai ix35 | Data estimata: 27.10.2018</h3>
-                </div>
-                <a href="" class="absolute absolute-full"></a>
-
-            </div>
-        </div>
-    </div>
 @endsection
 
+@section('scripts')
+<script>
+    jQuery(document).ready(function($){
+        
+        var switcher =  $('.grid-mode-switcher'),
+            grid =      $('#interventionsGrid .grid-content'),
+            card =      $(".intervention-card");
+
+        // pre add animation delays
+
+        var delay = 50;
+        card.each(function() {
+
+            $(this).css('animation-delay', delay + 'ms');
+            delay += 50;
+
+        });
+
+
+        // switch grid view mode
+
+        switcher.on('click', function(e){
+
+            if ($(this).hasClass('active')) {
+            
+                e.preventDefault();
+
+            } else {
+
+                changeView();
+                switcherActive($(this));
+
+            }
+        });
+
+
+        function changeView() {
+            var currentState = grid.attr('data-view');
+            if (currentState == "grid") {
+                card.removeClass('animate-list-in animate-grid-in is-animating-grid').addClass('is-animating-list');
+            } else {
+                card.removeClass('animate-list-in animate-grid-in is-animating-list').addClass('is-animating-grid');
+            }
+            
+            setTimeout(function(){
+                if (currentState == "grid") {
+                    grid.attr('data-view', 'list');
+                    card.attr('data-view', 'list').removeClass('animate-grid-in').addClass('animate-list-in');
+                } else {
+                    grid.attr('data-view', 'grid');
+                    card.attr('data-view', 'grid').removeClass('animate-list-in').addClass('animate-grid-in');
+                }
+            }, 700);
+
+            setTimeout(function(){
+                card.removeClass('is-animating-list is-animating-grid');
+            }, 800);
+
+        }
+
+        function switcherActive(el) {
+
+            switcher.removeClass('active');
+            el.addClass('active');
+
+        } 
+
+    });
+</script>
+@stop

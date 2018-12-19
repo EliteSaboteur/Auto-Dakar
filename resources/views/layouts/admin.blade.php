@@ -37,9 +37,9 @@
                 @yield('content')
             </div>
 
-            <footer >
+            <!-- <footer >
                 @include('includes._footer')
-            </footer>
+            </footer> -->
 
         </div>
 
