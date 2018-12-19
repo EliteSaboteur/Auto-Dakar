@@ -161,14 +161,17 @@
     <script type="text/javascript">
         $(function () {
 
-            clickCounter=0;
             $( "#adauga" ).on( "click", function() {
-                clickCounter++;
-                $('#lucrari').append('<div class="estimated-option">'+$('#optiune-lucrare').val()+'<span class="rem">Sterge <span class="material-icons close"></span></span></div>');
-                $('#optiune-lucrare').val("");
-                $('.form-radio input').prop('checked', false); ;
+                if($('#optiune-lucrare').val()!=""){
+                    $('#lucrari').append('<div class="estimated-option">'+$('#optiune-lucrare').val()+'<span class="rem">Sterge <span class="material-icons close"></span></span></div>');
+                    $('#optiune-lucrare').val("");
+                    $('.form-radio input').prop('checked', false);
+                }
             });
 
+            $( "#lucrari" ).on( "click",'.rem', function() {
+                $(this).parent().remove();
+            });
             $( ".type-of-service label" ).on( "click", function() {
                 $('#optiune-lucrare').val($.trim($( this ).text()));
             });
