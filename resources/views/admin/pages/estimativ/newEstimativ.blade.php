@@ -145,9 +145,7 @@
                             <h3>Lucrari soliciate</h3>
                         </div>
                         <div class="col-xs-12 col-md-12">
-                            <div id="lucrari">
-
-                            </div>
+                            <div id="lucrari"></div>
                         </div>
                     </div>
                 </div>
