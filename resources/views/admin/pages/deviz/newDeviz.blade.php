@@ -22,13 +22,13 @@
                         <div class="flex-item">
                             <div class="flex-list flex-2 flex-wrap">
                                 <div class="flex-item">
-                                    <a href="" class="cta cta-default btn-block da-text-primary">
+                                    <a href="javascript:void(0);" class="cta cta-default btn-block da-text-primary" data-ripple>
                                         Adaugă Manoperă
                                         <small class="material-icons add"></small>
                                     </a>
                                 </div>
                                 <div class="flex-item">
-                                    <a href="" class="cta cta-default btn-block da-text-primary">
+                                    <a href="javascript:void(0);" class="cta cta-default btn-block da-text-primary" data-ripple>
                                         Adaugă Piesă
                                         <small class="material-icons add"></small>
                                     </a>
@@ -58,6 +58,39 @@
                                 </div>
 
                                 <div class="form-options-list">
+
+
+                                    <div class="floating-share floating-full-circle">
+                                        <button class="float-trigger float-btn">Portieră
+                                            {{--<i class="main-button material-icons build"></i>--}}
+                                        </button>
+                                        <ul class="share-items">
+                                            <li class="floating-item item-cloud">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple >dreapta față
+                                                    {{--<i class="material-icons alarm"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-cog">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple >dreapta spate
+                                                    {{--<i class="material-icons alarm_add"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-folder">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple >stânga spate
+                                                    {{--<i class="material-icons alarm_off"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-paper-plane">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple >stânga față
+                                                    {{--<i class="material-icons alarm_on"></i>--}}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+
+
                                     <div class="form-radio form-big">
                                         <input type="radio" name="piesa" id="capota">
                                         <label for="capota">
@@ -143,19 +176,29 @@
                         <div class="flex-item">
                             <h1>First try</h1>
                             <div class="floating-share floating-full-circle">
-                                <button class="float-trigger float-btn"><i class="main-button material-icons build"></i></button>
+                                <button class="float-trigger float-btn">Portieră
+                                    {{--<i class="main-button material-icons build"></i>--}}
+                                </button>
                                 <ul class="share-items">
                                     <li class="floating-item item-cloud">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple >dreapta față<i class="material-icons alarm"></i></a>
+                                        <a href="javascript:void(0)" class="float-btn" data-ripple >Dreapta față
+                                            {{--<i class="material-icons alarm"></i>--}}
+                                        </a>
                                     </li>
                                     <li class="floating-item item-cog">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple >stânga față<i class="material-icons alarm_add"></i></a>
+                                        <a href="javascript:void(0)" class="float-btn" data-ripple >Dreapta spate
+                                            {{--<i class="material-icons alarm_add"></i>--}}
+                                        </a>
                                     </li>
                                     <li class="floating-item item-folder">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple >dreapta spate<i class="material-icons alarm_off"></i></a>
+                                        <a href="javascript:void(0)" class="float-btn" data-ripple >Stânga spate
+                                            {{--<i class="material-icons alarm_off"></i>--}}
+                                        </a>
                                     </li>
                                     <li class="floating-item item-paper-plane">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple >stânga spate<i class="material-icons alarm_on"></i></a>
+                                        <a href="javascript:void(0)" class="float-btn" data-ripple >Stânga față
+                                            {{--<i class="material-icons alarm_on"></i>--}}
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -171,9 +214,12 @@
 @section('scripts')
     <script type="text/javascript">
         $(function () {
-            $('.floating-full-circle button').float(0, 0, 75, 75, -45, 225, 1, 'build', 'bug_report');
+            $('.floating-full-circle button').float(0, 0, 90, 90, -45, 225, 1, 'build', 'bug_report');
             $('.share-items .floating-item').on('click',function(){
-                $('.floating-full-circle button').trigger('click');
+//                alert($.trim($(this).text()));
+//                alert($(this).parent().siblings().text());
+                $('#optiune-lucrare').val($.trim($(this).parent().siblings().text())+" "+$.trim($(this).text()));
+                $(this).parent().siblings().trigger('click');
             });
 
 
