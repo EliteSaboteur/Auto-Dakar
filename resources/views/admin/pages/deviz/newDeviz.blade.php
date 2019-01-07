@@ -22,16 +22,22 @@
                         <div class="flex-item">
                             <div class="flex-list flex-2 flex-wrap">
                                 <div class="flex-item">
-                                    <a href="javascript:void(0);" class="cta cta-default btn-block da-text-primary" data-ripple>
-                                        Adaugă Manoperă
-                                        <small class="material-icons add"></small>
-                                    </a>
+                                    <div class="form-radio form-big">
+                                        <input type="radio" name="adauga" id="adauga-manopera" checked>
+                                        <label for="adauga-manopera">
+                                            <span class="material-icons widgets"></span>
+                                            <span> Adaugă Manoperă</span>
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="flex-item">
-                                    <a href="javascript:void(0);" class="cta cta-default btn-block da-text-primary" data-ripple>
-                                        Adaugă Piesă
-                                        <small class="material-icons add"></small>
-                                    </a>
+                                    <div class="form-radio form-big">
+                                        <input type="radio" name="adauga" id="adauga-piesa">
+                                        <label for="adauga-piesa">
+                                            <span class="material-icons widgets"></span>
+                                            <span>Adaugă Piesă</span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -56,22 +62,20 @@
                                         <button class="cta cta-primary" id="adauga" data-ripple>Adaugă</button>
                                     </div>
                                 </div>
-
+                                <div class="margin-bottom-20"></div>
                                 <div class="form-options-list">
-
-
                                     <div class="floating-share floating-full-circle">
                                         <button class="float-trigger float-btn">Capotă
                                             {{--<i class="main-button material-icons build"></i>--}}
                                         </button>
                                         <ul class="share-items">
                                             <li class="floating-item item-folder">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >spate
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>spate
                                                     {{--<i class="material-icons alarm_off"></i>--}}
                                                 </a>
                                             </li>
                                             <li class="floating-item item-paper-plane">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >față
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>față
                                                     {{--<i class="material-icons alarm_on"></i>--}}
                                                 </a>
                                             </li>
@@ -84,22 +88,22 @@
                                         </button>
                                         <ul class="share-items">
                                             <li class="floating-item item-cloud">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >dreapta față
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta față
                                                     {{--<i class="material-icons alarm"></i>--}}
                                                 </a>
                                             </li>
                                             <li class="floating-item item-cog">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >dreapta spate
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta spate
                                                     {{--<i class="material-icons alarm_add"></i>--}}
                                                 </a>
                                             </li>
                                             <li class="floating-item item-folder">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >stânga spate
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>stânga spate
                                                     {{--<i class="material-icons alarm_off"></i>--}}
                                                 </a>
                                             </li>
                                             <li class="floating-item item-paper-plane">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >stânga față
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>stânga față
                                                     {{--<i class="material-icons alarm_on"></i>--}}
                                                 </a>
                                             </li>
@@ -112,22 +116,22 @@
                                         </button>
                                         <ul class="share-items">
                                             <li class="floating-item item-cloud">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >dreapta față
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta față
                                                     {{--<i class="material-icons alarm"></i>--}}
                                                 </a>
                                             </li>
                                             <li class="floating-item item-cog">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >dreapta spate
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta spate
                                                     {{--<i class="material-icons alarm_add"></i>--}}
                                                 </a>
                                             </li>
                                             <li class="floating-item item-folder">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >stânga spate
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>stânga spate
                                                     {{--<i class="material-icons alarm_off"></i>--}}
                                                 </a>
                                             </li>
                                             <li class="floating-item item-paper-plane">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >stânga față
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>stânga față
                                                     {{--<i class="material-icons alarm_on"></i>--}}
                                                 </a>
                                             </li>
@@ -140,22 +144,22 @@
                                         </button>
                                         <ul class="share-items">
                                             <li class="floating-item item-cloud">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >dreapta față
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta față
                                                     {{--<i class="material-icons alarm"></i>--}}
                                                 </a>
                                             </li>
                                             <li class="floating-item item-cog">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >dreapta spate
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta spate
                                                     {{--<i class="material-icons alarm_add"></i>--}}
                                                 </a>
                                             </li>
                                             <li class="floating-item item-folder">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >stânga spate
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>stânga spate
                                                     {{--<i class="material-icons alarm_off"></i>--}}
                                                 </a>
                                             </li>
                                             <li class="floating-item item-paper-plane">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >stânga față
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>stânga față
                                                     {{--<i class="material-icons alarm_on"></i>--}}
                                                 </a>
                                             </li>
@@ -168,7 +172,7 @@
                                         </button>
                                         <ul class="share-items">
                                             <li class="floating-item item-cloud">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>
                                                     <i class="material-icons add"></i>
                                                 </a>
                                             </li>
@@ -181,7 +185,7 @@
                                         </button>
                                         <ul class="share-items">
                                             <li class="floating-item item-cloud">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>
                                                     <i class="material-icons add"></i>
                                                 </a>
                                             </li>
@@ -194,72 +198,41 @@
                                         </button>
                                         <ul class="share-items">
                                             <li class="floating-item item-cloud">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >vopsire
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>vopsitorie
                                                     {{--<i class="material-icons alarm"></i>--}}
                                                 </a>
                                             </li>
                                             <li class="floating-item item-cog">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >parbriz
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>parbriz
                                                     {{--<i class="material-icons alarm_add"></i>--}}
                                                 </a>
                                             </li>
                                             <li class="floating-item item-folder">
-                                                <a href="javascript:void(0)" class="float-btn" data-ripple >tinichigerie
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>tinichigerie
                                                     {{--<i class="material-icons alarm_off"></i>--}}
                                                 </a>
                                             </li>
                                         </ul>
                                     </div>
 
-
-
-                                    <div class="form-radio form-big">
-                                        <input type="radio" name="piesa" id="capota">
-                                        <label for="capota">
-                                            <span class="material-icons directions_car"></span>
-                                            <span>Capotă</span>
-                                        </label>
-                                    </div>
-                                    <div class="form-radio form-big">
-                                        <input type="radio" name="piesa" id="aripa">
-                                        <label for="aripa">
-                                            <span class="material-icons local_car_wash"></span>
-                                            <span>Aripă</span>
-                                        </label>
-                                    </div>
-                                    <div class="form-radio form-big">
-                                        <input type="radio" name="piesa" id="portiera">
-                                        <label for="portiera">
-                                            <span class="material-icons local_taxi"></span>
-                                            <span>Portieră</span>
-                                        </label>
-                                    </div>
-                                    <div class="form-radio form-big">
-                                        <input type="radio" name="piesa" id="parbriz">
-                                        <label for="parbriz">
-                                            <span class="material-icons local_shipping"></span>
-                                            <span>Parbriz</span>
-                                        </label>
-                                    </div>
-                                    <div class="form-radio form-big">
-                                        <input type="radio" name="piesa" id="geam">
-                                        <label for="geam">
-                                            <span class="material-icons local_shipping"></span>
-                                            <span>Geam</span>
-                                        </label>
-                                    </div>
-                                    <div class="form-radio form-big">
-                                        <input type="radio" name="piesa" id="kit">
-                                        <label for="kit">
-                                            <span class="material-icons widgets"></span>
-                                            <span>Kituri</span>
-                                        </label>
-                                    </div>
+                                    {{--<div class="form-radio form-big">--}}
+                                    {{--<input type="radio" name="piesa" id="kit">--}}
+                                    {{--<label for="kit">--}}
+                                    {{--<span class="material-icons widgets"></span>--}}
+                                    {{--<span>Kituri</span>--}}
+                                    {{--</label>--}}
+                                    {{--</div>--}}
                                 </div>
                             </div>
                         </div>
+                        <div class="flex-item">
+                            <div class="margin-bottom-30"></div>
+                        </div>
+                        <div class="flex-item">
+                            <div class="margin-bottom-30"></div>
+                        </div>
                         <div class="flex-item"></div>
-                        <div class="flex-item"></div>
+
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
@@ -284,48 +257,15 @@
                         <div class="flex-item">
                             <h5>Denumirea lucrării:</h5>
                         </div>
-                        <div class="flex-item">
+                        <div class="flex-item canBeErased">
                             <div id="lucrari" class="has-numbered-items"></div>
                         </div>
                         <div class="flex-item">
-                            <h5>Piese de schimb / Materiale:</h5>
+                            <h5>Piese / Materiale:</h5>
                         </div>
 
-                        <div class="flex-item">
+                        <div class="flex-item canBeErased">
                             <div id="piese" class="has-numbered-items"></div>
-                        </div>
-
-                        <div class="flex-item">
-                            <h1>First try</h1>
-                            <div class="floating-share floating-full-circle">
-                                <button class="float-trigger float-btn">Portieră
-                                    {{--<i class="main-button material-icons build"></i>--}}
-                                </button>
-                                <ul class="share-items">
-                                    <li class="floating-item item-cloud">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple >Dreapta față
-                                            {{--<i class="material-icons alarm"></i>--}}
-                                        </a>
-                                    </li>
-                                    <li class="floating-item item-cog">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple >Dreapta spate
-                                            {{--<i class="material-icons alarm_add"></i>--}}
-                                        </a>
-                                    </li>
-                                    <li class="floating-item item-folder">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple >Stânga spate
-                                            {{--<i class="material-icons alarm_off"></i>--}}
-                                        </a>
-                                    </li>
-                                    <li class="floating-item item-paper-plane">
-                                        <a href="javascript:void(0)" class="float-btn" data-ripple >Stânga față
-                                            {{--<i class="material-icons alarm_on"></i>--}}
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -338,8 +278,8 @@
         $(function () {
             $('.floating-full-circle button').float(0, 0, 84, 104, -45, 225, 1, 'build', 'bug_report');
 
-            $('.share-items .floating-item').on('click',function(){
-                $('#optiune-lucrare').val($.trim($(this).parent().siblings().text())+" "+$.trim($(this).text()));
+            $('.share-items .floating-item').on('click', function () {
+                $('#optiune-lucrare').val($.trim($(this).parent().siblings().text()) + " " + $.trim($(this).text()));
                 $(this).parent().siblings().trigger('click');
             });
 //            $('.floating-full-circle button').focusout(function () {
@@ -356,17 +296,19 @@
 //                        }, 100);
 //            });
 
-
             $("#adauga").on("click", function () {
                 if ($('#optiune-lucrare').val() != "") {
-                    $('#piese').append('<div class="estimated-option is-numbered-item">' + $('#optiune-lucrare').val() + '<span class="rem">Șterge <span class="material-icons close"></span></span></div>');
-                    $('#lucrari').append('<div class="estimated-option is-numbered-item">' + $('#optiune-lucrare').val() + '<span class="rem">Șterge <span class="material-icons close"></span></span></div>');
+                    if ($('#adauga-manopera').is(':checked')) {
+                        $('#lucrari').append('<div class="estimated-option is-numbered-item">' + $('#optiune-lucrare').val() + '<span class="rem">Șterge <span class="material-icons close"></span></span></div>');
+                    } else {
+                        $('#piese').append('<div class="estimated-option is-numbered-item">' + $('#optiune-lucrare').val() + '<span class="rem">Șterge <span class="material-icons close"></span></span></div>');
+                    }
                     $('#optiune-lucrare').val("");
-                    $('.form-radio input').prop('checked', false);
+//                    $('.form-radio input').prop('checked', false);
                 }
             });
 
-            $("#lucrari").on("click", '.rem', function () {
+            $(".canBeErased").on("click", '.rem', function () {
                 $(this).parent().remove();
             });
             $(".type-of-service label").on("click", function () {
