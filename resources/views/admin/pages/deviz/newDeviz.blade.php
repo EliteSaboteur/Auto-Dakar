@@ -23,7 +23,7 @@
                             <div class="flex-list flex-2 flex-wrap">
                                 <div class="flex-item">
                                     <div class="form-radio form-big">
-                                        <input type="radio" name="adauga" id="adauga-manopera" checked>
+                                        <input type="radio" name="adauga" id="adauga-manopera">
                                         <label for="adauga-manopera">
                                             <span class="material-icons widgets"></span>
                                             <span> Adaugă Manoperă</span>
@@ -44,7 +44,7 @@
                         <div class="flex-item">
                             <div class="margin-bottom-30"></div>
                         </div>
-                        <div class="flex-item">
+                        <div class="flex-item" id="input-lucrare">
                             <div class="form-options-wrapper type-of-service">
                                 <div class="row">
                                     <div class="col">
@@ -69,42 +69,29 @@
                         </div>
                         <div class="flex-item" id="alege-manopera">
                             <h5>Manoperă</h5>
-                            <div class="form-options-list">
-                                <div class="floating-share floating-full-circle">
-                                    <button class="float-trigger float-btn">Înlocuit
-                                        {{--<i class="main-button material-icons build"></i>--}}
-                                    </button>
-                                    <ul class="share-items">
-                                        <li class="floating-item item-cloud">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>
-                                                <i class="material-icons add"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+
+
+                            <div class="form-options-list manopera-field">
+                                <div class="form-radio form-big">
+                                    <input type="radio" name="add-manopera" id="inlocuit">
+                                    <label for="inlocuit">
+                                        <span class="material-icons widgets"></span>
+                                        <span>Înlocuit</span>
+                                    </label>
                                 </div>
-                                <div class="floating-share floating-full-circle">
-                                    <button class="float-trigger float-btn">Vopsit
-                                        {{--<i class="main-button material-icons build"></i>--}}
-                                    </button>
-                                    <ul class="share-items">
-                                        <li class="floating-item item-cloud">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>
-                                                <i class="material-icons add"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                <div class="form-radio form-big">
+                                    <input type="radio" name="add-manopera" id="vopsit">
+                                    <label for="vopsit">
+                                        <span class="material-icons widgets"></span>
+                                        <span>Vopsit</span>
+                                    </label>
                                 </div>
-                                <div class="floating-share floating-full-circle">
-                                    <button class="float-trigger float-btn">Reparat
-                                        {{--<i class="main-button material-icons build"></i>--}}
-                                    </button>
-                                    <ul class="share-items">
-                                        <li class="floating-item item-cloud">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>
-                                                <i class="material-icons add"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                <div class="form-radio form-big">
+                                    <input type="radio" name="add-manopera" id="reparat">
+                                    <label for="reparat">
+                                        <span class="material-icons widgets"></span>
+                                        <span>Reparat</span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -304,6 +291,12 @@
                         <div class="flex-item canBeErased">
                             <div id="piese" class="has-numbered-items"></div>
                         </div>
+                        <div class="flex-item">
+                                <div class="text-right">
+                                    <a href="" class="cta cta-primary" data-ripple>Emite Deviz</a>
+                                </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -313,52 +306,83 @@
 @section('scripts')
     <script type="text/javascript">
         $(function () {
+
             $('.floating-full-circle button').float(0, 0, 84, 104, -45, 225, 1, 'build', 'bug_report');
 
             $('.share-items .floating-item').on('click', function () {
-                $('#optiune-lucrare').val($.trim($('#optiune-lucrare').val())+" "+$.trim($(this).parent().siblings().text()) + " " + $.trim($(this).text()));
+                var content = $.trim($('#optiune-lucrare').val())+" "+$.trim($(this).parent().siblings().text())+" "+$.trim($(this).text());
+                $('#optiune-lucrare').val(content.trim());
                 $(this).parent().siblings().trigger('click');
+                $("#adauga").trigger('click');
             });
-//            $('.floating-full-circle button').focusout(function () {
-////                $('.opened button').trigger('click');
-////                alert($(event.target).attr('class'));
-//                currentItem = $(this);
-//                setTimeout(
-//                        function()
-//                        {
-//                            if(!$('.float-btn').is(':focus')){
-//                                currentItem.trigger('click');
-//                            }
-//                            //do something special
-//                        }, 100);
-//            });
+
             //adauga lucrare from input
             $("#adauga").on("click", function () {
                 if ($('#optiune-lucrare').val() != "") {
                     var content = $('#optiune-lucrare').val().toLowerCase();
                     if ($('#adauga-manopera').is(':checked')) {
                         $('#manopera').append('<div class="estimated-option is-numbered-item">' + content.charAt(0).toUpperCase()+ content.slice(1) + '<span class="rem">Șterge <span class="material-icons close"></span></span></div>');
+                        $('#adauga-manopera').trigger('click');
                     } else {
                         $('#piese').append('<div class="estimated-option is-numbered-item">' + content.charAt(0).toUpperCase()+ content.slice(1) + '<span class="rem">Șterge <span class="material-icons close"></span></span></div>');
+                        $('#adauga-piese').trigger('click');
                     }
                     $('#optiune-lucrare').val("");
-//                    $('.form-radio input').prop('checked', false);
+                    $("input[name='add-manopera']").prop('checked',false);
                 }
             });
             //sterge input button
             $('#sterge').on('click',function(){
                 $('#optiune-lucrare').val("");
+                if ($('#adauga-manopera').is(':checked')){
+                    $('#adauga-manopera').trigger('click');
+                    $("input[name='add-manopera']").prop('checked',false);
+                }else{
+                    $('#adauga-piese').trigger('click');
+                }
             });
 
             //sterge lucrare button
             $(".canBeErased").on("click", '.rem', function () {
                 $(this).parent().remove();
             });
-
-//            for simple checkbox
-//            $(".type-of-service label").on("click", function () {
-//                $('#optiune-lucrare').val($.trim($(this).text()));
-//            });
+            //scrols so that all options are visible
+            function scrollToInput(){
+                $('html,body').animate({
+                    scrollTop: $('#input-lucrare').offset().top
+                }, 1000);
+            }
+            //initiates the addition process
+            $("#adauga-manopera").on("click", function () {
+                $('#alege-manopera').show(400);
+                $('#alege-piese').hide(400);
+                scrollToInput();
+            });
+            //initiates the addition process
+            $("#adauga-piesa").on("click", function () {
+                $('#alege-manopera').hide(400);
+                $('#alege-piese').show(400);
+                scrollToInput();
+            });
+//            for manopera field
+            $(".manopera-field label").on("click", function () {
+                $('#optiune-lucrare').val($.trim($(this).text()));
+                $('#alege-manopera').hide(400);
+                $('#alege-piese').show(400);
+            });
         });
+        //            $('.floating-full-circle button').focusout(function () {
+        ////                $('.opened button').trigger('click');
+        ////                alert($(event.target).attr('class'));
+        //                currentItem = $(this);
+        //                setTimeout(
+        //                        function()
+        //                        {
+        //                            if(!$('.float-btn').is(':focus')){
+        //                                currentItem.trigger('click');
+        //                            }
+        //                            //do something special
+        //                        }, 100);
+        //            });
     </script>
 @endsection
