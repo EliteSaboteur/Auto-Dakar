@@ -67,7 +67,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex-item" id="alege-manopera">
+                        <div class="flex-item d-none animated" id="alege-manopera">
                             <h5>Manoperă</h5>
 
 
@@ -95,7 +95,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex-item" id="alege-piese">
+                        <div class="flex-item d-none animated" id="alege-piese">
                             <h5>Piese</h5>
                             <div class="form-options-list">
                                 <div class="floating-share floating-full-circle">
@@ -350,25 +350,46 @@
             function scrollToInput(){
                 $('html,body').animate({
                     scrollTop: $('#input-lucrare').offset().top
-                }, 1000);
+                }, 500);
+            }
+            function scrollToButton(){
+                $('html,body').animate({
+                    scrollTop: $('#adauga-manopera').offset().top
+                }, 500);
             }
             //initiates the addition process
             $("#adauga-manopera").on("click", function () {
-                $('#alege-manopera').show(400);
-                $('#alege-piese').hide(400);
+                $('#alege-manopera').removeClass('d-none').addClass('zoomIn');
+                $('#alege-piese').addClass('zoomOut');
+                setTimeout(function(){
+                    $('#alege-manopera').removeClass('zoomIn');
+                    $('#alege-piese').addClass('d-none').removeClass('zoomOut');
+                }, 700);
                 scrollToInput();
             });
             //initiates the addition process
             $("#adauga-piesa").on("click", function () {
-                $('#alege-manopera').hide(400);
-                $('#alege-piese').show(400);
+                $('#alege-manopera').addClass('zoomOut');
+                $('#alege-piese').removeClass('d-none').addClass('zoomIn');
+                setTimeout(function(){
+                    $('#alege-manopera').addClass('d-none').removeClass('zoomOut');
+                    $('#alege-piese').removeClass('zoomIn');
+                }, 700);
                 scrollToInput();
             });
 //            for manopera field
             $(".manopera-field label").on("click", function () {
                 $('#optiune-lucrare').val($.trim($(this).text()));
-                $('#alege-manopera').hide(400);
-                $('#alege-piese').show(400);
+                $('#alege-manopera').addClass('zoomOut');
+                $('#alege-piese').removeClass('d-none').addClass('zoomIn');
+
+
+                setTimeout(function(){
+                    $('#alege-manopera').addClass('d-none').removeClass('zoomOut');
+                    $('#alege-piese').removeClass('zoomIn')
+                }, 700);
+                scrollToInput();
+
             });
         });
         //            $('.floating-full-circle button').focusout(function () {
