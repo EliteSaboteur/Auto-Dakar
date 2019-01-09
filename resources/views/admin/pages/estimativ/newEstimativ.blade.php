@@ -54,7 +54,8 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="optiune-lucrare" aria-describedby="optiune-lucrare" min="10" placeholder="&nbsp;">
+                                            <input type="text" class="form-control" id="optiune-lucrare"
+                                                   aria-describedby="optiune-lucrare" min="10" placeholder="&nbsp;">
                                             <label for="optiune-lucrare">
                                                 <span class="placeholder">Lucrare solicitată</span>
                                                 <span class="error">Numele nu trebuie sa contina spatii albe!</span>
@@ -67,43 +68,230 @@
                                     </div>
                                 </div>
 
-                                <div class="form-options-list">
+                                {{--<div class="form-options-list">--}}
+                                {{--<div class="form-radio form-big">--}}
+                                {{--<input type="radio" name="lucrare-estimata" id="capota">--}}
+                                {{--<label for="capota">--}}
+                                {{--<span class="material-icons directions_car"></span>--}}
+                                {{--<span>Capotă</span>--}}
+                                {{--</label>--}}
+                                {{--</div>--}}
+                                {{--<div class="form-radio form-big">--}}
+                                {{--<input type="radio" name="lucrare-estimata" id="aripa">--}}
+                                {{--<label for="aripa">--}}
+                                {{--<span class="material-icons local_car_wash"></span>--}}
+                                {{--<span>Aripă</span>--}}
+                                {{--</label>--}}
+                                {{--</div>--}}
+                                {{--<div class="form-radio form-big">--}}
+                                {{--<input type="radio" name="lucrare-estimata" id="portiera">--}}
+                                {{--<label for="portiera">--}}
+                                {{--<span class="material-icons local_taxi"></span>--}}
+                                {{--<span>Portieră</span>--}}
+                                {{--</label>--}}
+                                {{--</div>--}}
+                                {{--<div class="form-radio form-big">--}}
+                                {{--<input type="radio" name="lucrare-estimata" id="parbriz">--}}
+                                {{--<label for="parbriz">--}}
+                                {{--<span class="material-icons local_shipping"></span>--}}
+                                {{--<span>Parbriz</span>--}}
+                                {{--</label>--}}
+                                {{--</div>--}}
+                                {{--<div class="form-radio form-big">--}}
+                                {{--<input type="radio" name="lucrare-estimata" id="geam">--}}
+                                {{--<label for="geam">--}}
+                                {{--<span class="material-icons local_shipping"></span>--}}
+                                {{--<span>Geam</span>--}}
+                                {{--</label>--}}
+                                {{--</div>--}}
+                                {{--</div>--}}
+
+                                <div class="form-options-list manopera-field">
                                     <div class="form-radio form-big">
-                                        <input type="radio" name="piesa" id="capota">
-                                        <label for="capota">
-                                            <span class="material-icons directions_car"></span>
-                                            <span>Capotă</span>
+                                        <input type="radio" name="add-manopera" id="inlocuit">
+                                        <label for="inlocuit">
+                                            <span class="material-icons widgets"></span>
+                                            <span>Înlocuit</span>
                                         </label>
                                     </div>
                                     <div class="form-radio form-big">
-                                        <input type="radio" name="piesa" id="aripa">
-                                        <label for="aripa">
-                                            <span class="material-icons local_car_wash"></span>
-                                            <span>Aripă</span>
+                                        <input type="radio" name="add-manopera" id="vopsit">
+                                        <label for="vopsit">
+                                            <span class="material-icons widgets"></span>
+                                            <span>Vopsit</span>
                                         </label>
                                     </div>
                                     <div class="form-radio form-big">
-                                        <input type="radio" name="piesa" id="portiera">
-                                        <label for="portiera">
-                                            <span class="material-icons local_taxi"></span>
-                                            <span>Portieră</span>
-                                        </label>
-                                    </div>
-                                    <div class="form-radio form-big">
-                                        <input type="radio" name="piesa" id="parbriz">
-                                        <label for="parbriz">
-                                            <span class="material-icons local_shipping"></span>
-                                            <span>Parbriz</span>
-                                        </label>
-                                    </div>
-                                    <div class="form-radio form-big">
-                                        <input type="radio" name="piesa" id="geam">
-                                        <label for="geam">
-                                            <span class="material-icons local_shipping"></span>
-                                            <span>Geam</span>
+                                        <input type="radio" name="add-manopera" id="reparat">
+                                        <label for="reparat">
+                                            <span class="material-icons widgets"></span>
+                                            <span>Reparat</span>
                                         </label>
                                     </div>
                                 </div>
+                                <div class="margin-bottom-30"></div>
+
+                                <div class="form-options-list">
+                                    <div class="floating-share floating-full-circle">
+                                        <button class="float-trigger float-btn">Capotă
+                                            {{--<i class="main-button material-icons build"></i>--}}
+                                        </button>
+                                        <ul class="share-items">
+                                            <li class="floating-item item-folder">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>spate
+                                                    {{--<i class="material-icons alarm_off"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-paper-plane">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>față
+                                                    {{--<i class="material-icons alarm_on"></i>--}}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="floating-share floating-full-circle">
+                                        <button class="float-trigger float-btn">Portieră
+                                            {{--<i class="main-button material-icons build"></i>--}}
+                                        </button>
+                                        <ul class="share-items">
+                                            <li class="floating-item item-cloud">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta față
+                                                    {{--<i class="material-icons alarm"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-cog">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta spate
+                                                    {{--<i class="material-icons alarm_add"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-folder">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>stânga spate
+                                                    {{--<i class="material-icons alarm_off"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-paper-plane">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>stânga față
+                                                    {{--<i class="material-icons alarm_on"></i>--}}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="floating-share floating-full-circle">
+                                        <button class="float-trigger float-btn">Aripă
+                                            {{--<i class="main-button material-icons build"></i>--}}
+                                        </button>
+                                        <ul class="share-items">
+                                            <li class="floating-item item-cloud">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta față
+                                                    {{--<i class="material-icons alarm"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-cog">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta spate
+                                                    {{--<i class="material-icons alarm_add"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-folder">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>stânga spate
+                                                    {{--<i class="material-icons alarm_off"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-paper-plane">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>stânga față
+                                                    {{--<i class="material-icons alarm_on"></i>--}}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="floating-share floating-full-circle">
+                                        <button class="float-trigger float-btn">Geam
+                                            {{--<i class="main-button material-icons build"></i>--}}
+                                        </button>
+                                        <ul class="share-items">
+                                            <li class="floating-item item-cloud">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta față
+                                                    {{--<i class="material-icons alarm"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-cog">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta spate
+                                                    {{--<i class="material-icons alarm_add"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-folder">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>stânga spate
+                                                    {{--<i class="material-icons alarm_off"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-paper-plane">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>stânga față
+                                                    {{--<i class="material-icons alarm_on"></i>--}}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="floating-share floating-full-circle">
+                                        <button class="float-trigger float-btn">Parbriz
+                                            {{--<i class="main-button material-icons build"></i>--}}
+                                        </button>
+                                        <ul class="share-items">
+                                            <li class="floating-item item-cloud">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>
+                                                    <i class="material-icons add"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="floating-share floating-full-circle">
+                                        <button class="float-trigger float-btn">Lunetă
+                                            {{--<i class="main-button material-icons build"></i>--}}
+                                        </button>
+                                        <ul class="share-items">
+                                            <li class="floating-item item-cloud">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>
+                                                    <i class="material-icons add"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="floating-share floating-full-circle">
+                                        <button class="float-trigger float-btn">Kit
+                                            {{--<i class="main-button material-icons build"></i>--}}
+                                        </button>
+                                        <ul class="share-items">
+                                            <li class="floating-item item-cloud">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>vopsitorie
+                                                    {{--<i class="material-icons alarm"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-cog">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>parbriz
+                                                    {{--<i class="material-icons alarm_add"></i>--}}
+                                                </a>
+                                            </li>
+                                            <li class="floating-item item-folder">
+                                                <a href="javascript:void(0)" class="float-btn" data-ripple>tinichigerie
+                                                    {{--<i class="material-icons alarm_off"></i>--}}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    {{--<div class="form-radio form-big">--}}
+                                    {{--<input type="radio" name="piesa" id="kit">--}}
+                                    {{--<label for="kit">--}}
+                                    {{--<span class="material-icons widgets"></span>--}}
+                                    {{--<span>Kituri</span>--}}
+                                    {{--</label>--}}
+                                    {{--</div>--}}
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -132,7 +320,8 @@
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group has-float-label">
                                 <input type="text" id="data-estimata" name="data-estimata" data-toggle="datetimepicker"
-                                       class="form-control datetimepicker-input" data-target="#data-estimata" placeholder="&nbsp;">
+                                       class="form-control datetimepicker-input" data-target="#data-estimata"
+                                       placeholder="&nbsp;">
                                 <label for="data-estimata">
                                     <span class="placeholder">Dată estimată:</span>
                                 </label>
@@ -144,8 +333,8 @@
                         <div class="col-xs-12 col-md-12">
                             <h3>Lucrari soliciate</h3>
                         </div>
-                        <div class="col-xs-12 col-md-12">
-                            <div id="lucrari"></div>
+                        <div class="col-xs-12 col-md-12 canBeErased">
+                            <div id="lucrari" class="has-numbered-items"></div>
                         </div>
                     </div>
                 </div>
@@ -159,20 +348,22 @@
     <script type="text/javascript">
         $(function () {
 
-            $( "#adauga" ).on( "click", function() {
-                if($('#optiune-lucrare').val()!=""){
-                    $('#lucrari').append('<div class="estimated-option">'+$('#optiune-lucrare').val()+'<span class="rem">Șterge <span class="material-icons close"></span></span></div>');
-                    $('#optiune-lucrare').val("");
-                    $('.form-radio input').prop('checked', false);
-                }
-            });
-
-            $( "#lucrari" ).on( "click",'.rem', function() {
-                $(this).parent().remove();
-            });
-            $( ".type-of-service label" ).on( "click", function() {
-                $('#optiune-lucrare').val($.trim($( this ).text()));
-            });
+//            $( "#adauga" ).on( "click", function() {
+//                if($('#optiune-lucrare').val()!=""){
+//                    var content = $('#optiune-lucrare').val().toLowerCase();
+//                    $('#lucrari').append('<div class="estimated-option is-numbered-item">' + content.charAt(0).toUpperCase()+ content.slice(1) + '<span class="rem">Șterge <span class="material-icons close"></span></span></div>');
+//                    $('#optiune-lucrare').val("");
+//                    $("input[name='lucrare-estimata']").prop('checked',false);
+//                }
+//            });
+//
+//            $(".canBeErased").on("click", '.rem', function () {
+//                $(this).parent().remove();
+//            });
+//            $( ".type-of-service label" ).on( "click", function() {
+//                $('#optiune-lucrare').val($.trim($( this ).text()));
+//                $( "#adauga").trigger('click');
+//            });
 
             $('#data-comanda').datetimepicker({
                 locale: 'ro',
@@ -207,6 +398,82 @@
                     clear: 'material-icons clear',
                     close: 'material-icons clear'
                 },
+            });
+            $('.floating-full-circle button').float(0, 0, 84, 104, -45, 225, 1, 'build', 'bug_report');
+
+            $('.share-items .floating-item').on('click', function () {
+                var content = $.trim($('#optiune-lucrare').val()) + " " + $.trim($(this).parent().siblings().text()) + " " + $.trim($(this).text());
+                $('#optiune-lucrare').val(content.trim());
+                $(this).parent().siblings().trigger('click');
+                $("#adauga").trigger('click');
+            });
+
+            //adauga lucrare from input
+            $("#adauga").on("click", function () {
+                if ($('#optiune-lucrare').val() != "") {
+                    var content = $('#optiune-lucrare').val().toLowerCase();
+                    $('#lucrari').append('<div class="estimated-option is-numbered-item">' + content.charAt(0).toUpperCase() + content.slice(1) + '<span class="rem">Șterge <span class="material-icons close"></span></span></div>');
+                    $('#optiune-lucrare').val("");
+                    $("input[name='add-manopera']").prop('checked', false);
+                }
+            });
+            //sterge input button
+            $('#sterge').on('click', function () {
+                $('#optiune-lucrare').val("");
+                if ($('#adauga-manopera').is(':checked')) {
+                    $('#adauga-manopera').trigger('click');
+                    $("input[name='add-manopera']").prop('checked', false);
+                } else {
+                    $('#adauga-piese').trigger('click');
+                }
+            });
+
+            //sterge lucrare button
+            $(".canBeErased").on("click", '.rem', function () {
+                $(this).parent().remove();
+            });
+            //scrols so that all options are visible
+//            function scrollToInput(){
+//                $('html,body').animate({
+//                    scrollTop: $('#input-lucrare').offset().top
+//                }, 500);
+//            }
+//            function scrollToButton(){
+//                $('html,body').animate({
+//                    scrollTop: $('#adauga-manopera').offset().top
+//                }, 500);
+//            }
+            //initiates the addition process
+            $("#adauga-manopera").on("click", function () {
+                $('#alege-manopera').removeClass('d-none').addClass('zoomIn');
+                $('#alege-piese').addClass('zoomOut');
+                setTimeout(function () {
+                    $('#alege-manopera').removeClass('zoomIn');
+                    $('#alege-piese').addClass('d-none').removeClass('zoomOut');
+                }, 700);
+//                scrollToInput();
+            });
+            //initiates the addition process
+            $("#adauga-piesa").on("click", function () {
+                $('#alege-manopera').addClass('zoomOut');
+                $('#alege-piese').removeClass('d-none').addClass('zoomIn');
+                setTimeout(function () {
+                    $('#alege-manopera').addClass('d-none').removeClass('zoomOut');
+                    $('#alege-piese').removeClass('zoomIn');
+                }, 700);
+//                scrollToInput();
+            });
+//            for manopera field
+            $(".manopera-field label").on("click", function () {
+                $('#optiune-lucrare').val($.trim($(this).text()));
+                $('#alege-manopera').addClass('zoomOut');
+                $('#alege-piese').removeClass('d-none').addClass('zoomIn');
+                setTimeout(function () {
+                    $('#alege-manopera').addClass('d-none').removeClass('zoomOut');
+                    $('#alege-piese').removeClass('zoomIn')
+                }, 700);
+//                scrollToInput();
+
             });
         });
     </script>

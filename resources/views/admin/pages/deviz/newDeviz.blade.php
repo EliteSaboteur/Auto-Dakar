@@ -382,8 +382,6 @@
                 $('#optiune-lucrare').val($.trim($(this).text()));
                 $('#alege-manopera').addClass('zoomOut');
                 $('#alege-piese').removeClass('d-none').addClass('zoomIn');
-
-
                 setTimeout(function(){
                     $('#alege-manopera').addClass('d-none').removeClass('zoomOut');
                     $('#alege-piese').removeClass('zoomIn')
