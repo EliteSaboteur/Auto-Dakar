@@ -44,7 +44,8 @@ class InterventionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $a=0;
+        return view('admin.pages.intervention.newIntervention');
     }
 
     /**

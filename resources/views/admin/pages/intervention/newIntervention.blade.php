@@ -16,28 +16,28 @@
     <div class="divider margin-bottom-30"></div>
     <div class="row">
         <div class="col-sm">
-            <form action="">
+            <form method="POST" action="{{ route('intervention.store') }}">
+                @csrf
                 <div class="da-card">
                     <div class="da-card-header">
                         <h3 class="da-text-primary">Automobil</h3>
                     </div>
                     <div class="da-card-body">
-
                         <div class="row">
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="numar" aria-describedby="emailHelp"
+                                    <input type="text" class="form-control" id="numar" name="numar" aria-describedby="Număr înmatriculare"
                                            min="10" required="required" placeholder="&nbsp;">
                                     <label for="numar">
-                                        <span class="placeholder">Numar de inmatriculare</span>
-                                        <span class="error">Numele nu trebuie sa contina spatii albe!</span>
+                                        <span class="placeholder">Numar de înmatriculare</span>
+                                        <span class="error">Numele nu trebuie să conțina spatii albe!</span>
                                     </label>
                                     <span class="material-icons icon directions_car"></span>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-8">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="serie-caroserie"
+                                    <input type="text" class="form-control" id="serie-caroserie" name="serie-caroserie"
                                            aria-describedby="emailHelp" min="10" required="required"
                                            placeholder="&nbsp;">
                                     <label for="serie-caroserie">
@@ -52,7 +52,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-group has-float-label">
-                                    <select class="selectpicker" id="marca" title="Selecteaza">
+                                    <select class="selectpicker" id="marca" name="marca" title="Selecteaza">
                                         <option value="audi">Audi</option>
                                         <option value="bmw">BMW</option>
                                         <option value="dacia">Dacia</option>
@@ -66,7 +66,7 @@
                             </div>
                             <div class="col">
                                 <div class="form-group has-float-label">
-                                    <select class="selectpicker" id="model" title="Selecteaza">
+                                    <select class="selectpicker" id="model" name="model" title="Selecteaza">
                                         <option value="model1">Model</option>
                                         <option value="model2">Model</option>
                                         <option value="model3">Model</option>
@@ -79,7 +79,14 @@
                                 </div>
                             </div>
                         </div>
-                        {{--pf--}}      </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-right">
+                                    <a href="#" class="cta cta-default da-text-primary">Verifică<span class="material-icons search"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="margin-bottom-30"></div>
                 <div class="da-card">
@@ -96,7 +103,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="denumire" aria-describedby="emailHelp"
+                                    <input type="text" class="form-control" id="denumire" name="denumire" aria-describedby="Nume si prenume"
                                            min="10" required="required" placeholder="&nbsp;">
                                     <label for="denumire">
                                         <span class="placeholder" id="denumire-placeholder">Nume si Prenume</span>
@@ -108,7 +115,7 @@
                             </div>
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="telefon" aria-describedby="emailHelp"
+                                    <input type="text" class="form-control" id="telefon" name="telefon" aria-describedby="emailHelp"
                                            min="10" required="required" placeholder="&nbsp;">
                                     <label for="telefon">
                                         <span class="placeholder">Telefon</span>
@@ -119,8 +126,8 @@
                             </div>
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group has-float-label">
-                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                                           min="10" required="required" placeholder="&nbsp;">
+                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                                           min="10"  placeholder="&nbsp;">
                                     <label for="cnp/cui">
                                         <span class="placeholder">Email</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
@@ -135,7 +142,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="judet" aria-describedby="emailHelp"
+                                    <input type="text" class="form-control" id="judet" name="judet" aria-describedby="emailHelp"
                                            min="10" required="required" placeholder="&nbsp;">
                                     <label for="judet">
                                         <span class="placeholder">Judet</span>
@@ -146,7 +153,7 @@
                             </div>
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="cnp/cui" aria-describedby="emailHelp"
+                                    <input type="text" class="form-control" id="cnp/cui" name="cnp/cui" aria-describedby="emailHelp"
                                            min="10" required="required" placeholder="&nbsp;">
                                     <label for="cnp/cui">
                                         <span class="placeholder" id="cnp-placeholder">CNP</span>
@@ -157,8 +164,8 @@
                             </div>
                             <div class="col-xs-12 col-md-4 animated d-none">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="regcom" aria-describedby="emailHelp"
-                                           min="10" required="required" placeholder="&nbsp;">
+                                    <input type="text" class="form-control" id="regcom" name="regcom" aria-describedby="emailHelp"
+                                           min="10" placeholder="&nbsp;">
                                     <label for="regcom">
                                         <span class="placeholder">Nr. Reg.com/an.</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
@@ -172,8 +179,8 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="cont" aria-describedby="emailHelp"
-                                           min="10" required="required" placeholder="&nbsp;">
+                                    <input type="text" class="form-control" id="cont" name="cont" aria-describedby="emailHelp"
+                                           min="10" placeholder="&nbsp;">
                                     <label for="cont">
                                         <span class="placeholder">Cont</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
@@ -183,8 +190,8 @@
                             </div>
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="banca" aria-describedby="emailHelp"
-                                           min="10" required="required" placeholder="&nbsp;">
+                                    <input type="text" class="form-control" id="banca" name="banca" aria-describedby="emailHelp"
+                                           min="10" placeholder="&nbsp;">
                                     <label for="banca">
                                         <span class="placeholder">Banca</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
@@ -194,8 +201,8 @@
                             </div>
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="adresa" aria-describedby="emailHelp"
-                                           min="10" required="required" placeholder="&nbsp;">
+                                    <input type="text" class="form-control" id="adresa" name="adresa" aria-describedby="emailHelp"
+                                           min="10" placeholder="&nbsp;">
                                     <label for="adresa">
                                         <span class="placeholder">Adresa</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
@@ -203,15 +210,13 @@
                                     <span class="material-icons icon location_on"></span>
                                 </div>
                             </div>
-
-
                         </div>
 
                         <div class="row">
                             <div class="col-xs-12 col-md-3">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="reprezentant"
-                                           aria-describedby="emailHelp" min="10" required="required"
+                                    <input type="text" class="form-control" id="reprezentant" name="reprezentant"
+                                           aria-describedby="emailHelp" min="10"
                                            placeholder="&nbsp;">
                                     <label for="reprezentant">
                                         <span class="placeholder">Reprezentant</span>
@@ -222,8 +227,8 @@
                             </div>
                             <div class="col-xs-12 col-md-3">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="serie-ci" aria-describedby="emailHelp"
-                                           min="10" required="required" placeholder="&nbsp;">
+                                    <input type="text" class="form-control" id="serie-ci" name="serie-ci" aria-describedby="emailHelp"
+                                           min="10" placeholder="&nbsp;">
                                     <label for="serie-ci">
                                         <span class="placeholder">Serie CI</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
@@ -233,8 +238,8 @@
                             </div>
                             <div class="col-xs-12 col-md-3">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="numar-ci" aria-describedby="emailHelp"
-                                           min="10" required="required" placeholder="&nbsp;">
+                                    <input type="text" class="form-control" id="numar-ci" name="numar-ci" aria-describedby="emailHelp"
+                                           min="10" placeholder="&nbsp;">
                                     <label for="numar-ci">
                                         <span class="placeholder">Numar CI</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
@@ -244,8 +249,8 @@
                             </div>
                             <div class="col-xs-12 col-md-3">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="eliberat" aria-describedby="emailHelp"
-                                           min="10" required="required" placeholder="&nbsp;">
+                                    <input type="text" class="form-control" id="eliberat" name="eliberat" aria-describedby="emailHelp"
+                                           min="10" placeholder="&nbsp;">
                                     <label for="eliberat">
                                         <span class="placeholder">Eliberat de</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
