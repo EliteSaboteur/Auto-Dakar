@@ -29,9 +29,12 @@ $('#persoana-juridica').on('click',function(){
 });
 
 $('#denumire').on('keypress',function(){
-    setTimeout(function(){
-        $('#reprezentant').val($('#denumire').val());
-    }, 100);
+    if($('#persoana-fizica').hasClass('cta-primary')){
+        setTimeout(function(){
+            $('#reprezentant').val($('#denumire').val());
+        }, 100);
+    }
+
 });
 
 $('.floating-full-circle button').float(0, 0, 84, 104, -45, 225, 1, 'build', 'bug_report');
