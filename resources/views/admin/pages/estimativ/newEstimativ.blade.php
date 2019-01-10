@@ -337,6 +337,11 @@
                             <div id="lucrari" class="has-numbered-items"></div>
                         </div>
                     </div>
+                    <div class="flex-item">
+                        <div class="text-right">
+                            <a href="" class="cta cta-primary" data-ripple>Emite Deviz</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

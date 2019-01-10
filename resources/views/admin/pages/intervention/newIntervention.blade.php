@@ -89,8 +89,8 @@
                     <div class="da-card-body">
                         <div class="form-group margin-all-0">
                             <div class="text-left">
-                                <button type="button" class="cta cta-primary" data-ripple>Persoana Fizica</button>
-                                <button type="button" class="cta cta-default" data-ripple>Persoana Juridica</button>
+                                <button type="button" class="cta cta-primary" id="persoana-fizica" data-ripple>Persoana Fizica</button>
+                                <button type="button" class="cta cta-default" id="persoana-juridica" data-ripple>Persoana Juridica</button>
                             </div>
                         </div>
                         <div class="row">
@@ -99,7 +99,7 @@
                                     <input type="text" class="form-control" id="denumire" aria-describedby="emailHelp"
                                            min="10" required="required" placeholder="&nbsp;">
                                     <label for="denumire">
-                                        <span class="placeholder">Nume si Prenume</span>
+                                        <span class="placeholder" id="denumire-placeholder">Nume si Prenume</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
                                     </label>
                                     <span class="material-icons icon perm_identity"></span>
@@ -135,16 +135,27 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" id="judet" aria-describedby="emailHelp"
+                                           min="10" required="required" placeholder="&nbsp;">
+                                    <label for="judet">
+                                        <span class="placeholder">Judet</span>
+                                        <span class="error">Acest camp e obligatoriu!</span>
+                                    </label>
+                                    <span class="material-icons icon location_on"></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <div class="form-group has-float-label">
                                     <input type="text" class="form-control" id="cnp/cui" aria-describedby="emailHelp"
                                            min="10" required="required" placeholder="&nbsp;">
                                     <label for="cnp/cui">
-                                        <span class="placeholder">CNP</span>
+                                        <span class="placeholder" id="cnp-placeholder">CNP</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
                                     </label>
                                     <span class="material-icons icon credit_card"></span>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-md-4">
+                            <div class="col-xs-12 col-md-4 animated d-none">
                                 <div class="form-group has-float-label">
                                     <input type="text" class="form-control" id="regcom" aria-describedby="emailHelp"
                                            min="10" required="required" placeholder="&nbsp;">
@@ -155,17 +166,7 @@
                                     <span class="material-icons icon credit_card"></span>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="judet" aria-describedby="emailHelp"
-                                           min="10" required="required" placeholder="&nbsp;">
-                                    <label for="judet">
-                                        <span class="placeholder">Judet</span>
-                                        <span class="error">Acest camp e obligatoriu!</span>
-                                    </label>
-                                    <span class="material-icons icon location_on"></span>
-                                </div>
-                            </div>
+
                         </div>
 
                         <div class="row">
@@ -264,6 +265,5 @@
         </div>
     </div>
 @endsection
-
 
 
