@@ -337,9 +337,10 @@
                             <div id="lucrari" class="has-numbered-items"></div>
                         </div>
                     </div>
+                    <div class="margin-bottom-30"></div>
                     <div class="flex-item">
                         <div class="text-right">
-                            <a href="" class="cta cta-primary" data-ripple>Emite Deviz</a>
+                            <a href="" class="cta cta-primary" data-ripple>Emite Estimativ</a>
                         </div>
                     </div>
                 </div>
