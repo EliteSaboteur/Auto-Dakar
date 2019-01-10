@@ -17,10 +17,10 @@ mix.copyDirectory('resources/fonts', 'public/fonts');
 mix.copyDirectory('resources/js/tempus-deus.js', 'public/js');
 mix.copyDirectory('resources/js/moment.js', 'public/js');
 mix.copyDirectory('resources/js/bootstrap-select.js', 'public/js');
-mix.copyDirectory('resources/js/scss.js', 'public/js');
 
 mix.js('resources/js/app.js', 'public/js/app.js')
     // .js('resources/js/custom.js', 'public/js/app.js')
+    .js('resources/js/scss.js', 'public/js/app.js')
     .js('resources/js/admin.js', 'public/js/app.js');
 
 mix.sass('resources/sass/app.scss', 'public/css')
