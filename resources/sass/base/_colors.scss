@@ -8,7 +8,9 @@ $colors: (
     dark: $dark,
     black: $black,
     type: $type,
-    light-grey: $light-grey
+    light-grey: $light-grey,
+    error: $error,
+    warning: $warning
     );
 
 @each $key,

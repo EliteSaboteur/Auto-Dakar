@@ -39,6 +39,13 @@
         'components/admin-estimations',
         'components/page';
 
+// FRONTEND PAGE COMPONENTS
+
+@import 'page-components/bootstrap-grid-overwrite',
+        'page-components/section-padding',
+        'page-components/hero';
+
 // VENDOR
 @import 'vendor/bootstrap-select',
-        'vendor/date-time';
+        'vendor/date-time',
+        'vendor/slick';
