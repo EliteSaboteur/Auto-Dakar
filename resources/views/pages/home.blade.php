@@ -12,6 +12,11 @@
 @stop
 @section('content')
 
+
+@push('scripts')
+    <script src="{{ asset('js/slick.min.js') }}"></script>
+@endpush
+
 <!-- HERO -->
 <div class="da-hero da-background-dark da-section-padding">
     <div class="da-hero-image">
@@ -28,7 +33,7 @@
 <div class="da-quick-access da-section-padding da-background-light-grey">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 margin-auto">
+            <div class="col-sm-10 col-lg-6 margin-auto">
                 <ul class="flex-list flex-center flex-3">
                     <li class="flex-item relative">
                         <div class="da-quick-access-card da-card relative ratio-square">
@@ -73,8 +78,8 @@
 
 <div class="da-promotions da-background-primary da-section-padding">
     <div class="container">
-        <div class="row">
-        <div class="col">
+        <div class="row promotions-slider" data-initialize="promotions-slider">
+            <div class="col">
                 <div class="da-card da-image-card da-background-dark">
                     <div class="da-card-image">
                         <i class="da-icon icon-round"></i>
@@ -111,7 +116,55 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <div class="promotions-nav padding-top-30">
+                    <div class="flex-list flex-center">
+                        <div class="flex-item text-center">
+                            <i class="cta cta-default cta-rounded prev"> < </i>
+                        </div>
+                        <div class="flex-item text-center">
+                            <i class="cta cta-default cta-rounded next"> > </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    @push('scripts')
+        
+        <script type="text/javascript">
+             $('[data-initialize="promotions-slider"]').slick({
+                dots: false,
+                infinite: true,
+                swipeToSlide: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                prevArrow: $('.da-promotions .prev'),
+                nextArrow:  $('.da-promotions .next'),
+                responsive: [
+                    {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+                ]
+                });
+        </script>
+
+    @endpush
+
 </div>
 
 <!-- ABOUT US -->
@@ -232,60 +285,59 @@
                 </div>
                 <div class="testimonials-nav padding-vertical-15">
                     <div class="flex-list flex-center">
-                        <div class="flex-item">
+                        <div class="flex-item text-center">
                             <i class="cta cta-default cta-rounded prev"> < </i>
                         </div>
-                        <div class="flex-item">
+                        <div class="flex-item text-center">
                             <i class="cta cta-default cta-rounded next"> > </i>
                         </div>
                     </div>
                 </div>
                 <div class="da-testimonials-more flex-list flex-center padding-vertical-15">
-                    <div class="flex-item">
+                    <div class="flex-item text-center">
                         <a href="" class="cta cta-primary">mai multe</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    @push('scripts')
+    
+    <script type="text/javascript">
+        $('[data-initialize="testimonials"]').slick({
+            dots: false,
+            infinite: true,
+            swipeToSlide: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: $('.da-testimonials .prev'),
+            nextArrow:  $('.da-testimonials .next'),
+            responsive: [
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+            ]
+        });
+    </script>
+    
+    @endpush
+
 </div>
 
 <!-- FOOTER -->
-
-
-@section('scripts')
-    <script src="{{ asset('js/slick.min.js') }}"></script>
-    <script type="text/javascript">
-        $('[data-initialize="testimonials"]').slick({
-        dots: false,
-        infinite: true,
-        swipeToSlide: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        prevArrow: $('.da-testimonials .prev'),
-        nextArrow:  $('.da-testimonials .next'),
-        responsive: [
-            {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-            },
-            {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-            }
-        ]
-        });
-
-    </script>
-
-@stop
 
 
 @endsection

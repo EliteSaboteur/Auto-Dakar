@@ -4,8 +4,8 @@ $da-gutter: 30px;
 .container {
     width: 100%;
     max-width: rem-calc($da-container-width);
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: rem-calc($da-gutter);
+    padding-right: rem-calc($da-gutter);
 
     .row {
         margin-left: rem-calc(-$da-gutter);
