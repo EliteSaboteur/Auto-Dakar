@@ -227,7 +227,7 @@
         <div class="row">
             <div class="col">
                 <h1 class="section-title">Testimoniale</h1>
-                <div class="testimonials-slider padding-vertical-50" data-initialize="testimonials">
+                <div class="testimonials-slider" data-initialize="testimonials">
                     <div class="testimonial-slide">
                         <div class="da-testimonial-author flex-list flex-space-between">
                             <div class="flex-item"><strong>Autor testimonial</strong></div>
@@ -314,6 +314,8 @@
             slidesToScroll: 1,
             prevArrow: $('.da-testimonials .prev'),
             nextArrow:  $('.da-testimonials .next'),
+            autoplay: true,
+            autoplaySpeed: 4000,
             responsive: [
                 {
                 breakpoint: 600,

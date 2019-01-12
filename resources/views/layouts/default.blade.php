@@ -14,8 +14,27 @@
 <div id='app'></div>
 
     <!-- Page Header -->
-    <header>
+    <header class="da-frontend-menu">
         @include('includes._header')
+
+        @push('scripts')
+
+        <script type="text/javascript">
+            const nav = $('.da-frontend-menu');
+            var offset = $(window).height(),
+                scrolled;
+
+            $(window).on('scroll load', function(){
+                var scrolled = $(window).scrollTop();
+                if (scrolled >= offset / 2) {
+                    nav.addClass('fixed');
+                } else if (scrolled < offset * 2) {
+                    nav.removeClass('fixed');
+                }
+            });
+        </script>
+
+        @endpush
     </header>
 
     <!-- Page Body -->
