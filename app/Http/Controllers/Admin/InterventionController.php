@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Chitanta;
+use App\Models\Factura;
+use App\Models\Automobil;
 
 class InterventionController extends Controller
 {
@@ -44,6 +47,33 @@ class InterventionController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'numar' => 'required|max:255',
+            'serieCaroserie' => 'required|max:255',
+            'marca' => 'required|max:255',
+            'model' => 'required|max:255',
+            'anFabricatie' => 'required|max:255',
+            'denumire' => 'required|max:255',
+            'telefon' => 'required|max:255',
+            'email' => 'nullable|max:255',
+            'judet' => 'nullable|max:255',
+            'cnp/cui' => 'nullable|max:255',
+            'regcom' => 'nullable|max:255',
+            'cont' => 'nullable|max:255',
+            'banca' => 'nullable|max:255',
+            'adresa' => 'nullable|max:255',
+            'reprezentant' => 'nullable|max:255',
+            'serieCi' => 'nullable|max:255',
+            'numarCi' => 'nullable|max:255',
+            'eliberat' => 'nullable|max:255',
+        ]);
+        $automobil= new Automobil();
+        $automobil->numar = $request->numar;
+        $automobil->marca = $request->marca;
+        $automobil->model = $request->model;
+        $automobil->sasiu = $request->serieCaroserie;
+        $automobil->an = $request->anFabricatie;
+        $automobil->save();
         $a=0;
         return view('admin.pages.intervention.newIntervention');
     }
