@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Chitanta;
 use App\Models\Factura;
 use App\Models\Automobil;
+use App\Models\Client;
+use App\Models\Interventie;
 
 class InterventionController extends Controller
 {
@@ -57,7 +59,7 @@ class InterventionController extends Controller
             'telefon' => 'required|max:255',
             'email' => 'nullable|max:255',
             'judet' => 'nullable|max:255',
-            'cnp/cui' => 'nullable|max:255',
+            'cnpcui' => 'nullable|max:255',
             'regcom' => 'nullable|max:255',
             'cont' => 'nullable|max:255',
             'banca' => 'nullable|max:255',
@@ -74,6 +76,25 @@ class InterventionController extends Controller
         $automobil->sasiu = $request->serieCaroserie;
         $automobil->an = $request->anFabricatie;
         $automobil->save();
+        $client = new Client();
+        $client->denumire = $request->denumire;
+        $client->cnpcui = $request->cnpcui;
+        $client->email = $request->email;
+        $client->telefon = $request->telefon;
+        $client->metadata = json_encode(['judet' => $request->judet,
+                                        'regcom' => $request->regcom,
+                                        'cont' => $request->cont,
+                                        'banca' => $request->banca,
+                                        'adresa' => $request->adresa,
+                                        'reprezentant' => $request->reprezentant,
+                                        'serieCi' => $request->serieCi,
+                                        'numarCi' => $request->numarCi,
+                                        'eliberat' => $request->eliberat,
+                            ]);
+        $client->save();
+        $interventie = new Interventie();
+        $interventie->automobil_id = $automobil->id;
+        $interventie->save();
         $a=0;
         return view('admin.pages.intervention.newIntervention');
     }

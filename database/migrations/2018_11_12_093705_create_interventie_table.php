@@ -17,14 +17,14 @@ class CreateInterventieTable extends Migration
             $table->unsignedInteger('automobil_id')->nullable();
             $table->increments('id');
 
-            $table->date('data_receptie');
-            $table->integer('numar_receptie');
-            $table->longText('lucrari_estimative');
-            $table->date('data_estimativa');
-            $table->double('cost_estimativ');
+            $table->date('data_receptie')->nullable();
+            $table->integer('numar_receptie')->nullable();
+            $table->longText('lucrari_estimative')->nullable();
+            $table->date('data_estimativa')->nullable();
+            $table->double('cost_estimativ')->nullable();
             $table->string('observatii',255)->nullable();
             $table->smallInteger('status')->nullable();
-            $table->smallInteger('vizibilitate');
+            $table->smallInteger('vizibilitate')->nullable();
 
             $table->unsignedInteger('factura_id')->nullable();
             $table->unsignedInteger('client_id')->nullable();

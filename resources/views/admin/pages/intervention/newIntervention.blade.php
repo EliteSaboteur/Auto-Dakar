@@ -139,7 +139,7 @@
                                 <div class="form-group has-float-label">
                                     <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
                                            min="10"  placeholder="&nbsp;">
-                                    <label for="cnp/cui">
+                                    <label for="email">
                                         <span class="placeholder">Email</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
                                     </label>
@@ -164,9 +164,9 @@
                             </div>
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="cnp/cui" name="cnp/cui" aria-describedby="emailHelp"
+                                    <input type="text" class="form-control" id="cnpcui" name="cnpcui" aria-describedby="emailHelp"
                                            min="10" required="required" placeholder="&nbsp;">
-                                    <label for="cnp/cui">
+                                    <label for="cnpcui">
                                         <span class="placeholder" id="cnp-placeholder">CNP</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
                                     </label>
