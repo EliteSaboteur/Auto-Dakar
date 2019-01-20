@@ -37,7 +37,7 @@ $('#denumire').on('keypress',function(){
 
 });
 
-$('.floating-full-circle button').float(0, 0, 84, 104, -45, 225, 1, 'build', 'bug_report');
+$('.floating-full-circle button').float(0, 0, 80, 80, -45, 225, 1, 'build', 'bug_report');
 
 $('.share-items .floating-item').on('click', function () {
     var content = $.trim($('#optiune-lucrare').val()) + " " + $.trim($(this).parent().siblings().text()) + " " + $.trim($(this).text());
