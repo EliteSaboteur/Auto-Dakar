@@ -37,7 +37,25 @@ $('#denumire').on('keypress',function(){
 
 });
 
-$('.floating-full-circle button').float(0, 0, 80, 80, -45, 225, 1, 'build', 'bug_report');
+// init floating options for elements with only one child - opens to the right - increase both xy radius to increase distange from center
+$('.service-option.one-child .float-trigger').float(0, 0, 60, 60, 0, 180, 0, 'build', 'bug_report');
+
+// init floating options for elements with only two children (change 0,180 to 90,-90 to open them vertically)
+$('.service-option.two-children .float-trigger').float(0, 0, 100, 100, 0, 180, 1, 'build', 'bug_report');
+
+// init floating options for elements with only three children - they open in triangle
+$('.service-option.three-children .float-trigger').float(0, 0, 80, 80, 0, 360, 0, 'build', 'bug_report');
+
+// init floating options for elements with four or more
+$('.service-option.four-children .float-trigger').float(0, 0, 80, 80, -45, 225, 1, 'build', 'bug_report');
+
+if ($('.service-option').length > 0 ) {
+    $(document).click(function(event){
+        if (!($(event.target).closest(".service-option").length)) {
+            $(".service-option.opened .float-trigger").trigger('click');
+        }
+    });
+}
 
 $('.share-items .floating-item').on('click', function () {
     var content = $.trim($('#optiune-lucrare').val()) + " " + $.trim($(this).parent().siblings().text()) + " " + $.trim($(this).text());
