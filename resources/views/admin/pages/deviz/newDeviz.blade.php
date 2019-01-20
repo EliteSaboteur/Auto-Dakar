@@ -99,152 +99,104 @@
                             <h5>Piese</h5>
                             <div class="form-options-list">
                                 <div class="floating-share floating-full-circle">
-                                    <button class="float-trigger float-btn">Capotă
-                                        {{--<i class="main-button material-icons build"></i>--}}
-                                    </button>
+                                    <button class="float-trigger float-btn">Capotă</button>
                                     <ul class="share-items">
                                         <li class="floating-item item-folder">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>spate
-                                                {{--<i class="material-icons alarm_off"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>spate</span>
                                         </li>
                                         <li class="floating-item item-paper-plane">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>față
-                                                {{--<i class="material-icons alarm_on"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>față</span>
                                         </li>
                                     </ul>
                                 </div>
 
                                 <div class="floating-share floating-full-circle">
-                                    <button class="float-trigger float-btn">Portieră
-                                        {{--<i class="main-button material-icons build"></i>--}}
-                                    </button>
+                                    <button class="float-trigger float-btn">Portieră</button>
                                     <ul class="share-items">
                                         <li class="floating-item item-cloud">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta față
-                                                {{--<i class="material-icons alarm"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>dreapta față</span>
                                         </li>
                                         <li class="floating-item item-cog">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta spate
-                                                {{--<i class="material-icons alarm_add"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>dreapta spate</span>
                                         </li>
                                         <li class="floating-item item-folder">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>stânga spate
-                                                {{--<i class="material-icons alarm_off"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>stânga spate</span>
                                         </li>
                                         <li class="floating-item item-paper-plane">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>stânga față
-                                                {{--<i class="material-icons alarm_on"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>stânga față</span>
                                         </li>
                                     </ul>
                                 </div>
 
                                 <div class="floating-share floating-full-circle">
-                                    <button class="float-trigger float-btn">Aripă
-                                        {{--<i class="main-button material-icons build"></i>--}}
-                                    </button>
+                                    <button class="float-trigger float-btn">Aripă</button>
                                     <ul class="share-items">
                                         <li class="floating-item item-cloud">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta față
-                                                {{--<i class="material-icons alarm"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>dreapta față </span>
                                         </li>
                                         <li class="floating-item item-cog">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta spate
-                                                {{--<i class="material-icons alarm_add"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>dreapta spate</span>
                                         </li>
                                         <li class="floating-item item-folder">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>stânga spate
-                                                {{--<i class="material-icons alarm_off"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>stânga spate</span>
                                         </li>
                                         <li class="floating-item item-paper-plane">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>stânga față
-                                                {{--<i class="material-icons alarm_on"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>stânga față</span>
                                         </li>
                                     </ul>
                                 </div>
 
                                 <div class="floating-share floating-full-circle">
-                                    <button class="float-trigger float-btn">Geam
-                                        {{--<i class="main-button material-icons build"></i>--}}
-                                    </button>
+                                    <button class="float-trigger float-btn">Geam</button>
                                     <ul class="share-items">
                                         <li class="floating-item item-cloud">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta față
-                                                {{--<i class="material-icons alarm"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>dreapta față </span>
                                         </li>
                                         <li class="floating-item item-cog">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>dreapta spate
-                                                {{--<i class="material-icons alarm_add"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>dreapta spate</span>
                                         </li>
                                         <li class="floating-item item-folder">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>stânga spate
-                                                {{--<i class="material-icons alarm_off"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>stânga spate</span>
                                         </li>
                                         <li class="floating-item item-paper-plane">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>stânga față
-                                                {{--<i class="material-icons alarm_on"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>stânga față</span>
                                         </li>
                                     </ul>
                                 </div>
 
                                 <div class="floating-share floating-full-circle">
-                                    <button class="float-trigger float-btn">Parbriz
-                                        {{--<i class="main-button material-icons build"></i>--}}
-                                    </button>
+                                    <button class="float-trigger float-btn">Parbriz</button>
                                     <ul class="share-items">
                                         <li class="floating-item item-cloud">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>
+                                            <span class="float-btn" data-ripple>
                                                 <i class="material-icons add"></i>
-                                            </a>
+                                            </span>
                                         </li>
                                     </ul>
                                 </div>
 
                                 <div class="floating-share floating-full-circle">
-                                    <button class="float-trigger float-btn">Lunetă
-                                        {{--<i class="main-button material-icons build"></i>--}}
-                                    </button>
+                                    <button class="float-trigger float-btn">Lunetă </button>
                                     <ul class="share-items">
                                         <li class="floating-item item-cloud">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>
+                                            <span class="float-btn" data-ripple>
                                                 <i class="material-icons add"></i>
-                                            </a>
+                                            </span>
                                         </li>
                                     </ul>
                                 </div>
 
                                 <div class="floating-share floating-full-circle">
-                                    <button class="float-trigger float-btn">Kit
-                                        {{--<i class="main-button material-icons build"></i>--}}
-                                    </button>
+                                    <button class="float-trigger float-btn">Kit</button>
                                     <ul class="share-items">
                                         <li class="floating-item item-cloud">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>vopsitorie
-                                                {{--<i class="material-icons alarm"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>vopsitorie</span>
                                         </li>
                                         <li class="floating-item item-cog">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>parbriz
-                                                {{--<i class="material-icons alarm_add"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>parbriz</span>
                                         </li>
                                         <li class="floating-item item-folder">
-                                            <a href="javascript:void(0)" class="float-btn" data-ripple>tinichigerie
-                                                {{--<i class="material-icons alarm_off"></i>--}}
-                                            </a>
+                                            <span class="float-btn" data-ripple>tinichigerie</span>
                                         </li>
                                     </ul>
                                 </div>
