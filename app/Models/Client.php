@@ -15,17 +15,18 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $id
  * @property string $denumire
  * @property string $telefon
- * @property string $cnp/cui
- * @property string $regcom
- * @property string $seria
- * @property string $numar
- * @property string $eliberat_de
- * @property string $reprezentant
- * @property string $adresa
- * @property string $judet
- * @property string $cont
- * @property string $banca
+ * @property string $cnpcui
+ * property string $regcom
+ * property string $seria
+ * property string $numar
+ * property string $eliberat_de
+ * property string $reprezentant
+ * property string $adresa
+ * property string $judet
+ * property string $cont
+ * property string $banca
  * @property string $email
+ * @property mixed $metadata
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * 
@@ -40,9 +41,9 @@ class Client extends Eloquent
 	protected $fillable = [
 		'denumire',
 		'telefon',
-		'cnp/cui',
+		'cnpcui',
 		'email',
-		'meta'
+		'metadata',
 	];
 
 	public function interventii()

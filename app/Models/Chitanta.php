@@ -24,6 +24,8 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  */
 class Chitanta extends Eloquent
 {
+	protected $table = 'chitanta';
+
 	protected $casts = [
 		'nr_chitanta' => 'int'
 	];

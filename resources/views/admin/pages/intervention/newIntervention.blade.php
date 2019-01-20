@@ -35,9 +35,20 @@
                                     <span class="material-icons icon directions_car"></span>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-md-8">
+                            <div class="col-xs-12 col-md-2">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="serie-caroserie" name="serie-caroserie"
+                                    <input type="text" class="form-control" id="an-fabricatie" name="anFabricatie" aria-describedby="Număr înmatriculare"
+                                           min="10" required="required" placeholder="&nbsp;">
+                                    <label for="an-fabricatie">
+                                        <span class="placeholder">Anul</span>
+                                        <span class="error">Numele nu trebuie să conțina spatii albe!</span>
+                                    </label>
+                                    <span class="material-icons icon directions_car"></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group has-float-label">
+                                    <input type="text" class="form-control" id="serie-caroserie" name="serieCaroserie"
                                            aria-describedby="emailHelp" min="10" required="required"
                                            placeholder="&nbsp;">
                                     <label for="serie-caroserie">
@@ -128,7 +139,7 @@
                                 <div class="form-group has-float-label">
                                     <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
                                            min="10"  placeholder="&nbsp;">
-                                    <label for="cnp/cui">
+                                    <label for="email">
                                         <span class="placeholder">Email</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
                                     </label>
@@ -153,9 +164,9 @@
                             </div>
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="cnp/cui" name="cnp/cui" aria-describedby="emailHelp"
+                                    <input type="text" class="form-control" id="cnpcui" name="cnpcui" aria-describedby="emailHelp"
                                            min="10" required="required" placeholder="&nbsp;">
-                                    <label for="cnp/cui">
+                                    <label for="cnpcui">
                                         <span class="placeholder" id="cnp-placeholder">CNP</span>
                                         <span class="error">Acest camp e obligatoriu!</span>
                                     </label>
@@ -227,7 +238,7 @@
                             </div>
                             <div class="col-xs-12 col-md-3">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="serie-ci" name="serie-ci" aria-describedby="emailHelp"
+                                    <input type="text" class="form-control" id="serie-ci" name="serieCi" aria-describedby="emailHelp"
                                            min="10" placeholder="&nbsp;">
                                     <label for="serie-ci">
                                         <span class="placeholder">Serie CI</span>
@@ -238,7 +249,7 @@
                             </div>
                             <div class="col-xs-12 col-md-3">
                                 <div class="form-group has-float-label">
-                                    <input type="text" class="form-control" id="numar-ci" name="numar-ci" aria-describedby="emailHelp"
+                                    <input type="text" class="form-control" id="numar-ci" name="numarCi" aria-describedby="emailHelp"
                                            min="10" placeholder="&nbsp;">
                                     <label for="numar-ci">
                                         <span class="placeholder">Numar CI</span>
