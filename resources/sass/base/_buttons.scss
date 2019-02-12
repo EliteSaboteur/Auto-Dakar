@@ -123,6 +123,16 @@ $color in $buttons {
     }
 }
 
+.cta-rounded {
+    border-radius: rem-calc(1000px);
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: rem-calc(40px);
+    width: rem-calc(40px);
+    min-width: rem-calc(40px);
+}
+
 //ripple
 .ripple {
     position: absolute;

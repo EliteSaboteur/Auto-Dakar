@@ -6,29 +6,35 @@
     .float-btn {
         width: $float-btn-size;
         height: $float-btn-size;
-        line-height: $float-btn-size;
         border-radius: 0%;
         text-align: center;
         outline: none;
         border: none;
         padding: 0;
         cursor: pointer;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         transition: all 0.15s ease-in-out;
         position: relative;
+        font-size: rem-calc(12px);
         i {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
+        &:hover, &:focus, &:active {
+            outline: none;
+        }
     }
     .float-trigger {
         position: relative;
         z-index: 100;
         background: $float-btn-color;
-        color: #fff;
-        transition: all 0.3s ease;
+        color: $type;
+        transition: all 0.15s ease;
     }
     .share-items {
         z-index: 0;
@@ -44,40 +50,16 @@
             position: absolute;
             color: #fff;
             transition: all 0.3s ease;
-            border-radius: 50%;
+            border-radius: rem-calc(4px);
 
             .float-btn {
                 text-decoration: none;
                 color: inherit;
+                background: $primary;
                 &:hover {
-                    transform: scale(1.2);
                     box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.2);
                 }
             }
-        }
-        .item-heart .float-btn {
-            background: #f44336
-        }
-        .item-star .float-btn {
-            background: #9C27B0
-        }
-        .item-wifi .float-btn {
-            background: #3F51B5
-        }
-        .item-bell .float-btn {
-            background: #03A9F4
-        }
-        .item-cloud .float-btn {
-            background: #8BC34A
-        }
-        .item-cog .float-btn {
-            background: #FF9800
-        }
-        .item-folder .float-btn {
-            background: #FF5722
-        }
-        .item-paper-plane .float-btn {
-            background: #795548
         }
     }
 }
@@ -85,9 +67,11 @@
 
 .floating-share.opened {
     .float-trigger {
-        transform: scale(1.5);
+        transform: scale(.50);
         box-shadow: 0px 0px 0px 5px rgba($float-btn-color, 0.3);
-        z-index: 3000;
+        z-index: 3002;
+        font-size: rem-calc(20px);
+
     }
     .share-items {
         z-index: 3001;
@@ -102,10 +86,9 @@
         opacity: 1;
         transition-delay: #{$delay}s;
         animation-delay: #{$animdelay}s;
-
     }
     .floating-share.closing .share-items li:nth-last-child(#{$i}) {
-        animation: hide 0.5s ease forwards;
+        animation: hide 0.35s ease forwards;
         transition-delay: #{$delay}s;
         animation-delay: #{$animdelay}s;
     }

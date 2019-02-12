@@ -37,8 +37,18 @@
         'components/admin-interventions',
         'components/admin-intervention-card',
         'components/admin-estimations',
+        'components/admin-estimativ',
+        'components/admin-deviz',
         'components/page';
+
+// FRONTEND PAGE COMPONENTS
+
+@import 'page-components/bootstrap-grid-overwrite',
+        'page-components/section-padding',
+        'page-components/testimonials-slider',
+        'page-components/hero';
 
 // VENDOR
 @import 'vendor/bootstrap-select',
-        'vendor/date-time';
+        'vendor/date-time',
+        'vendor/slick';
